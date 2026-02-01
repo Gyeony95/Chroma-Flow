@@ -1,0 +1,733 @@
+{
+  "builtTestProducts" : [
+    {
+      "binaryPath" : "/Users/gwongihyeon/IosProjects/ChromaFlow/Packages/DDCKit/.build/arm64-apple-macosx/debug/DDCKitPackageTests.xctest/Contents/MacOS/DDCKitPackageTests",
+      "packagePath" : "/Users/gwongihyeon/IosProjects/ChromaFlow/Packages/DDCKit",
+      "productName" : "DDCKitPackageTests"
+    }
+  ],
+  "copyCommands" : {
+
+  },
+  "explicitTargetDependencyImportCheckingMode" : {
+    "none" : {
+
+    }
+  },
+  "generatedSourceTargetSet" : [
+
+  ],
+  "pluginDescriptions" : [
+
+  ],
+  "swiftCommands" : {
+    "C.DDCKit-arm64-apple-macosx15.0-debug.module" : {
+      "executable" : "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "fileList" : "/Users/gwongihyeon/IosProjects/ChromaFlow/Packages/DDCKit/.build/arm64-apple-macosx/debug/DDCKit.build/sources",
+      "importPath" : "/Users/gwongihyeon/IosProjects/ChromaFlow/Packages/DDCKit/.build/arm64-apple-macosx/debug/Modules",
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/Packages/DDCKit/Sources/DDCKit/DDCCapabilityDetector.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/Packages/DDCKit/Sources/DDCKit/DDCInterface.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/Packages/DDCKit/Sources/DDCKit/DDCKit.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/Packages/DDCKit/Sources/DDCKit/EDIDReader.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/Packages/DDCKit/Sources/DDCKit/I2CTransport.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/Packages/DDCKit/Sources/DDCKit/VCPCodes.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/Packages/DDCKit/.build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/Packages/DDCKit/.build/arm64-apple-macosx/debug/DDCKit.build/sources"
+        }
+      ],
+      "isLibrary" : true,
+      "moduleName" : "DDCKit",
+      "moduleOutputPath" : "/Users/gwongihyeon/IosProjects/ChromaFlow/Packages/DDCKit/.build/arm64-apple-macosx/debug/Modules/DDCKit.swiftmodule",
+      "objects" : [
+        "/Users/gwongihyeon/IosProjects/ChromaFlow/Packages/DDCKit/.build/arm64-apple-macosx/debug/DDCKit.build/DDCCapabilityDetector.swift.o",
+        "/Users/gwongihyeon/IosProjects/ChromaFlow/Packages/DDCKit/.build/arm64-apple-macosx/debug/DDCKit.build/DDCInterface.swift.o",
+        "/Users/gwongihyeon/IosProjects/ChromaFlow/Packages/DDCKit/.build/arm64-apple-macosx/debug/DDCKit.build/DDCKit.swift.o",
+        "/Users/gwongihyeon/IosProjects/ChromaFlow/Packages/DDCKit/.build/arm64-apple-macosx/debug/DDCKit.build/EDIDReader.swift.o",
+        "/Users/gwongihyeon/IosProjects/ChromaFlow/Packages/DDCKit/.build/arm64-apple-macosx/debug/DDCKit.build/I2CTransport.swift.o",
+        "/Users/gwongihyeon/IosProjects/ChromaFlow/Packages/DDCKit/.build/arm64-apple-macosx/debug/DDCKit.build/VCPCodes.swift.o"
+      ],
+      "otherArguments" : [
+        "-target",
+        "arm64-apple-macosx14.0",
+        "-incremental",
+        "-enable-batch-mode",
+        "-serialize-diagnostics",
+        "-index-store-path",
+        "/Users/gwongihyeon/IosProjects/ChromaFlow/Packages/DDCKit/.build/arm64-apple-macosx/debug/index/store",
+        "-Onone",
+        "-enable-testing",
+        "-j8",
+        "-DSWIFT_PACKAGE",
+        "-DDEBUG",
+        "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+        "-module-cache-path",
+        "/Users/gwongihyeon/IosProjects/ChromaFlow/Packages/DDCKit/.build/arm64-apple-macosx/debug/ModuleCache",
+        "-parseable-output",
+        "-parse-as-library",
+        "-emit-objc-header",
+        "-emit-objc-header-path",
+        "/Users/gwongihyeon/IosProjects/ChromaFlow/Packages/DDCKit/.build/arm64-apple-macosx/debug/DDCKit.build/include/DDCKit-Swift.h",
+        "-swift-version",
+        "5",
+        "-plugin-path",
+        "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing",
+        "-sdk",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+        "-F",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-F",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+        "-I",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-L",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-g",
+        "-Xcc",
+        "-isysroot",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+        "-Xcc",
+        "-F",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-Xcc",
+        "-F",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+        "-Xcc",
+        "-fPIC",
+        "-Xcc",
+        "-g",
+        "-package-name",
+        "ddckit"
+      ],
+      "outputFileMapPath" : "/Users/gwongihyeon/IosProjects/ChromaFlow/Packages/DDCKit/.build/arm64-apple-macosx/debug/DDCKit.build/output-file-map.json",
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/Packages/DDCKit/.build/arm64-apple-macosx/debug/DDCKit.build/DDCCapabilityDetector.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/Packages/DDCKit/.build/arm64-apple-macosx/debug/DDCKit.build/DDCInterface.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/Packages/DDCKit/.build/arm64-apple-macosx/debug/DDCKit.build/DDCKit.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/Packages/DDCKit/.build/arm64-apple-macosx/debug/DDCKit.build/EDIDReader.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/Packages/DDCKit/.build/arm64-apple-macosx/debug/DDCKit.build/I2CTransport.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/Packages/DDCKit/.build/arm64-apple-macosx/debug/DDCKit.build/VCPCodes.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/Packages/DDCKit/.build/arm64-apple-macosx/debug/Modules/DDCKit.swiftmodule"
+        }
+      ],
+      "prepareForIndexing" : false,
+      "sources" : [
+        "/Users/gwongihyeon/IosProjects/ChromaFlow/Packages/DDCKit/Sources/DDCKit/DDCCapabilityDetector.swift",
+        "/Users/gwongihyeon/IosProjects/ChromaFlow/Packages/DDCKit/Sources/DDCKit/DDCInterface.swift",
+        "/Users/gwongihyeon/IosProjects/ChromaFlow/Packages/DDCKit/Sources/DDCKit/DDCKit.swift",
+        "/Users/gwongihyeon/IosProjects/ChromaFlow/Packages/DDCKit/Sources/DDCKit/EDIDReader.swift",
+        "/Users/gwongihyeon/IosProjects/ChromaFlow/Packages/DDCKit/Sources/DDCKit/I2CTransport.swift",
+        "/Users/gwongihyeon/IosProjects/ChromaFlow/Packages/DDCKit/Sources/DDCKit/VCPCodes.swift"
+      ],
+      "tempsPath" : "/Users/gwongihyeon/IosProjects/ChromaFlow/Packages/DDCKit/.build/arm64-apple-macosx/debug/DDCKit.build",
+      "wholeModuleOptimization" : false
+    },
+    "C.DDCKitPackageTests-arm64-apple-macosx15.0-debug.module" : {
+      "executable" : "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "fileList" : "/Users/gwongihyeon/IosProjects/ChromaFlow/Packages/DDCKit/.build/arm64-apple-macosx/debug/DDCKitPackageTests.build/sources",
+      "importPath" : "/Users/gwongihyeon/IosProjects/ChromaFlow/Packages/DDCKit/.build/arm64-apple-macosx/debug/Modules",
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/Packages/DDCKit/.build/arm64-apple-macosx/debug/DDCKitPackageTests.derived/runner.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/Packages/DDCKit/.build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/Packages/DDCKit/.build/arm64-apple-macosx/debug/Modules/DDCKitTests.swiftmodule"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/Packages/DDCKit/.build/arm64-apple-macosx/debug/DDCKitPackageTests.build/sources"
+        }
+      ],
+      "isLibrary" : true,
+      "moduleName" : "DDCKitPackageTests",
+      "moduleOutputPath" : "/Users/gwongihyeon/IosProjects/ChromaFlow/Packages/DDCKit/.build/arm64-apple-macosx/debug/Modules/DDCKitPackageTests.swiftmodule",
+      "objects" : [
+        "/Users/gwongihyeon/IosProjects/ChromaFlow/Packages/DDCKit/.build/arm64-apple-macosx/debug/DDCKitPackageTests.build/runner.swift.o"
+      ],
+      "otherArguments" : [
+        "-target",
+        "arm64-apple-macosx14.0",
+        "-incremental",
+        "-enable-batch-mode",
+        "-serialize-diagnostics",
+        "-index-store-path",
+        "/Users/gwongihyeon/IosProjects/ChromaFlow/Packages/DDCKit/.build/arm64-apple-macosx/debug/index/store",
+        "-Onone",
+        "-enable-testing",
+        "-Xfrontend",
+        "-enable-cross-import-overlays",
+        "-j8",
+        "-DSWIFT_PACKAGE",
+        "-DDEBUG",
+        "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+        "-module-cache-path",
+        "/Users/gwongihyeon/IosProjects/ChromaFlow/Packages/DDCKit/.build/arm64-apple-macosx/debug/ModuleCache",
+        "-parseable-output",
+        "-parse-as-library",
+        "-emit-objc-header",
+        "-emit-objc-header-path",
+        "/Users/gwongihyeon/IosProjects/ChromaFlow/Packages/DDCKit/.build/arm64-apple-macosx/debug/DDCKitPackageTests.build/include/DDCKitPackageTests-Swift.h",
+        "-plugin-path",
+        "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing",
+        "-sdk",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+        "-F",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-F",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+        "-I",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-L",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-g",
+        "-Xcc",
+        "-isysroot",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+        "-Xcc",
+        "-F",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-Xcc",
+        "-F",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+        "-Xcc",
+        "-fPIC",
+        "-Xcc",
+        "-g",
+        "-package-name",
+        "ddckit"
+      ],
+      "outputFileMapPath" : "/Users/gwongihyeon/IosProjects/ChromaFlow/Packages/DDCKit/.build/arm64-apple-macosx/debug/DDCKitPackageTests.build/output-file-map.json",
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/Packages/DDCKit/.build/arm64-apple-macosx/debug/DDCKitPackageTests.build/runner.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/Packages/DDCKit/.build/arm64-apple-macosx/debug/Modules/DDCKitPackageTests.swiftmodule"
+        }
+      ],
+      "prepareForIndexing" : false,
+      "sources" : [
+        "/Users/gwongihyeon/IosProjects/ChromaFlow/Packages/DDCKit/.build/arm64-apple-macosx/debug/DDCKitPackageTests.derived/runner.swift"
+      ],
+      "tempsPath" : "/Users/gwongihyeon/IosProjects/ChromaFlow/Packages/DDCKit/.build/arm64-apple-macosx/debug/DDCKitPackageTests.build",
+      "wholeModuleOptimization" : false
+    },
+    "C.DDCKitTests-arm64-apple-macosx15.0-debug.module" : {
+      "executable" : "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "fileList" : "/Users/gwongihyeon/IosProjects/ChromaFlow/Packages/DDCKit/.build/arm64-apple-macosx/debug/DDCKitTests.build/sources",
+      "importPath" : "/Users/gwongihyeon/IosProjects/ChromaFlow/Packages/DDCKit/.build/arm64-apple-macosx/debug/Modules",
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/Packages/DDCKit/Tests/DDCKitTests/DDCKitTests.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/Packages/DDCKit/.build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/Packages/DDCKit/.build/arm64-apple-macosx/debug/Modules/DDCKit.swiftmodule"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/Packages/DDCKit/.build/arm64-apple-macosx/debug/DDCKitTests.build/sources"
+        }
+      ],
+      "isLibrary" : true,
+      "moduleName" : "DDCKitTests",
+      "moduleOutputPath" : "/Users/gwongihyeon/IosProjects/ChromaFlow/Packages/DDCKit/.build/arm64-apple-macosx/debug/Modules/DDCKitTests.swiftmodule",
+      "objects" : [
+        "/Users/gwongihyeon/IosProjects/ChromaFlow/Packages/DDCKit/.build/arm64-apple-macosx/debug/DDCKitTests.build/DDCKitTests.swift.o"
+      ],
+      "otherArguments" : [
+        "-target",
+        "arm64-apple-macosx14.0",
+        "-incremental",
+        "-enable-batch-mode",
+        "-serialize-diagnostics",
+        "-index-store-path",
+        "/Users/gwongihyeon/IosProjects/ChromaFlow/Packages/DDCKit/.build/arm64-apple-macosx/debug/index/store",
+        "-Onone",
+        "-enable-testing",
+        "-Xfrontend",
+        "-enable-cross-import-overlays",
+        "-j8",
+        "-DSWIFT_PACKAGE",
+        "-DDEBUG",
+        "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+        "-module-cache-path",
+        "/Users/gwongihyeon/IosProjects/ChromaFlow/Packages/DDCKit/.build/arm64-apple-macosx/debug/ModuleCache",
+        "-parseable-output",
+        "-parse-as-library",
+        "-swift-version",
+        "5",
+        "-plugin-path",
+        "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing",
+        "-sdk",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+        "-F",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-F",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+        "-I",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-L",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-g",
+        "-Xcc",
+        "-isysroot",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+        "-Xcc",
+        "-F",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-Xcc",
+        "-F",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+        "-Xcc",
+        "-fPIC",
+        "-Xcc",
+        "-g",
+        "-package-name",
+        "ddckit"
+      ],
+      "outputFileMapPath" : "/Users/gwongihyeon/IosProjects/ChromaFlow/Packages/DDCKit/.build/arm64-apple-macosx/debug/DDCKitTests.build/output-file-map.json",
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/Packages/DDCKit/.build/arm64-apple-macosx/debug/DDCKitTests.build/DDCKitTests.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/Packages/DDCKit/.build/arm64-apple-macosx/debug/Modules/DDCKitTests.swiftmodule"
+        }
+      ],
+      "prepareForIndexing" : false,
+      "sources" : [
+        "/Users/gwongihyeon/IosProjects/ChromaFlow/Packages/DDCKit/Tests/DDCKitTests/DDCKitTests.swift"
+      ],
+      "tempsPath" : "/Users/gwongihyeon/IosProjects/ChromaFlow/Packages/DDCKit/.build/arm64-apple-macosx/debug/DDCKitTests.build",
+      "wholeModuleOptimization" : false
+    }
+  },
+  "swiftFrontendCommands" : {
+
+  },
+  "swiftTargetScanArgs" : {
+    "DDCKit" : [
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "-module-name",
+      "DDCKit",
+      "-package-name",
+      "ddckit",
+      "-c",
+      "/Users/gwongihyeon/IosProjects/ChromaFlow/Packages/DDCKit/Sources/DDCKit/DDCCapabilityDetector.swift",
+      "/Users/gwongihyeon/IosProjects/ChromaFlow/Packages/DDCKit/Sources/DDCKit/DDCInterface.swift",
+      "/Users/gwongihyeon/IosProjects/ChromaFlow/Packages/DDCKit/Sources/DDCKit/DDCKit.swift",
+      "/Users/gwongihyeon/IosProjects/ChromaFlow/Packages/DDCKit/Sources/DDCKit/EDIDReader.swift",
+      "/Users/gwongihyeon/IosProjects/ChromaFlow/Packages/DDCKit/Sources/DDCKit/I2CTransport.swift",
+      "/Users/gwongihyeon/IosProjects/ChromaFlow/Packages/DDCKit/Sources/DDCKit/VCPCodes.swift",
+      "-I",
+      "/Users/gwongihyeon/IosProjects/ChromaFlow/Packages/DDCKit/.build/arm64-apple-macosx/debug/Modules",
+      "-target",
+      "arm64-apple-macosx14.0",
+      "-incremental",
+      "-enable-batch-mode",
+      "-serialize-diagnostics",
+      "-index-store-path",
+      "/Users/gwongihyeon/IosProjects/ChromaFlow/Packages/DDCKit/.build/arm64-apple-macosx/debug/index/store",
+      "-Onone",
+      "-enable-testing",
+      "-j8",
+      "-DSWIFT_PACKAGE",
+      "-DDEBUG",
+      "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+      "-module-cache-path",
+      "/Users/gwongihyeon/IosProjects/ChromaFlow/Packages/DDCKit/.build/arm64-apple-macosx/debug/ModuleCache",
+      "-parseable-output",
+      "-parse-as-library",
+      "-emit-objc-header",
+      "-emit-objc-header-path",
+      "/Users/gwongihyeon/IosProjects/ChromaFlow/Packages/DDCKit/.build/arm64-apple-macosx/debug/DDCKit.build/include/DDCKit-Swift.h",
+      "-swift-version",
+      "5",
+      "-plugin-path",
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing",
+      "-sdk",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+      "-F",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+      "-F",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+      "-I",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+      "-L",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+      "-g",
+      "-Xcc",
+      "-isysroot",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+      "-Xcc",
+      "-F",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+      "-Xcc",
+      "-F",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+      "-Xcc",
+      "-fPIC",
+      "-Xcc",
+      "-g",
+      "-package-name",
+      "ddckit",
+      "-driver-use-frontend-path",
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"
+    ],
+    "DDCKitPackageTests" : [
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "-module-name",
+      "DDCKitPackageTests",
+      "-package-name",
+      "ddckit",
+      "-c",
+      "/Users/gwongihyeon/IosProjects/ChromaFlow/Packages/DDCKit/.build/arm64-apple-macosx/debug/DDCKitPackageTests.derived/runner.swift",
+      "-I",
+      "/Users/gwongihyeon/IosProjects/ChromaFlow/Packages/DDCKit/.build/arm64-apple-macosx/debug/Modules",
+      "-target",
+      "arm64-apple-macosx14.0",
+      "-incremental",
+      "-enable-batch-mode",
+      "-serialize-diagnostics",
+      "-index-store-path",
+      "/Users/gwongihyeon/IosProjects/ChromaFlow/Packages/DDCKit/.build/arm64-apple-macosx/debug/index/store",
+      "-Onone",
+      "-enable-testing",
+      "-Xfrontend",
+      "-enable-cross-import-overlays",
+      "-j8",
+      "-DSWIFT_PACKAGE",
+      "-DDEBUG",
+      "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+      "-module-cache-path",
+      "/Users/gwongihyeon/IosProjects/ChromaFlow/Packages/DDCKit/.build/arm64-apple-macosx/debug/ModuleCache",
+      "-parseable-output",
+      "-parse-as-library",
+      "-emit-objc-header",
+      "-emit-objc-header-path",
+      "/Users/gwongihyeon/IosProjects/ChromaFlow/Packages/DDCKit/.build/arm64-apple-macosx/debug/DDCKitPackageTests.build/include/DDCKitPackageTests-Swift.h",
+      "-plugin-path",
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing",
+      "-sdk",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+      "-F",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+      "-F",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+      "-I",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+      "-L",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+      "-g",
+      "-Xcc",
+      "-isysroot",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+      "-Xcc",
+      "-F",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+      "-Xcc",
+      "-F",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+      "-Xcc",
+      "-fPIC",
+      "-Xcc",
+      "-g",
+      "-package-name",
+      "ddckit",
+      "-driver-use-frontend-path",
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"
+    ],
+    "DDCKitTests" : [
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "-module-name",
+      "DDCKitTests",
+      "-package-name",
+      "ddckit",
+      "-c",
+      "/Users/gwongihyeon/IosProjects/ChromaFlow/Packages/DDCKit/Tests/DDCKitTests/DDCKitTests.swift",
+      "-I",
+      "/Users/gwongihyeon/IosProjects/ChromaFlow/Packages/DDCKit/.build/arm64-apple-macosx/debug/Modules",
+      "-target",
+      "arm64-apple-macosx14.0",
+      "-incremental",
+      "-enable-batch-mode",
+      "-serialize-diagnostics",
+      "-index-store-path",
+      "/Users/gwongihyeon/IosProjects/ChromaFlow/Packages/DDCKit/.build/arm64-apple-macosx/debug/index/store",
+      "-Onone",
+      "-enable-testing",
+      "-Xfrontend",
+      "-enable-cross-import-overlays",
+      "-j8",
+      "-DSWIFT_PACKAGE",
+      "-DDEBUG",
+      "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+      "-module-cache-path",
+      "/Users/gwongihyeon/IosProjects/ChromaFlow/Packages/DDCKit/.build/arm64-apple-macosx/debug/ModuleCache",
+      "-parseable-output",
+      "-parse-as-library",
+      "-swift-version",
+      "5",
+      "-plugin-path",
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing",
+      "-sdk",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+      "-F",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+      "-F",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+      "-I",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+      "-L",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+      "-g",
+      "-Xcc",
+      "-isysroot",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+      "-Xcc",
+      "-F",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+      "-Xcc",
+      "-F",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+      "-Xcc",
+      "-fPIC",
+      "-Xcc",
+      "-g",
+      "-package-name",
+      "ddckit",
+      "-driver-use-frontend-path",
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"
+    ]
+  },
+  "targetDependencyMap" : {
+    "DDCKit" : [
+
+    ],
+    "DDCKitPackageTests" : [
+      "DDCKitTests",
+      "DDCKit"
+    ],
+    "DDCKitTests" : [
+      "DDCKit"
+    ]
+  },
+  "testDiscoveryCommands" : {
+
+  },
+  "testEntryPointCommands" : {
+    "/Users/gwongihyeon/IosProjects/ChromaFlow/Packages/DDCKit/.build/arm64-apple-macosx/debug/DDCKitPackageTests.derived/runner.swift" : {
+      "inputs" : [
+
+      ],
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/Packages/DDCKit/.build/arm64-apple-macosx/debug/DDCKitPackageTests.derived/runner.swift"
+        }
+      ]
+    }
+  },
+  "traitConfiguration" : {
+    "default" : {
+
+    }
+  },
+  "writeCommands" : {
+    "/Users/gwongihyeon/IosProjects/ChromaFlow/Packages/DDCKit/.build/arm64-apple-macosx/debug/DDCKit.build/sources" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<sources-file-list>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/Packages/DDCKit/Sources/DDCKit/DDCCapabilityDetector.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/Packages/DDCKit/Sources/DDCKit/DDCInterface.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/Packages/DDCKit/Sources/DDCKit/DDCKit.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/Packages/DDCKit/Sources/DDCKit/EDIDReader.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/Packages/DDCKit/Sources/DDCKit/I2CTransport.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/Packages/DDCKit/Sources/DDCKit/VCPCodes.swift"
+        }
+      ],
+      "outputFilePath" : "/Users/gwongihyeon/IosProjects/ChromaFlow/Packages/DDCKit/.build/arm64-apple-macosx/debug/DDCKit.build/sources"
+    },
+    "/Users/gwongihyeon/IosProjects/ChromaFlow/Packages/DDCKit/.build/arm64-apple-macosx/debug/DDCKitPackageTests.build/sources" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<sources-file-list>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/Packages/DDCKit/.build/arm64-apple-macosx/debug/DDCKitPackageTests.derived/runner.swift"
+        }
+      ],
+      "outputFilePath" : "/Users/gwongihyeon/IosProjects/ChromaFlow/Packages/DDCKit/.build/arm64-apple-macosx/debug/DDCKitPackageTests.build/sources"
+    },
+    "/Users/gwongihyeon/IosProjects/ChromaFlow/Packages/DDCKit/.build/arm64-apple-macosx/debug/DDCKitPackageTests.product/Objects.LinkFileList" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<link-file-list>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/Packages/DDCKit/.build/arm64-apple-macosx/debug/DDCKit.build/DDCCapabilityDetector.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/Packages/DDCKit/.build/arm64-apple-macosx/debug/DDCKit.build/DDCInterface.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/Packages/DDCKit/.build/arm64-apple-macosx/debug/DDCKit.build/DDCKit.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/Packages/DDCKit/.build/arm64-apple-macosx/debug/DDCKit.build/EDIDReader.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/Packages/DDCKit/.build/arm64-apple-macosx/debug/DDCKit.build/I2CTransport.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/Packages/DDCKit/.build/arm64-apple-macosx/debug/DDCKit.build/VCPCodes.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/Packages/DDCKit/.build/arm64-apple-macosx/debug/DDCKitPackageTests.build/runner.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/Packages/DDCKit/.build/arm64-apple-macosx/debug/DDCKitTests.build/DDCKitTests.swift.o"
+        }
+      ],
+      "outputFilePath" : "/Users/gwongihyeon/IosProjects/ChromaFlow/Packages/DDCKit/.build/arm64-apple-macosx/debug/DDCKitPackageTests.product/Objects.LinkFileList"
+    },
+    "/Users/gwongihyeon/IosProjects/ChromaFlow/Packages/DDCKit/.build/arm64-apple-macosx/debug/DDCKitTests.build/sources" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<sources-file-list>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/Packages/DDCKit/Tests/DDCKitTests/DDCKitTests.swift"
+        }
+      ],
+      "outputFilePath" : "/Users/gwongihyeon/IosProjects/ChromaFlow/Packages/DDCKit/.build/arm64-apple-macosx/debug/DDCKitTests.build/sources"
+    },
+    "/Users/gwongihyeon/IosProjects/ChromaFlow/Packages/DDCKit/.build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt" : {
+      "alwaysOutOfDate" : true,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<swift-get-version>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"
+        }
+      ],
+      "outputFilePath" : "/Users/gwongihyeon/IosProjects/ChromaFlow/Packages/DDCKit/.build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt"
+    }
+  }
+}

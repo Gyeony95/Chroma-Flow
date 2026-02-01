@@ -1,0 +1,12 @@
+{
+  "": {
+    "swift-dependencies": "/Users/gwongihyeon/IosProjects/ChromaFlow/Packages/DDCKit/.build/arm64-apple-macosx/debug/DDCKitPackageTests.build/master.swiftdeps"
+  },
+  "/Users/gwongihyeon/IosProjects/ChromaFlow/Packages/DDCKit/.build/arm64-apple-macosx/debug/DDCKitPackageTests.derived/runner.swift": {
+    "dependencies": "/Users/gwongihyeon/IosProjects/ChromaFlow/Packages/DDCKit/.build/arm64-apple-macosx/debug/DDCKitPackageTests.build/runner.d",
+    "object": "/Users/gwongihyeon/IosProjects/ChromaFlow/Packages/DDCKit/.build/arm64-apple-macosx/debug/DDCKitPackageTests.build/runner.swift.o",
+    "swiftmodule": "/Users/gwongihyeon/IosProjects/ChromaFlow/Packages/DDCKit/.build/arm64-apple-macosx/debug/DDCKitPackageTests.build/runner~partial.swiftmodule",
+    "swift-dependencies": "/Users/gwongihyeon/IosProjects/ChromaFlow/Packages/DDCKit/.build/arm64-apple-macosx/debug/DDCKitPackageTests.build/runner.swiftdeps",
+    "diagnostics": "/Users/gwongihyeon/IosProjects/ChromaFlow/Packages/DDCKit/.build/arm64-apple-macosx/debug/DDCKitPackageTests.build/runner.dia"
+  }
+}

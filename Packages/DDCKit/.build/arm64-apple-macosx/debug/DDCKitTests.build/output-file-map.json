@@ -1,0 +1,12 @@
+{
+  "": {
+    "swift-dependencies": "/Users/gwongihyeon/IosProjects/ChromaFlow/Packages/DDCKit/.build/arm64-apple-macosx/debug/DDCKitTests.build/master.swiftdeps"
+  },
+  "/Users/gwongihyeon/IosProjects/ChromaFlow/Packages/DDCKit/Tests/DDCKitTests/DDCKitTests.swift": {
+    "dependencies": "/Users/gwongihyeon/IosProjects/ChromaFlow/Packages/DDCKit/.build/arm64-apple-macosx/debug/DDCKitTests.build/DDCKitTests.d",
+    "object": "/Users/gwongihyeon/IosProjects/ChromaFlow/Packages/DDCKit/.build/arm64-apple-macosx/debug/DDCKitTests.build/DDCKitTests.swift.o",
+    "swiftmodule": "/Users/gwongihyeon/IosProjects/ChromaFlow/Packages/DDCKit/.build/arm64-apple-macosx/debug/DDCKitTests.build/DDCKitTests~partial.swiftmodule",
+    "swift-dependencies": "/Users/gwongihyeon/IosProjects/ChromaFlow/Packages/DDCKit/.build/arm64-apple-macosx/debug/DDCKitTests.build/DDCKitTests.swiftdeps",
+    "diagnostics": "/Users/gwongihyeon/IosProjects/ChromaFlow/Packages/DDCKit/.build/arm64-apple-macosx/debug/DDCKitTests.build/DDCKitTests.dia"
+  }
+}
