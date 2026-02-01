@@ -282,7 +282,7 @@
 
   ],
   "swiftCommands" : {
-    "C.ChromaFlow-arm64-apple-macosx15.0-debug.module" : {
+    "C.ChromaFlow-arm64-apple-macosx26.0-debug.module" : {
       "executable" : "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
       "fileList" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/debug/ChromaFlow.build/sources",
       "importPath" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/debug/Modules",
@@ -513,7 +513,7 @@
         },
         {
           "kind" : "virtual",
-          "name" : "<ChromaFlow-arm64-apple-macosx15.0-debug.module-resources>"
+          "name" : "<ChromaFlow-arm64-apple-macosx26.0-debug.module-resources>"
         },
         {
           "kind" : "file",
@@ -937,7 +937,7 @@
       "tempsPath" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/debug/ChromaFlow.build",
       "wholeModuleOptimization" : false
     },
-    "C.DDCKit-arm64-apple-macosx15.0-debug.module" : {
+    "C.DDCKit-arm64-apple-macosx26.0-debug.module" : {
       "executable" : "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
       "fileList" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/debug/DDCKit.build/sources",
       "importPath" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/debug/Modules",
@@ -1084,7 +1084,7 @@
       "tempsPath" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/debug/DDCKit.build",
       "wholeModuleOptimization" : false
     },
-    "C.KeyboardShortcuts-arm64-apple-macosx15.0-debug.module" : {
+    "C.KeyboardShortcuts-arm64-apple-macosx26.0-debug.module" : {
       "executable" : "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
       "fileList" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/debug/KeyboardShortcuts.build/sources",
       "importPath" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/debug/Modules",
@@ -1139,7 +1139,7 @@
         },
         {
           "kind" : "virtual",
-          "name" : "<KeyboardShortcuts-arm64-apple-macosx15.0-debug.module-resources>"
+          "name" : "<KeyboardShortcuts-arm64-apple-macosx26.0-debug.module-resources>"
         },
         {
           "kind" : "file",
@@ -1288,7 +1288,7 @@
       "tempsPath" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/debug/KeyboardShortcuts.build",
       "wholeModuleOptimization" : false
     },
-    "C.LaunchAtLogin-arm64-apple-macosx15.0-debug.module" : {
+    "C.LaunchAtLogin-arm64-apple-macosx26.0-debug.module" : {
       "executable" : "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
       "fileList" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/debug/LaunchAtLogin.build/sources",
       "importPath" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/debug/Modules",

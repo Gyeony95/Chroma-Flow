@@ -82,6 +82,33 @@ final class AppState {
         Task {
             await observeReferenceModeChanges()
         }
+
+        // Load connected displays on initialization
+        Task {
+            await loadConnectedDisplays()
+        }
+    }
+
+    // MARK: - Display Management
+
+    /// Load and populate connected displays
+    func loadConnectedDisplays() async {
+        let connectedDisplays = await displayEngine.connectedDisplays()
+        displays = connectedDisplays
+
+        // Set selected display to first available if not already set
+        if selectedDisplayID == nil, let firstDisplay = connectedDisplays.first {
+            selectedDisplayID = firstDisplay.id
+        }
+
+        // Try to load active profile for selected display
+        if let displayID = selectedDisplayID {
+            do {
+                currentProfile = try await displayEngine.activeProfile(for: displayID)
+            } catch {
+                // Failed to get active profile, leave as nil
+            }
+        }
     }
 
     // MARK: - Reference Mode Methods

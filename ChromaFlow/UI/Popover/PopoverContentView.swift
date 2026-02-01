@@ -65,6 +65,10 @@ struct PopoverContentView: View {
             withAnimation(LiquidUITheme.Animation.elastic) {
                 isVisible = true
             }
+            // Refresh displays when popover opens
+            Task {
+                await appState.loadConnectedDisplays()
+            }
         }
         .overlay(
             // Toast notification overlay
