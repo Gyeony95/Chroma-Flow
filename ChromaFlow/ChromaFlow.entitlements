@@ -12,6 +12,9 @@
 	<array>
 		<string>IOHIDDeviceUserClient</string>
 		<string>IOI2CInterfaceUserClient</string>
+		<string>IOFramebufferSharedUserClient</string>
+		<string>AppleGraphicsControlClient</string>
+		<string>IOAccelerationUserClient</string>
 	</array>
 </dict>
 </plist>

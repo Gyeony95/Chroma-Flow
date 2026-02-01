@@ -1,0 +1,43 @@
+{
+  "": {
+    "dependencies": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/DDCKit.build/DDCKit.d",
+    "object": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/DDCKit.build/DDCKit.o",
+    "swift-dependencies": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/DDCKit.build/master.swiftdeps"
+  },
+  "/Users/gwongihyeon/IosProjects/ChromaFlow/Packages/DDCKit/Sources/DDCKit/DDCCapabilityDetector.swift": {
+    "object": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/DDCKit.build/DDCCapabilityDetector.swift.o",
+    "swiftmodule": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/DDCKit.build/DDCCapabilityDetector~partial.swiftmodule",
+    "swift-dependencies": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/DDCKit.build/DDCCapabilityDetector.swiftdeps",
+    "diagnostics": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/DDCKit.build/DDCCapabilityDetector.dia"
+  },
+  "/Users/gwongihyeon/IosProjects/ChromaFlow/Packages/DDCKit/Sources/DDCKit/DDCInterface.swift": {
+    "object": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/DDCKit.build/DDCInterface.swift.o",
+    "swiftmodule": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/DDCKit.build/DDCInterface~partial.swiftmodule",
+    "swift-dependencies": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/DDCKit.build/DDCInterface.swiftdeps",
+    "diagnostics": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/DDCKit.build/DDCInterface.dia"
+  },
+  "/Users/gwongihyeon/IosProjects/ChromaFlow/Packages/DDCKit/Sources/DDCKit/DDCKit.swift": {
+    "object": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/DDCKit.build/DDCKit.swift.o",
+    "swiftmodule": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/DDCKit.build/DDCKit~partial.swiftmodule",
+    "swift-dependencies": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/DDCKit.build/DDCKit.swiftdeps",
+    "diagnostics": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/DDCKit.build/DDCKit.dia"
+  },
+  "/Users/gwongihyeon/IosProjects/ChromaFlow/Packages/DDCKit/Sources/DDCKit/EDIDReader.swift": {
+    "object": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/DDCKit.build/EDIDReader.swift.o",
+    "swiftmodule": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/DDCKit.build/EDIDReader~partial.swiftmodule",
+    "swift-dependencies": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/DDCKit.build/EDIDReader.swiftdeps",
+    "diagnostics": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/DDCKit.build/EDIDReader.dia"
+  },
+  "/Users/gwongihyeon/IosProjects/ChromaFlow/Packages/DDCKit/Sources/DDCKit/I2CTransport.swift": {
+    "object": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/DDCKit.build/I2CTransport.swift.o",
+    "swiftmodule": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/DDCKit.build/I2CTransport~partial.swiftmodule",
+    "swift-dependencies": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/DDCKit.build/I2CTransport.swiftdeps",
+    "diagnostics": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/DDCKit.build/I2CTransport.dia"
+  },
+  "/Users/gwongihyeon/IosProjects/ChromaFlow/Packages/DDCKit/Sources/DDCKit/VCPCodes.swift": {
+    "object": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/DDCKit.build/VCPCodes.swift.o",
+    "swiftmodule": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/DDCKit.build/VCPCodes~partial.swiftmodule",
+    "swift-dependencies": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/DDCKit.build/VCPCodes.swiftdeps",
+    "diagnostics": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/DDCKit.build/VCPCodes.dia"
+  }
+}

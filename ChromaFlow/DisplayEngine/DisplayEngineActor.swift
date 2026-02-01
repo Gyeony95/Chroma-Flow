@@ -14,6 +14,8 @@ actor DisplayEngineActor {
     private let gammaController: GammaController
     private let calibrationDataManager: CalibrationDataManager
     private let colorCorrectionEngine: ColorCorrectionEngine
+    private let ddcActor: DDCActor
+    private let displayModeController: DisplayModeController
     private let logger = Logger(
         subsystem: "com.chromaflow.ChromaFlow",
         category: "DisplayEngine"
@@ -30,10 +32,17 @@ actor DisplayEngineActor {
     init(profileManager: ProfileManager = ProfileManager(),
          displayDetector: DisplayDetector = DisplayDetector(),
          referenceModeManager: ReferenceModeManager? = nil,
-         gammaController: GammaController? = nil) {
+         gammaController: GammaController? = nil,
+         ddcActor: DDCActor = DDCActor()) {
         // Initialize simple properties first
         self.profileManager = profileManager
         self.displayDetector = displayDetector
+        self.ddcActor = ddcActor
+
+        // Initialize DisplayModeController on MainActor
+        self.displayModeController = MainActor.assumeIsolated {
+            DisplayModeController()
+        }
 
         // Initialize or capture GammaController
         let localGammaController: GammaController
@@ -650,6 +659,178 @@ actor DisplayEngineActor {
         profile: CalibrationProfile?
     ) {
         return await colorCorrectionEngine.getCorrectionState(for: displayID)
+    }
+
+    // MARK: - Display Mode Control
+
+    /// Get available display modes for a display
+    func availableDisplayModes(for displayID: CGDirectDisplayID) async -> [DisplayModeController.DisplayMode] {
+        return await MainActor.run {
+            displayModeController.availableModes(for: displayID)
+        }
+    }
+
+    /// Get encoding variants (same timing, different encoding)
+    func displayEncodingVariants(for displayID: CGDirectDisplayID) async -> [DisplayModeController.DisplayMode] {
+        return await MainActor.run {
+            displayModeController.encodingVariants(for: displayID, matchingCurrent: true)
+        }
+    }
+
+    /// Get current display mode
+    func currentDisplayMode(for displayID: CGDirectDisplayID) async -> DisplayModeController.DisplayMode? {
+        return await MainActor.run {
+            displayModeController.currentMode(for: displayID)
+        }
+    }
+
+    /// Set display mode
+    func setDisplayMode(_ mode: DisplayModeController.DisplayMode, for displayID: CGDirectDisplayID) async throws {
+        try await MainActor.run {
+            try displayModeController.setMode(mode, for: displayID)
+        }
+
+        logger.info("Display mode changed to: \(mode.description)")
+
+        // Show toast notification
+        await MainActor.run {
+            ToastManager.shared.show(
+                title: "Display Mode Changed",
+                subtitle: mode.description,
+                style: .success
+            )
+        }
+    }
+
+    /// Switch to 8-bit SDR RGB mode
+    func setSDRMode(for displayID: CGDirectDisplayID) async throws {
+        try await MainActor.run {
+            try displayModeController.setSSDRMode(for: displayID)
+        }
+
+        logger.info("Switched to 8-bit SDR RGB mode for display \(displayID)")
+
+        await MainActor.run {
+            ToastManager.shared.show(
+                title: "SDR Mode",
+                subtitle: "8-bit RGB Full Range",
+                style: .success
+            )
+        }
+    }
+
+    /// Switch to 10-bit HDR mode
+    func setHDRMode(for displayID: CGDirectDisplayID) async throws {
+        try await MainActor.run {
+            try displayModeController.setHDRMode(for: displayID)
+        }
+
+        logger.info("Switched to 10-bit HDR mode for display \(displayID)")
+
+        await MainActor.run {
+            ToastManager.shared.show(
+                title: "HDR Mode",
+                subtitle: "10-bit RGB Limited Range",
+                style: .success
+            )
+        }
+    }
+
+    /// Toggle between full and limited RGB range
+    func toggleRGBRange(for displayID: CGDirectDisplayID) async throws {
+        try await MainActor.run {
+            try displayModeController.toggleRGBRange(for: displayID)
+        }
+
+        guard let newMode = await currentDisplayMode(for: displayID) else { return }
+
+        logger.info("RGB range toggled to: \(newMode.range.description)")
+
+        await MainActor.run {
+            ToastManager.shared.show(
+                title: "RGB Range",
+                subtitle: newMode.range.description,
+                style: .success
+            )
+        }
+    }
+
+    // MARK: - DDC Control
+
+    /// Sets the display color preset mode via DDC/CI
+    /// - Parameters:
+    ///   - preset: The color preset to apply
+    ///   - displayID: The target display
+    /// - Throws: DDCActor.DDCError if communication fails or display doesn't support DDC
+    func setColorPreset(_ preset: ColorPreset, for displayID: CGDirectDisplayID) async throws {
+        // Ensure display is connected and supports DDC
+        guard let device = await findDisplayDevice(by: displayID) else {
+            throw DDCActor.DDCError.displayNotFound(displayID)
+        }
+
+        // Check if display has DDC capabilities
+        let capabilities = await ddcActor.detectCapabilities(for: displayID)
+        guard capabilities.supportsColorTemperature || !capabilities.supportedColorPresets.isEmpty else {
+            throw DDCActor.DDCError.ddcNotSupported(displayID)
+        }
+
+        // Send DDC command via DDCActor
+        try await ddcActor.setColorPreset(preset, for: displayID)
+
+        logger.info("Color preset changed to \(preset.displayName) for display \(displayID)")
+
+        // Show toast notification on main thread
+        await MainActor.run {
+            ToastManager.shared.show(
+                title: "Color Mode",
+                subtitle: preset.displayName,
+                style: .success
+            )
+        }
+    }
+
+    /// Reads the current color preset from the display
+    /// - Parameter displayID: The target display
+    /// - Returns: The current color preset, or nil if unrecognized
+    /// - Throws: DDCActor.DDCError if communication fails
+    func readColorPreset(for displayID: CGDirectDisplayID) async throws -> ColorPreset? {
+        let vcpValue = try await ddcActor.readColorPreset(for: displayID)
+        return ColorPreset(vcpValue: vcpValue)
+    }
+
+    /// Detects DDC capabilities for a display and returns updated DisplayDevice
+    /// - Parameter displayID: The display to detect capabilities for
+    /// - Returns: Updated DisplayDevice with detected capabilities, or nil if display not found
+    func detectAndUpdateDDCCapabilities(for displayID: CGDirectDisplayID) async -> DisplayDevice? {
+        print("[DisplayEngine] detectAndUpdateDDCCapabilities called for display \(displayID)")
+
+        // Get display device
+        guard var device = await findDisplayDevice(by: displayID) else {
+            print("[DisplayEngine] Display \(displayID) not found")
+            return nil
+        }
+
+        print("[DisplayEngine] Found device: \(device.name), isBuiltIn: \(device.isBuiltIn)")
+
+        // Skip built-in displays (they don't support DDC)
+        if device.isBuiltIn {
+            print("[DisplayEngine] Skipping built-in display")
+            return device
+        }
+
+        print("[DisplayEngine] Calling ddcActor.detectCapabilities for display \(displayID)")
+
+        // Detect capabilities via DDCActor
+        let capabilities = await ddcActor.detectCapabilities(for: displayID)
+
+        print("[DisplayEngine] Received capabilities: brightness=\(capabilities.supportsBrightness), contrast=\(capabilities.supportsContrast), colorTemp=\(capabilities.supportsColorTemperature)")
+
+        // Update device with detected capabilities
+        device.ddcCapabilities = capabilities
+
+        logger.info("Detected DDC capabilities for \(device.name): brightness=\(capabilities.supportsBrightness), contrast=\(capabilities.supportsContrast), colorTemp=\(capabilities.supportsColorTemperature)")
+
+        return device
     }
 
     // MARK: - Private Helpers

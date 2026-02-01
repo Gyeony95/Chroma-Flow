@@ -21,7 +21,7 @@
 
   ],
   "swiftCommands" : {
-    "C.DDCKit-arm64-apple-macosx15.0-debug.module" : {
+    "C.DDCKit-arm64-apple-macosx26.0-debug.module" : {
       "executable" : "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
       "fileList" : "/Users/gwongihyeon/IosProjects/ChromaFlow/Packages/DDCKit/.build/arm64-apple-macosx/debug/DDCKit.build/sources",
       "importPath" : "/Users/gwongihyeon/IosProjects/ChromaFlow/Packages/DDCKit/.build/arm64-apple-macosx/debug/Modules",
@@ -168,7 +168,7 @@
       "tempsPath" : "/Users/gwongihyeon/IosProjects/ChromaFlow/Packages/DDCKit/.build/arm64-apple-macosx/debug/DDCKit.build",
       "wholeModuleOptimization" : false
     },
-    "C.DDCKitPackageTests-arm64-apple-macosx15.0-debug.module" : {
+    "C.DDCKitPackageTests-arm64-apple-macosx26.0-debug.module" : {
       "executable" : "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
       "fileList" : "/Users/gwongihyeon/IosProjects/ChromaFlow/Packages/DDCKit/.build/arm64-apple-macosx/debug/DDCKitPackageTests.build/sources",
       "importPath" : "/Users/gwongihyeon/IosProjects/ChromaFlow/Packages/DDCKit/.build/arm64-apple-macosx/debug/Modules",
@@ -269,7 +269,7 @@
       "tempsPath" : "/Users/gwongihyeon/IosProjects/ChromaFlow/Packages/DDCKit/.build/arm64-apple-macosx/debug/DDCKitPackageTests.build",
       "wholeModuleOptimization" : false
     },
-    "C.DDCKitTests-arm64-apple-macosx15.0-debug.module" : {
+    "C.DDCKitTests-arm64-apple-macosx26.0-debug.module" : {
       "executable" : "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
       "fileList" : "/Users/gwongihyeon/IosProjects/ChromaFlow/Packages/DDCKit/.build/arm64-apple-macosx/debug/DDCKitTests.build/sources",
       "importPath" : "/Users/gwongihyeon/IosProjects/ChromaFlow/Packages/DDCKit/.build/arm64-apple-macosx/debug/Modules",

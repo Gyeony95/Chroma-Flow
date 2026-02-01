@@ -1,0 +1,3 @@
+module DDCKit {
+    header "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/DDCKit.build/include/DDCKit-Swift.h"
+}

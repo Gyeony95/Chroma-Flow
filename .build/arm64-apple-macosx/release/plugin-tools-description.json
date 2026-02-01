@@ -1,0 +1,2406 @@
+{
+  "builtTestProducts" : [
+
+  ],
+  "copyCommands" : {
+    "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow_ChromaFlow.bundle/Assets.xcassets" : {
+      "inputs" : [
+        {
+          "kind" : "directory",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/Resources/Assets.xcassets"
+        }
+      ],
+      "outputs" : [
+        {
+          "kind" : "directory",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow_ChromaFlow.bundle/Assets.xcassets"
+        }
+      ]
+    },
+    "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow_ChromaFlow.bundle/Localizable.xcstrings" : {
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/Resources/Localizable.xcstrings"
+        }
+      ],
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow_ChromaFlow.bundle/Localizable.xcstrings"
+        }
+      ]
+    },
+    "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/KeyboardShortcuts_KeyboardShortcuts.bundle/Info.plist" : {
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/KeyboardShortcuts.build/Info.plist"
+        }
+      ],
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/KeyboardShortcuts_KeyboardShortcuts.bundle/Info.plist"
+        }
+      ]
+    },
+    "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/KeyboardShortcuts_KeyboardShortcuts.bundle/ar.lproj/Localizable.strings" : {
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/checkouts/KeyboardShortcuts/Sources/KeyboardShortcuts/Localization/ar.lproj/Localizable.strings"
+        }
+      ],
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/KeyboardShortcuts_KeyboardShortcuts.bundle/ar.lproj/Localizable.strings"
+        }
+      ]
+    },
+    "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/KeyboardShortcuts_KeyboardShortcuts.bundle/cs.lproj/Localizable.strings" : {
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/checkouts/KeyboardShortcuts/Sources/KeyboardShortcuts/Localization/cs.lproj/Localizable.strings"
+        }
+      ],
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/KeyboardShortcuts_KeyboardShortcuts.bundle/cs.lproj/Localizable.strings"
+        }
+      ]
+    },
+    "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/KeyboardShortcuts_KeyboardShortcuts.bundle/de.lproj/Localizable.strings" : {
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/checkouts/KeyboardShortcuts/Sources/KeyboardShortcuts/Localization/de.lproj/Localizable.strings"
+        }
+      ],
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/KeyboardShortcuts_KeyboardShortcuts.bundle/de.lproj/Localizable.strings"
+        }
+      ]
+    },
+    "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/KeyboardShortcuts_KeyboardShortcuts.bundle/en.lproj/Localizable.strings" : {
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/checkouts/KeyboardShortcuts/Sources/KeyboardShortcuts/Localization/en.lproj/Localizable.strings"
+        }
+      ],
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/KeyboardShortcuts_KeyboardShortcuts.bundle/en.lproj/Localizable.strings"
+        }
+      ]
+    },
+    "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/KeyboardShortcuts_KeyboardShortcuts.bundle/es.lproj/Localizable.strings" : {
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/checkouts/KeyboardShortcuts/Sources/KeyboardShortcuts/Localization/es.lproj/Localizable.strings"
+        }
+      ],
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/KeyboardShortcuts_KeyboardShortcuts.bundle/es.lproj/Localizable.strings"
+        }
+      ]
+    },
+    "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/KeyboardShortcuts_KeyboardShortcuts.bundle/fr.lproj/Localizable.strings" : {
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/checkouts/KeyboardShortcuts/Sources/KeyboardShortcuts/Localization/fr.lproj/Localizable.strings"
+        }
+      ],
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/KeyboardShortcuts_KeyboardShortcuts.bundle/fr.lproj/Localizable.strings"
+        }
+      ]
+    },
+    "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/KeyboardShortcuts_KeyboardShortcuts.bundle/hu.lproj/Localizable.strings" : {
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/checkouts/KeyboardShortcuts/Sources/KeyboardShortcuts/Localization/hu.lproj/Localizable.strings"
+        }
+      ],
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/KeyboardShortcuts_KeyboardShortcuts.bundle/hu.lproj/Localizable.strings"
+        }
+      ]
+    },
+    "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/KeyboardShortcuts_KeyboardShortcuts.bundle/it.lproj/Localizable.strings" : {
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/checkouts/KeyboardShortcuts/Sources/KeyboardShortcuts/Localization/it.lproj/Localizable.strings"
+        }
+      ],
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/KeyboardShortcuts_KeyboardShortcuts.bundle/it.lproj/Localizable.strings"
+        }
+      ]
+    },
+    "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/KeyboardShortcuts_KeyboardShortcuts.bundle/ja.lproj/Localizable.strings" : {
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/checkouts/KeyboardShortcuts/Sources/KeyboardShortcuts/Localization/ja.lproj/Localizable.strings"
+        }
+      ],
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/KeyboardShortcuts_KeyboardShortcuts.bundle/ja.lproj/Localizable.strings"
+        }
+      ]
+    },
+    "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/KeyboardShortcuts_KeyboardShortcuts.bundle/ko.lproj/Localizable.strings" : {
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/checkouts/KeyboardShortcuts/Sources/KeyboardShortcuts/Localization/ko.lproj/Localizable.strings"
+        }
+      ],
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/KeyboardShortcuts_KeyboardShortcuts.bundle/ko.lproj/Localizable.strings"
+        }
+      ]
+    },
+    "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/KeyboardShortcuts_KeyboardShortcuts.bundle/nl.lproj/Localizable.strings" : {
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/checkouts/KeyboardShortcuts/Sources/KeyboardShortcuts/Localization/nl.lproj/Localizable.strings"
+        }
+      ],
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/KeyboardShortcuts_KeyboardShortcuts.bundle/nl.lproj/Localizable.strings"
+        }
+      ]
+    },
+    "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/KeyboardShortcuts_KeyboardShortcuts.bundle/pt-br.lproj/Localizable.strings" : {
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/checkouts/KeyboardShortcuts/Sources/KeyboardShortcuts/Localization/pt-BR.lproj/Localizable.strings"
+        }
+      ],
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/KeyboardShortcuts_KeyboardShortcuts.bundle/pt-br.lproj/Localizable.strings"
+        }
+      ]
+    },
+    "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/KeyboardShortcuts_KeyboardShortcuts.bundle/ru.lproj/Localizable.strings" : {
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/checkouts/KeyboardShortcuts/Sources/KeyboardShortcuts/Localization/ru.lproj/Localizable.strings"
+        }
+      ],
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/KeyboardShortcuts_KeyboardShortcuts.bundle/ru.lproj/Localizable.strings"
+        }
+      ]
+    },
+    "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/KeyboardShortcuts_KeyboardShortcuts.bundle/sk.lproj/Localizable.strings" : {
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/checkouts/KeyboardShortcuts/Sources/KeyboardShortcuts/Localization/sk.lproj/Localizable.strings"
+        }
+      ],
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/KeyboardShortcuts_KeyboardShortcuts.bundle/sk.lproj/Localizable.strings"
+        }
+      ]
+    },
+    "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/KeyboardShortcuts_KeyboardShortcuts.bundle/zh-hans.lproj/Localizable.strings" : {
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/checkouts/KeyboardShortcuts/Sources/KeyboardShortcuts/Localization/zh-Hans.lproj/Localizable.strings"
+        }
+      ],
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/KeyboardShortcuts_KeyboardShortcuts.bundle/zh-hans.lproj/Localizable.strings"
+        }
+      ]
+    },
+    "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/KeyboardShortcuts_KeyboardShortcuts.bundle/zh-tw.lproj/Localizable.strings" : {
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/checkouts/KeyboardShortcuts/Sources/KeyboardShortcuts/Localization/zh-TW.lproj/Localizable.strings"
+        }
+      ],
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/KeyboardShortcuts_KeyboardShortcuts.bundle/zh-tw.lproj/Localizable.strings"
+        }
+      ]
+    }
+  },
+  "explicitTargetDependencyImportCheckingMode" : {
+    "none" : {
+
+    }
+  },
+  "generatedSourceTargetSet" : [
+
+  ],
+  "pluginDescriptions" : [
+
+  ],
+  "swiftCommands" : {
+    "C.ChromaFlow-arm64-apple-macosx26.0-release.module" : {
+      "executable" : "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "fileList" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/sources",
+      "importPath" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/Modules",
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/App/AppState.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/App/Constants.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/App/TestAppAware.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/ChromaFlowApp.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/DisplayEngine/CalibrationDataManager.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/DisplayEngine/ColorCorrectionEngine.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/DisplayEngine/ColorSpaceDefinitions.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/DisplayEngine/DeltaECalculator.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/DisplayEngine/DisplayDetecting.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/DisplayEngine/DisplayDetector.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/DisplayEngine/DisplayEngineActor.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/DisplayEngine/DisplayProfileManaging.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/DisplayEngine/GammaController.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/DisplayEngine/ProfileManager.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/DisplayEngine/VirtualHDREngine.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/DisplayEngine/VirtualHDRTests.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/DisplayEngine/WhiteBalanceController.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/HardwareBridge/AppActivityMonitor.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/HardwareBridge/AutomationEngine.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/HardwareBridge/DDC/Arm64DDCAdapter.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/HardwareBridge/DDC/DDCActor.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/HardwareBridge/DDC/DDCDeviceControlling.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/HardwareBridge/Sensors/AmbientLightSensor.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/HardwareBridge/SolarCalculator.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/HardwareBridge/SolarScheduleEngine.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/Models/AppProfileMapping.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/Models/AutomationAction.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/Models/AutomationRule.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/Models/ColorPreset.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/Models/ColorProfile.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/Models/DDCCapabilities.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/Models/DisplayDevice.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/Models/ReferenceModeManager.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/Persistence/DeviceMemory.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/Persistence/ProfileStore.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/UI/Components/ReferenceModeButton.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/UI/LiquidUI/ElasticModifiers.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/UI/LiquidUI/LiquidDepth.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/UI/LiquidUI/LiquidMaterials.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/UI/LiquidUI/LiquidUITheme.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/UI/Popover/BrightnessContrastSliders.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/UI/Popover/DisplaySelectorView.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/UI/Popover/PopoverContentView.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/UI/Popover/ProfileSwitcherView.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/UI/Theme/UIThemeProviding.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/UI/Toast/ToastManager.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/UI/Toast/ToastNotification.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/UI/Toast/ToastOverlay.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/UI/Toast/ToastView.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/UI/VirtualHDRView.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/Utilities/Debouncer.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/Utilities/EDIDParser.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/Utilities/FeatureFlags.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/Utilities/Logger.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/Utilities/SystemConflictDetector.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/DerivedSources/resource_bundle_accessor.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/swift-version--58304C5D6DBC2206.txt"
+        },
+        {
+          "kind" : "virtual",
+          "name" : "<ChromaFlow-arm64-apple-macosx26.0-release.module-resources>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/Modules/DDCKit.swiftmodule"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/Modules/KeyboardShortcuts.swiftmodule"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/Modules/LaunchAtLogin.swiftmodule"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/sources"
+        }
+      ],
+      "isLibrary" : false,
+      "moduleName" : "ChromaFlow",
+      "moduleOutputPath" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/Modules/ChromaFlow.swiftmodule",
+      "objects" : [
+        "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/AppState.swift.o",
+        "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/Constants.swift.o",
+        "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/TestAppAware.swift.o",
+        "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/ChromaFlowApp.swift.o",
+        "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/CalibrationDataManager.swift.o",
+        "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/ColorCorrectionEngine.swift.o",
+        "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/ColorSpaceDefinitions.swift.o",
+        "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/DeltaECalculator.swift.o",
+        "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/DisplayDetecting.swift.o",
+        "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/DisplayDetector.swift.o",
+        "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/DisplayEngineActor.swift.o",
+        "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/DisplayProfileManaging.swift.o",
+        "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/GammaController.swift.o",
+        "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/ProfileManager.swift.o",
+        "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/VirtualHDREngine.swift.o",
+        "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/VirtualHDRTests.swift.o",
+        "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/WhiteBalanceController.swift.o",
+        "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/AppActivityMonitor.swift.o",
+        "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/AutomationEngine.swift.o",
+        "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/Arm64DDCAdapter.swift.o",
+        "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/DDCActor.swift.o",
+        "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/DDCDeviceControlling.swift.o",
+        "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/AmbientLightSensor.swift.o",
+        "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/SolarCalculator.swift.o",
+        "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/SolarScheduleEngine.swift.o",
+        "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/AppProfileMapping.swift.o",
+        "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/AutomationAction.swift.o",
+        "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/AutomationRule.swift.o",
+        "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/ColorPreset.swift.o",
+        "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/ColorProfile.swift.o",
+        "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/DDCCapabilities.swift.o",
+        "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/DisplayDevice.swift.o",
+        "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/ReferenceModeManager.swift.o",
+        "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/DeviceMemory.swift.o",
+        "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/ProfileStore.swift.o",
+        "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/ReferenceModeButton.swift.o",
+        "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/ElasticModifiers.swift.o",
+        "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/LiquidDepth.swift.o",
+        "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/LiquidMaterials.swift.o",
+        "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/LiquidUITheme.swift.o",
+        "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/BrightnessContrastSliders.swift.o",
+        "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/DisplaySelectorView.swift.o",
+        "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/PopoverContentView.swift.o",
+        "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/ProfileSwitcherView.swift.o",
+        "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/UIThemeProviding.swift.o",
+        "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/ToastManager.swift.o",
+        "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/ToastNotification.swift.o",
+        "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/ToastOverlay.swift.o",
+        "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/ToastView.swift.o",
+        "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/VirtualHDRView.swift.o",
+        "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/Debouncer.swift.o",
+        "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/EDIDParser.swift.o",
+        "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/FeatureFlags.swift.o",
+        "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/Logger.swift.o",
+        "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/SystemConflictDetector.swift.o",
+        "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/resource_bundle_accessor.swift.o"
+      ],
+      "otherArguments" : [
+        "-target",
+        "arm64-apple-macosx14.0",
+        "-whole-module-optimization",
+        "-num-threads",
+        "8",
+        "-serialize-diagnostics",
+        "-O",
+        "-j8",
+        "-DSWIFT_PACKAGE",
+        "-DSWIFT_MODULE_RESOURCE_BUNDLE_AVAILABLE",
+        "-module-cache-path",
+        "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ModuleCache",
+        "-parseable-output",
+        "-Xfrontend",
+        "-entry-point-function-name",
+        "-Xfrontend",
+        "ChromaFlow_main",
+        "-swift-version",
+        "5",
+        "-enable-upcoming-feature",
+        "BareSlashRegexLiterals",
+        "-plugin-path",
+        "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing",
+        "-sdk",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+        "-F",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-F",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+        "-I",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-L",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-g",
+        "-Xcc",
+        "-isysroot",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+        "-Xcc",
+        "-F",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-Xcc",
+        "-F",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+        "-Xcc",
+        "-fPIC",
+        "-Xcc",
+        "-g",
+        "-package-name",
+        "chromaflow"
+      ],
+      "outputFileMapPath" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/output-file-map.json",
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/AppState.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/Constants.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/TestAppAware.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/ChromaFlowApp.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/CalibrationDataManager.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/ColorCorrectionEngine.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/ColorSpaceDefinitions.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/DeltaECalculator.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/DisplayDetecting.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/DisplayDetector.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/DisplayEngineActor.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/DisplayProfileManaging.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/GammaController.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/ProfileManager.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/VirtualHDREngine.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/VirtualHDRTests.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/WhiteBalanceController.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/AppActivityMonitor.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/AutomationEngine.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/Arm64DDCAdapter.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/DDCActor.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/DDCDeviceControlling.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/AmbientLightSensor.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/SolarCalculator.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/SolarScheduleEngine.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/AppProfileMapping.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/AutomationAction.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/AutomationRule.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/ColorPreset.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/ColorProfile.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/DDCCapabilities.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/DisplayDevice.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/ReferenceModeManager.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/DeviceMemory.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/ProfileStore.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/ReferenceModeButton.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/ElasticModifiers.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/LiquidDepth.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/LiquidMaterials.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/LiquidUITheme.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/BrightnessContrastSliders.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/DisplaySelectorView.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/PopoverContentView.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/ProfileSwitcherView.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/UIThemeProviding.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/ToastManager.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/ToastNotification.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/ToastOverlay.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/ToastView.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/VirtualHDRView.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/Debouncer.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/EDIDParser.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/FeatureFlags.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/Logger.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/SystemConflictDetector.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/resource_bundle_accessor.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/Modules/ChromaFlow.swiftmodule"
+        }
+      ],
+      "prepareForIndexing" : false,
+      "sources" : [
+        "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/App/AppState.swift",
+        "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/App/Constants.swift",
+        "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/App/TestAppAware.swift",
+        "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/ChromaFlowApp.swift",
+        "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/DisplayEngine/CalibrationDataManager.swift",
+        "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/DisplayEngine/ColorCorrectionEngine.swift",
+        "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/DisplayEngine/ColorSpaceDefinitions.swift",
+        "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/DisplayEngine/DeltaECalculator.swift",
+        "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/DisplayEngine/DisplayDetecting.swift",
+        "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/DisplayEngine/DisplayDetector.swift",
+        "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/DisplayEngine/DisplayEngineActor.swift",
+        "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/DisplayEngine/DisplayProfileManaging.swift",
+        "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/DisplayEngine/GammaController.swift",
+        "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/DisplayEngine/ProfileManager.swift",
+        "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/DisplayEngine/VirtualHDREngine.swift",
+        "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/DisplayEngine/VirtualHDRTests.swift",
+        "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/DisplayEngine/WhiteBalanceController.swift",
+        "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/HardwareBridge/AppActivityMonitor.swift",
+        "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/HardwareBridge/AutomationEngine.swift",
+        "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/HardwareBridge/DDC/Arm64DDCAdapter.swift",
+        "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/HardwareBridge/DDC/DDCActor.swift",
+        "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/HardwareBridge/DDC/DDCDeviceControlling.swift",
+        "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/HardwareBridge/Sensors/AmbientLightSensor.swift",
+        "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/HardwareBridge/SolarCalculator.swift",
+        "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/HardwareBridge/SolarScheduleEngine.swift",
+        "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/Models/AppProfileMapping.swift",
+        "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/Models/AutomationAction.swift",
+        "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/Models/AutomationRule.swift",
+        "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/Models/ColorPreset.swift",
+        "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/Models/ColorProfile.swift",
+        "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/Models/DDCCapabilities.swift",
+        "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/Models/DisplayDevice.swift",
+        "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/Models/ReferenceModeManager.swift",
+        "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/Persistence/DeviceMemory.swift",
+        "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/Persistence/ProfileStore.swift",
+        "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/UI/Components/ReferenceModeButton.swift",
+        "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/UI/LiquidUI/ElasticModifiers.swift",
+        "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/UI/LiquidUI/LiquidDepth.swift",
+        "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/UI/LiquidUI/LiquidMaterials.swift",
+        "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/UI/LiquidUI/LiquidUITheme.swift",
+        "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/UI/Popover/BrightnessContrastSliders.swift",
+        "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/UI/Popover/DisplaySelectorView.swift",
+        "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/UI/Popover/PopoverContentView.swift",
+        "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/UI/Popover/ProfileSwitcherView.swift",
+        "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/UI/Theme/UIThemeProviding.swift",
+        "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/UI/Toast/ToastManager.swift",
+        "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/UI/Toast/ToastNotification.swift",
+        "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/UI/Toast/ToastOverlay.swift",
+        "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/UI/Toast/ToastView.swift",
+        "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/UI/VirtualHDRView.swift",
+        "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/Utilities/Debouncer.swift",
+        "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/Utilities/EDIDParser.swift",
+        "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/Utilities/FeatureFlags.swift",
+        "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/Utilities/Logger.swift",
+        "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/Utilities/SystemConflictDetector.swift",
+        "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/DerivedSources/resource_bundle_accessor.swift"
+      ],
+      "tempsPath" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build",
+      "wholeModuleOptimization" : true
+    },
+    "C.DDCKit-arm64-apple-macosx26.0-release.module" : {
+      "executable" : "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "fileList" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/DDCKit.build/sources",
+      "importPath" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/Modules",
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/Packages/DDCKit/Sources/DDCKit/DDCCapabilityDetector.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/Packages/DDCKit/Sources/DDCKit/DDCInterface.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/Packages/DDCKit/Sources/DDCKit/DDCKit.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/Packages/DDCKit/Sources/DDCKit/EDIDReader.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/Packages/DDCKit/Sources/DDCKit/I2CTransport.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/Packages/DDCKit/Sources/DDCKit/VCPCodes.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/swift-version--58304C5D6DBC2206.txt"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/DDCKit.build/sources"
+        }
+      ],
+      "isLibrary" : true,
+      "moduleName" : "DDCKit",
+      "moduleOutputPath" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/Modules/DDCKit.swiftmodule",
+      "objects" : [
+        "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/DDCKit.build/DDCCapabilityDetector.swift.o",
+        "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/DDCKit.build/DDCInterface.swift.o",
+        "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/DDCKit.build/DDCKit.swift.o",
+        "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/DDCKit.build/EDIDReader.swift.o",
+        "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/DDCKit.build/I2CTransport.swift.o",
+        "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/DDCKit.build/VCPCodes.swift.o"
+      ],
+      "otherArguments" : [
+        "-target",
+        "arm64-apple-macosx14.0",
+        "-whole-module-optimization",
+        "-num-threads",
+        "8",
+        "-serialize-diagnostics",
+        "-O",
+        "-j8",
+        "-DSWIFT_PACKAGE",
+        "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+        "-module-cache-path",
+        "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ModuleCache",
+        "-parseable-output",
+        "-parse-as-library",
+        "-emit-objc-header",
+        "-emit-objc-header-path",
+        "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/DDCKit.build/include/DDCKit-Swift.h",
+        "-swift-version",
+        "5",
+        "-plugin-path",
+        "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing",
+        "-sdk",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+        "-F",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-F",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+        "-I",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-L",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-g",
+        "-Xcc",
+        "-isysroot",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+        "-Xcc",
+        "-F",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-Xcc",
+        "-F",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+        "-Xcc",
+        "-fPIC",
+        "-Xcc",
+        "-g",
+        "-package-name",
+        "chromaflow"
+      ],
+      "outputFileMapPath" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/DDCKit.build/output-file-map.json",
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/DDCKit.build/DDCCapabilityDetector.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/DDCKit.build/DDCInterface.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/DDCKit.build/DDCKit.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/DDCKit.build/EDIDReader.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/DDCKit.build/I2CTransport.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/DDCKit.build/VCPCodes.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/Modules/DDCKit.swiftmodule"
+        }
+      ],
+      "prepareForIndexing" : false,
+      "sources" : [
+        "/Users/gwongihyeon/IosProjects/ChromaFlow/Packages/DDCKit/Sources/DDCKit/DDCCapabilityDetector.swift",
+        "/Users/gwongihyeon/IosProjects/ChromaFlow/Packages/DDCKit/Sources/DDCKit/DDCInterface.swift",
+        "/Users/gwongihyeon/IosProjects/ChromaFlow/Packages/DDCKit/Sources/DDCKit/DDCKit.swift",
+        "/Users/gwongihyeon/IosProjects/ChromaFlow/Packages/DDCKit/Sources/DDCKit/EDIDReader.swift",
+        "/Users/gwongihyeon/IosProjects/ChromaFlow/Packages/DDCKit/Sources/DDCKit/I2CTransport.swift",
+        "/Users/gwongihyeon/IosProjects/ChromaFlow/Packages/DDCKit/Sources/DDCKit/VCPCodes.swift"
+      ],
+      "tempsPath" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/DDCKit.build",
+      "wholeModuleOptimization" : true
+    },
+    "C.KeyboardShortcuts-arm64-apple-macosx26.0-release.module" : {
+      "executable" : "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "fileList" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/KeyboardShortcuts.build/sources",
+      "importPath" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/Modules",
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/checkouts/KeyboardShortcuts/Sources/KeyboardShortcuts/CarbonKeyboardShortcuts.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/checkouts/KeyboardShortcuts/Sources/KeyboardShortcuts/Key.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/checkouts/KeyboardShortcuts/Sources/KeyboardShortcuts/KeyboardShortcuts.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/checkouts/KeyboardShortcuts/Sources/KeyboardShortcuts/NSMenuItem++.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/checkouts/KeyboardShortcuts/Sources/KeyboardShortcuts/Name.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/checkouts/KeyboardShortcuts/Sources/KeyboardShortcuts/Recorder.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/checkouts/KeyboardShortcuts/Sources/KeyboardShortcuts/RecorderCocoa.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/checkouts/KeyboardShortcuts/Sources/KeyboardShortcuts/Shortcut.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/checkouts/KeyboardShortcuts/Sources/KeyboardShortcuts/Utilities.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/checkouts/KeyboardShortcuts/Sources/KeyboardShortcuts/ViewModifiers.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/KeyboardShortcuts.build/DerivedSources/resource_bundle_accessor.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/swift-version--58304C5D6DBC2206.txt"
+        },
+        {
+          "kind" : "virtual",
+          "name" : "<KeyboardShortcuts-arm64-apple-macosx26.0-release.module-resources>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/KeyboardShortcuts.build/sources"
+        }
+      ],
+      "isLibrary" : true,
+      "moduleName" : "KeyboardShortcuts",
+      "moduleOutputPath" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/Modules/KeyboardShortcuts.swiftmodule",
+      "objects" : [
+        "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/KeyboardShortcuts.build/CarbonKeyboardShortcuts.swift.o",
+        "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/KeyboardShortcuts.build/Key.swift.o",
+        "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/KeyboardShortcuts.build/KeyboardShortcuts.swift.o",
+        "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/KeyboardShortcuts.build/NSMenuItem++.swift.o",
+        "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/KeyboardShortcuts.build/Name.swift.o",
+        "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/KeyboardShortcuts.build/Recorder.swift.o",
+        "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/KeyboardShortcuts.build/RecorderCocoa.swift.o",
+        "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/KeyboardShortcuts.build/Shortcut.swift.o",
+        "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/KeyboardShortcuts.build/Utilities.swift.o",
+        "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/KeyboardShortcuts.build/ViewModifiers.swift.o",
+        "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/KeyboardShortcuts.build/resource_bundle_accessor.swift.o"
+      ],
+      "otherArguments" : [
+        "-target",
+        "arm64-apple-macosx10.15",
+        "-whole-module-optimization",
+        "-num-threads",
+        "8",
+        "-serialize-diagnostics",
+        "-O",
+        "-j8",
+        "-DSWIFT_PACKAGE",
+        "-DSWIFT_MODULE_RESOURCE_BUNDLE_AVAILABLE",
+        "-module-cache-path",
+        "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ModuleCache",
+        "-parseable-output",
+        "-parse-as-library",
+        "-emit-objc-header",
+        "-emit-objc-header-path",
+        "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/KeyboardShortcuts.build/include/KeyboardShortcuts-Swift.h",
+        "-swift-version",
+        "5",
+        "-plugin-path",
+        "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing",
+        "-sdk",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+        "-F",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-F",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+        "-I",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-L",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-g",
+        "-Xcc",
+        "-isysroot",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+        "-Xcc",
+        "-F",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-Xcc",
+        "-F",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+        "-Xcc",
+        "-fPIC",
+        "-Xcc",
+        "-g",
+        "-suppress-warnings",
+        "-user-module-version",
+        "2.4.0",
+        "-package-name",
+        "keyboardshortcuts"
+      ],
+      "outputFileMapPath" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/KeyboardShortcuts.build/output-file-map.json",
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/KeyboardShortcuts.build/CarbonKeyboardShortcuts.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/KeyboardShortcuts.build/Key.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/KeyboardShortcuts.build/KeyboardShortcuts.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/KeyboardShortcuts.build/NSMenuItem++.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/KeyboardShortcuts.build/Name.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/KeyboardShortcuts.build/Recorder.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/KeyboardShortcuts.build/RecorderCocoa.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/KeyboardShortcuts.build/Shortcut.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/KeyboardShortcuts.build/Utilities.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/KeyboardShortcuts.build/ViewModifiers.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/KeyboardShortcuts.build/resource_bundle_accessor.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/Modules/KeyboardShortcuts.swiftmodule"
+        }
+      ],
+      "prepareForIndexing" : false,
+      "sources" : [
+        "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/checkouts/KeyboardShortcuts/Sources/KeyboardShortcuts/CarbonKeyboardShortcuts.swift",
+        "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/checkouts/KeyboardShortcuts/Sources/KeyboardShortcuts/Key.swift",
+        "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/checkouts/KeyboardShortcuts/Sources/KeyboardShortcuts/KeyboardShortcuts.swift",
+        "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/checkouts/KeyboardShortcuts/Sources/KeyboardShortcuts/NSMenuItem++.swift",
+        "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/checkouts/KeyboardShortcuts/Sources/KeyboardShortcuts/Name.swift",
+        "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/checkouts/KeyboardShortcuts/Sources/KeyboardShortcuts/Recorder.swift",
+        "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/checkouts/KeyboardShortcuts/Sources/KeyboardShortcuts/RecorderCocoa.swift",
+        "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/checkouts/KeyboardShortcuts/Sources/KeyboardShortcuts/Shortcut.swift",
+        "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/checkouts/KeyboardShortcuts/Sources/KeyboardShortcuts/Utilities.swift",
+        "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/checkouts/KeyboardShortcuts/Sources/KeyboardShortcuts/ViewModifiers.swift",
+        "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/KeyboardShortcuts.build/DerivedSources/resource_bundle_accessor.swift"
+      ],
+      "tempsPath" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/KeyboardShortcuts.build",
+      "wholeModuleOptimization" : true
+    },
+    "C.LaunchAtLogin-arm64-apple-macosx26.0-release.module" : {
+      "executable" : "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "fileList" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/LaunchAtLogin.build/sources",
+      "importPath" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/Modules",
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/checkouts/LaunchAtLogin-Modern/Sources/LaunchAtLogin/LaunchAtLogin.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/swift-version--58304C5D6DBC2206.txt"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/LaunchAtLogin.build/sources"
+        }
+      ],
+      "isLibrary" : true,
+      "moduleName" : "LaunchAtLogin",
+      "moduleOutputPath" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/Modules/LaunchAtLogin.swiftmodule",
+      "objects" : [
+        "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/LaunchAtLogin.build/LaunchAtLogin.swift.o"
+      ],
+      "otherArguments" : [
+        "-target",
+        "arm64-apple-macosx13.0",
+        "-whole-module-optimization",
+        "-num-threads",
+        "8",
+        "-serialize-diagnostics",
+        "-O",
+        "-j8",
+        "-DSWIFT_PACKAGE",
+        "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+        "-module-cache-path",
+        "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ModuleCache",
+        "-parseable-output",
+        "-parse-as-library",
+        "-emit-objc-header",
+        "-emit-objc-header-path",
+        "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/LaunchAtLogin.build/include/LaunchAtLogin-Swift.h",
+        "-swift-version",
+        "5",
+        "-plugin-path",
+        "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing",
+        "-sdk",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+        "-F",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-F",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+        "-I",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-L",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-g",
+        "-Xcc",
+        "-isysroot",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+        "-Xcc",
+        "-F",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-Xcc",
+        "-F",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+        "-Xcc",
+        "-fPIC",
+        "-Xcc",
+        "-g",
+        "-suppress-warnings",
+        "-package-name",
+        "launchatlogin_modern"
+      ],
+      "outputFileMapPath" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/LaunchAtLogin.build/output-file-map.json",
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/LaunchAtLogin.build/LaunchAtLogin.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/Modules/LaunchAtLogin.swiftmodule"
+        }
+      ],
+      "prepareForIndexing" : false,
+      "sources" : [
+        "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/checkouts/LaunchAtLogin-Modern/Sources/LaunchAtLogin/LaunchAtLogin.swift"
+      ],
+      "tempsPath" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/LaunchAtLogin.build",
+      "wholeModuleOptimization" : true
+    }
+  },
+  "swiftFrontendCommands" : {
+
+  },
+  "swiftTargetScanArgs" : {
+    "ChromaFlow" : [
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "-module-name",
+      "ChromaFlow",
+      "-package-name",
+      "chromaflow",
+      "-c",
+      "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/App/AppState.swift",
+      "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/App/Constants.swift",
+      "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/App/TestAppAware.swift",
+      "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/ChromaFlowApp.swift",
+      "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/DisplayEngine/CalibrationDataManager.swift",
+      "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/DisplayEngine/ColorCorrectionEngine.swift",
+      "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/DisplayEngine/ColorSpaceDefinitions.swift",
+      "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/DisplayEngine/DeltaECalculator.swift",
+      "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/DisplayEngine/DisplayDetecting.swift",
+      "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/DisplayEngine/DisplayDetector.swift",
+      "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/DisplayEngine/DisplayEngineActor.swift",
+      "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/DisplayEngine/DisplayProfileManaging.swift",
+      "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/DisplayEngine/GammaController.swift",
+      "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/DisplayEngine/ProfileManager.swift",
+      "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/DisplayEngine/VirtualHDREngine.swift",
+      "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/DisplayEngine/VirtualHDRTests.swift",
+      "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/DisplayEngine/WhiteBalanceController.swift",
+      "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/HardwareBridge/AppActivityMonitor.swift",
+      "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/HardwareBridge/AutomationEngine.swift",
+      "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/HardwareBridge/DDC/Arm64DDCAdapter.swift",
+      "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/HardwareBridge/DDC/DDCActor.swift",
+      "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/HardwareBridge/DDC/DDCDeviceControlling.swift",
+      "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/HardwareBridge/Sensors/AmbientLightSensor.swift",
+      "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/HardwareBridge/SolarCalculator.swift",
+      "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/HardwareBridge/SolarScheduleEngine.swift",
+      "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/Models/AppProfileMapping.swift",
+      "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/Models/AutomationAction.swift",
+      "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/Models/AutomationRule.swift",
+      "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/Models/ColorPreset.swift",
+      "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/Models/ColorProfile.swift",
+      "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/Models/DDCCapabilities.swift",
+      "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/Models/DisplayDevice.swift",
+      "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/Models/ReferenceModeManager.swift",
+      "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/Persistence/DeviceMemory.swift",
+      "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/Persistence/ProfileStore.swift",
+      "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/UI/Components/ReferenceModeButton.swift",
+      "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/UI/LiquidUI/ElasticModifiers.swift",
+      "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/UI/LiquidUI/LiquidDepth.swift",
+      "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/UI/LiquidUI/LiquidMaterials.swift",
+      "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/UI/LiquidUI/LiquidUITheme.swift",
+      "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/UI/Popover/BrightnessContrastSliders.swift",
+      "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/UI/Popover/DisplaySelectorView.swift",
+      "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/UI/Popover/PopoverContentView.swift",
+      "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/UI/Popover/ProfileSwitcherView.swift",
+      "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/UI/Theme/UIThemeProviding.swift",
+      "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/UI/Toast/ToastManager.swift",
+      "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/UI/Toast/ToastNotification.swift",
+      "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/UI/Toast/ToastOverlay.swift",
+      "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/UI/Toast/ToastView.swift",
+      "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/UI/VirtualHDRView.swift",
+      "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/Utilities/Debouncer.swift",
+      "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/Utilities/EDIDParser.swift",
+      "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/Utilities/FeatureFlags.swift",
+      "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/Utilities/Logger.swift",
+      "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/Utilities/SystemConflictDetector.swift",
+      "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/DerivedSources/resource_bundle_accessor.swift",
+      "-I",
+      "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/Modules",
+      "-target",
+      "arm64-apple-macosx14.0",
+      "-whole-module-optimization",
+      "-num-threads",
+      "8",
+      "-serialize-diagnostics",
+      "-O",
+      "-j8",
+      "-DSWIFT_PACKAGE",
+      "-DSWIFT_MODULE_RESOURCE_BUNDLE_AVAILABLE",
+      "-module-cache-path",
+      "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ModuleCache",
+      "-parseable-output",
+      "-Xfrontend",
+      "-entry-point-function-name",
+      "-Xfrontend",
+      "ChromaFlow_main",
+      "-swift-version",
+      "5",
+      "-enable-upcoming-feature",
+      "BareSlashRegexLiterals",
+      "-plugin-path",
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing",
+      "-sdk",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+      "-F",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+      "-F",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+      "-I",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+      "-L",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+      "-g",
+      "-Xcc",
+      "-isysroot",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+      "-Xcc",
+      "-F",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+      "-Xcc",
+      "-F",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+      "-Xcc",
+      "-fPIC",
+      "-Xcc",
+      "-g",
+      "-package-name",
+      "chromaflow",
+      "-driver-use-frontend-path",
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"
+    ],
+    "DDCKit" : [
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "-module-name",
+      "DDCKit",
+      "-package-name",
+      "chromaflow",
+      "-c",
+      "/Users/gwongihyeon/IosProjects/ChromaFlow/Packages/DDCKit/Sources/DDCKit/DDCCapabilityDetector.swift",
+      "/Users/gwongihyeon/IosProjects/ChromaFlow/Packages/DDCKit/Sources/DDCKit/DDCInterface.swift",
+      "/Users/gwongihyeon/IosProjects/ChromaFlow/Packages/DDCKit/Sources/DDCKit/DDCKit.swift",
+      "/Users/gwongihyeon/IosProjects/ChromaFlow/Packages/DDCKit/Sources/DDCKit/EDIDReader.swift",
+      "/Users/gwongihyeon/IosProjects/ChromaFlow/Packages/DDCKit/Sources/DDCKit/I2CTransport.swift",
+      "/Users/gwongihyeon/IosProjects/ChromaFlow/Packages/DDCKit/Sources/DDCKit/VCPCodes.swift",
+      "-I",
+      "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/Modules",
+      "-target",
+      "arm64-apple-macosx14.0",
+      "-whole-module-optimization",
+      "-num-threads",
+      "8",
+      "-serialize-diagnostics",
+      "-O",
+      "-j8",
+      "-DSWIFT_PACKAGE",
+      "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+      "-module-cache-path",
+      "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ModuleCache",
+      "-parseable-output",
+      "-parse-as-library",
+      "-emit-objc-header",
+      "-emit-objc-header-path",
+      "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/DDCKit.build/include/DDCKit-Swift.h",
+      "-swift-version",
+      "5",
+      "-plugin-path",
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing",
+      "-sdk",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+      "-F",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+      "-F",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+      "-I",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+      "-L",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+      "-g",
+      "-Xcc",
+      "-isysroot",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+      "-Xcc",
+      "-F",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+      "-Xcc",
+      "-F",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+      "-Xcc",
+      "-fPIC",
+      "-Xcc",
+      "-g",
+      "-package-name",
+      "chromaflow",
+      "-driver-use-frontend-path",
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"
+    ],
+    "KeyboardShortcuts" : [
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "-module-name",
+      "KeyboardShortcuts",
+      "-package-name",
+      "keyboardshortcuts",
+      "-c",
+      "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/checkouts/KeyboardShortcuts/Sources/KeyboardShortcuts/CarbonKeyboardShortcuts.swift",
+      "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/checkouts/KeyboardShortcuts/Sources/KeyboardShortcuts/Key.swift",
+      "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/checkouts/KeyboardShortcuts/Sources/KeyboardShortcuts/KeyboardShortcuts.swift",
+      "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/checkouts/KeyboardShortcuts/Sources/KeyboardShortcuts/NSMenuItem++.swift",
+      "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/checkouts/KeyboardShortcuts/Sources/KeyboardShortcuts/Name.swift",
+      "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/checkouts/KeyboardShortcuts/Sources/KeyboardShortcuts/Recorder.swift",
+      "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/checkouts/KeyboardShortcuts/Sources/KeyboardShortcuts/RecorderCocoa.swift",
+      "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/checkouts/KeyboardShortcuts/Sources/KeyboardShortcuts/Shortcut.swift",
+      "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/checkouts/KeyboardShortcuts/Sources/KeyboardShortcuts/Utilities.swift",
+      "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/checkouts/KeyboardShortcuts/Sources/KeyboardShortcuts/ViewModifiers.swift",
+      "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/KeyboardShortcuts.build/DerivedSources/resource_bundle_accessor.swift",
+      "-I",
+      "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/Modules",
+      "-target",
+      "arm64-apple-macosx10.15",
+      "-whole-module-optimization",
+      "-num-threads",
+      "8",
+      "-serialize-diagnostics",
+      "-O",
+      "-j8",
+      "-DSWIFT_PACKAGE",
+      "-DSWIFT_MODULE_RESOURCE_BUNDLE_AVAILABLE",
+      "-module-cache-path",
+      "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ModuleCache",
+      "-parseable-output",
+      "-parse-as-library",
+      "-emit-objc-header",
+      "-emit-objc-header-path",
+      "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/KeyboardShortcuts.build/include/KeyboardShortcuts-Swift.h",
+      "-swift-version",
+      "5",
+      "-plugin-path",
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing",
+      "-sdk",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+      "-F",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+      "-F",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+      "-I",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+      "-L",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+      "-g",
+      "-Xcc",
+      "-isysroot",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+      "-Xcc",
+      "-F",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+      "-Xcc",
+      "-F",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+      "-Xcc",
+      "-fPIC",
+      "-Xcc",
+      "-g",
+      "-suppress-warnings",
+      "-user-module-version",
+      "2.4.0",
+      "-package-name",
+      "keyboardshortcuts",
+      "-driver-use-frontend-path",
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"
+    ],
+    "LaunchAtLogin" : [
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "-module-name",
+      "LaunchAtLogin",
+      "-package-name",
+      "launchatlogin_modern",
+      "-c",
+      "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/checkouts/LaunchAtLogin-Modern/Sources/LaunchAtLogin/LaunchAtLogin.swift",
+      "-I",
+      "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/Modules",
+      "-target",
+      "arm64-apple-macosx13.0",
+      "-whole-module-optimization",
+      "-num-threads",
+      "8",
+      "-serialize-diagnostics",
+      "-O",
+      "-j8",
+      "-DSWIFT_PACKAGE",
+      "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+      "-module-cache-path",
+      "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ModuleCache",
+      "-parseable-output",
+      "-parse-as-library",
+      "-emit-objc-header",
+      "-emit-objc-header-path",
+      "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/LaunchAtLogin.build/include/LaunchAtLogin-Swift.h",
+      "-swift-version",
+      "5",
+      "-plugin-path",
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing",
+      "-sdk",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+      "-F",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+      "-F",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+      "-I",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+      "-L",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+      "-g",
+      "-Xcc",
+      "-isysroot",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+      "-Xcc",
+      "-F",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+      "-Xcc",
+      "-F",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+      "-Xcc",
+      "-fPIC",
+      "-Xcc",
+      "-g",
+      "-suppress-warnings",
+      "-package-name",
+      "launchatlogin_modern",
+      "-driver-use-frontend-path",
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"
+    ]
+  },
+  "targetDependencyMap" : {
+    "ChromaFlow" : [
+      "LaunchAtLogin",
+      "KeyboardShortcuts",
+      "DDCKit"
+    ],
+    "DDCKit" : [
+
+    ],
+    "KeyboardShortcuts" : [
+
+    ],
+    "LaunchAtLogin" : [
+
+    ]
+  },
+  "testDiscoveryCommands" : {
+
+  },
+  "testEntryPointCommands" : {
+
+  },
+  "traitConfiguration" : {
+    "default" : {
+
+    }
+  },
+  "writeCommands" : {
+    "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/sources" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<sources-file-list>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/App/AppState.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/App/Constants.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/App/TestAppAware.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/ChromaFlowApp.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/DisplayEngine/CalibrationDataManager.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/DisplayEngine/ColorCorrectionEngine.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/DisplayEngine/ColorSpaceDefinitions.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/DisplayEngine/DeltaECalculator.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/DisplayEngine/DisplayDetecting.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/DisplayEngine/DisplayDetector.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/DisplayEngine/DisplayEngineActor.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/DisplayEngine/DisplayProfileManaging.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/DisplayEngine/GammaController.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/DisplayEngine/ProfileManager.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/DisplayEngine/VirtualHDREngine.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/DisplayEngine/VirtualHDRTests.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/DisplayEngine/WhiteBalanceController.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/HardwareBridge/AppActivityMonitor.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/HardwareBridge/AutomationEngine.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/HardwareBridge/DDC/Arm64DDCAdapter.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/HardwareBridge/DDC/DDCActor.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/HardwareBridge/DDC/DDCDeviceControlling.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/HardwareBridge/Sensors/AmbientLightSensor.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/HardwareBridge/SolarCalculator.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/HardwareBridge/SolarScheduleEngine.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/Models/AppProfileMapping.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/Models/AutomationAction.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/Models/AutomationRule.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/Models/ColorPreset.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/Models/ColorProfile.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/Models/DDCCapabilities.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/Models/DisplayDevice.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/Models/ReferenceModeManager.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/Persistence/DeviceMemory.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/Persistence/ProfileStore.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/UI/Components/ReferenceModeButton.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/UI/LiquidUI/ElasticModifiers.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/UI/LiquidUI/LiquidDepth.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/UI/LiquidUI/LiquidMaterials.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/UI/LiquidUI/LiquidUITheme.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/UI/Popover/BrightnessContrastSliders.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/UI/Popover/DisplaySelectorView.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/UI/Popover/PopoverContentView.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/UI/Popover/ProfileSwitcherView.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/UI/Theme/UIThemeProviding.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/UI/Toast/ToastManager.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/UI/Toast/ToastNotification.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/UI/Toast/ToastOverlay.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/UI/Toast/ToastView.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/UI/VirtualHDRView.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/Utilities/Debouncer.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/Utilities/EDIDParser.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/Utilities/FeatureFlags.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/Utilities/Logger.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/Utilities/SystemConflictDetector.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/DerivedSources/resource_bundle_accessor.swift"
+        }
+      ],
+      "outputFilePath" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/sources"
+    },
+    "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.product/Objects.LinkFileList" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<link-file-list>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/AmbientLightSensor.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/AppActivityMonitor.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/AppProfileMapping.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/AppState.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/Arm64DDCAdapter.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/AutomationAction.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/AutomationEngine.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/AutomationRule.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/BrightnessContrastSliders.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/CalibrationDataManager.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/ChromaFlowApp.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/ColorCorrectionEngine.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/ColorPreset.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/ColorProfile.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/ColorSpaceDefinitions.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/Constants.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/DDCActor.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/DDCCapabilities.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/DDCDeviceControlling.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/Debouncer.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/DeltaECalculator.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/DeviceMemory.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/DisplayDetecting.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/DisplayDetector.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/DisplayDevice.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/DisplayEngineActor.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/DisplayProfileManaging.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/DisplaySelectorView.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/EDIDParser.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/ElasticModifiers.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/FeatureFlags.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/GammaController.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/LiquidDepth.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/LiquidMaterials.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/LiquidUITheme.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/Logger.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/PopoverContentView.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/ProfileManager.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/ProfileStore.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/ProfileSwitcherView.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/ReferenceModeButton.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/ReferenceModeManager.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/SolarCalculator.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/SolarScheduleEngine.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/SystemConflictDetector.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/TestAppAware.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/ToastManager.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/ToastNotification.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/ToastOverlay.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/ToastView.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/UIThemeProviding.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/VirtualHDREngine.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/VirtualHDRTests.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/VirtualHDRView.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/WhiteBalanceController.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/resource_bundle_accessor.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/DDCKit.build/DDCCapabilityDetector.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/DDCKit.build/DDCInterface.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/DDCKit.build/DDCKit.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/DDCKit.build/EDIDReader.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/DDCKit.build/I2CTransport.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/DDCKit.build/VCPCodes.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/KeyboardShortcuts.build/CarbonKeyboardShortcuts.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/KeyboardShortcuts.build/Key.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/KeyboardShortcuts.build/KeyboardShortcuts.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/KeyboardShortcuts.build/NSMenuItem++.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/KeyboardShortcuts.build/Name.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/KeyboardShortcuts.build/Recorder.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/KeyboardShortcuts.build/RecorderCocoa.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/KeyboardShortcuts.build/Shortcut.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/KeyboardShortcuts.build/Utilities.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/KeyboardShortcuts.build/ViewModifiers.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/KeyboardShortcuts.build/resource_bundle_accessor.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/LaunchAtLogin.build/LaunchAtLogin.swift.o"
+        }
+      ],
+      "outputFilePath" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.product/Objects.LinkFileList"
+    },
+    "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/DDCKit.build/sources" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<sources-file-list>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/Packages/DDCKit/Sources/DDCKit/DDCCapabilityDetector.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/Packages/DDCKit/Sources/DDCKit/DDCInterface.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/Packages/DDCKit/Sources/DDCKit/DDCKit.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/Packages/DDCKit/Sources/DDCKit/EDIDReader.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/Packages/DDCKit/Sources/DDCKit/I2CTransport.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/Packages/DDCKit/Sources/DDCKit/VCPCodes.swift"
+        }
+      ],
+      "outputFilePath" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/DDCKit.build/sources"
+    },
+    "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/KeyboardShortcuts.build/sources" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<sources-file-list>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/checkouts/KeyboardShortcuts/Sources/KeyboardShortcuts/CarbonKeyboardShortcuts.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/checkouts/KeyboardShortcuts/Sources/KeyboardShortcuts/Key.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/checkouts/KeyboardShortcuts/Sources/KeyboardShortcuts/KeyboardShortcuts.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/checkouts/KeyboardShortcuts/Sources/KeyboardShortcuts/NSMenuItem++.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/checkouts/KeyboardShortcuts/Sources/KeyboardShortcuts/Name.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/checkouts/KeyboardShortcuts/Sources/KeyboardShortcuts/Recorder.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/checkouts/KeyboardShortcuts/Sources/KeyboardShortcuts/RecorderCocoa.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/checkouts/KeyboardShortcuts/Sources/KeyboardShortcuts/Shortcut.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/checkouts/KeyboardShortcuts/Sources/KeyboardShortcuts/Utilities.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/checkouts/KeyboardShortcuts/Sources/KeyboardShortcuts/ViewModifiers.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/KeyboardShortcuts.build/DerivedSources/resource_bundle_accessor.swift"
+        }
+      ],
+      "outputFilePath" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/KeyboardShortcuts.build/sources"
+    },
+    "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/LaunchAtLogin.build/sources" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<sources-file-list>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/checkouts/LaunchAtLogin-Modern/Sources/LaunchAtLogin/LaunchAtLogin.swift"
+        }
+      ],
+      "outputFilePath" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/LaunchAtLogin.build/sources"
+    },
+    "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/swift-version--58304C5D6DBC2206.txt" : {
+      "alwaysOutOfDate" : true,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<swift-get-version>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"
+        }
+      ],
+      "outputFilePath" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/swift-version--58304C5D6DBC2206.txt"
+    }
+  }
+}

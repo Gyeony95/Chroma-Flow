@@ -9,6 +9,9 @@
 /Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/DisplayEngine/DisplayDetecting.swift
 /Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/DisplayEngine/DisplayDetector.swift
 /Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/DisplayEngine/DisplayEngineActor.swift
+/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/DisplayEngine/DisplayModeController+IOKit.swift
+/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/DisplayEngine/DisplayModeController.swift
+/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/DisplayEngine/DisplayModeControllerTests.swift
 /Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/DisplayEngine/DisplayProfileManaging.swift
 /Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/DisplayEngine/GammaController.swift
 /Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/DisplayEngine/ProfileManager.swift
@@ -26,12 +29,15 @@
 /Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/Models/AppProfileMapping.swift
 /Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/Models/AutomationAction.swift
 /Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/Models/AutomationRule.swift
+/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/Models/ColorPreset.swift
 /Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/Models/ColorProfile.swift
 /Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/Models/DDCCapabilities.swift
 /Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/Models/DisplayDevice.swift
 /Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/Models/ReferenceModeManager.swift
 /Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/Persistence/DeviceMemory.swift
 /Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/Persistence/ProfileStore.swift
+/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/UI/Components/ColorModeSelector.swift
+/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/UI/Components/DisplayModeSelector.swift
 /Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/UI/Components/ReferenceModeButton.swift
 /Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/UI/LiquidUI/ElasticModifiers.swift
 /Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/UI/LiquidUI/LiquidDepth.swift

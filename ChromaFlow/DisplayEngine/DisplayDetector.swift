@@ -11,6 +11,7 @@ final class DisplayDetector: DisplayDetecting, @unchecked Sendable {
 
     private var isMonitoring = false
     private let queue = DispatchQueue(label: "com.chromaflow.display-detector", qos: .userInitiated)
+    private var registeredCallback: CGDisplayReconfigurationCallBack?
 
     // MARK: - Initialization
 
@@ -45,16 +46,19 @@ final class DisplayDetector: DisplayDetecting, @unchecked Sendable {
     private func startMonitoring() {
         guard !isMonitoring else { return }
 
+        print("[DisplayDetector] Starting display monitoring")
+
         // Register for display reconfiguration callbacks
         let callback: CGDisplayReconfigurationCallBack = { displayID, flags, userInfo in
-            guard let detector = userInfo?.assumingMemoryBound(to: DisplayDetector.self).pointee else {
-                return
-            }
-
+            guard let userInfo = userInfo else { return }
+            let detector = Unmanaged<DisplayDetector>.fromOpaque(userInfo).takeUnretainedValue()
             detector.handleDisplayReconfiguration(displayID: displayID, flags: flags)
         }
 
-        // Use withUnsafeMutablePointer to pass self as userInfo
+        // Store callback for later removal
+        registeredCallback = callback
+
+        // Use Unmanaged to pass self as userInfo
         let selfPointer = Unmanaged.passUnretained(self).toOpaque()
 
         CGDisplayRegisterReconfigurationCallback(callback, selfPointer)
@@ -64,8 +68,15 @@ final class DisplayDetector: DisplayDetecting, @unchecked Sendable {
     private func stopMonitoring() {
         guard isMonitoring else { return }
 
-        // Note: CGDisplayRemoveReconfigurationCallback requires the same callback reference
-        // For simplicity, we'll let the system clean up on deinit
+        print("[DisplayDetector] Stopping display monitoring")
+
+        // Properly unregister the callback to prevent crashes
+        if let callback = registeredCallback {
+            let selfPointer = Unmanaged.passUnretained(self).toOpaque()
+            CGDisplayRemoveReconfigurationCallback(callback, selfPointer)
+            registeredCallback = nil
+        }
+
         isMonitoring = false
     }
 
@@ -92,15 +103,22 @@ final class DisplayDetector: DisplayDetecting, @unchecked Sendable {
         var displayCount: UInt32 = 0
         var displays = [CGDirectDisplayID](repeating: 0, count: 16)
 
-        // Get active displays
-        guard CGGetActiveDisplayList(UInt32(displays.count), &displays, &displayCount) == .success else {
+        // Get online displays (includes sleeping/inactive displays)
+        // CGGetActiveDisplayList only returns fully active displays, missing external monitors in some states
+        guard CGGetOnlineDisplayList(UInt32(displays.count), &displays, &displayCount) == .success else {
+            print("[DisplayDetector] Failed to get online display list")
             return []
         }
 
+        print("[DisplayDetector] CGGetOnlineDisplayList returned \(displayCount) displays")
+
         // Build DisplayDevice for each display
-        return displays.prefix(Int(displayCount)).compactMap { displayID in
+        let devices = displays.prefix(Int(displayCount)).compactMap { displayID in
             createDisplayDevice(for: displayID)
         }
+
+        print("[DisplayDetector] Successfully created \(devices.count) DisplayDevice objects")
+        return devices
     }
 
     private func createDisplayDevice(for displayID: CGDirectDisplayID) -> DisplayDevice? {

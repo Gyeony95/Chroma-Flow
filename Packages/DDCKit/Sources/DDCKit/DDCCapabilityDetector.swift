@@ -51,7 +51,7 @@ public final class DDCCapabilityDetector: @unchecked Sendable {
             protocolClass: parsedCapabilities.protocolClass,
             supportsBrightness: supportsBrightness,
             supportsContrast: supportedCodes.contains(.contrast),
-            supportsColorTemperature: supportedCodes.contains(.colorTemperature),
+            supportsColorPresetSelect: supportedCodes.contains(.colorPresetSelect),
             supportsInputSource: supportedCodes.contains(.inputSource),
             supportedColorPresets: parsedCapabilities.supportedColorPresets,
             maxBrightness: parsedCapabilities.maxBrightness,
@@ -163,8 +163,8 @@ public final class DDCCapabilityDetector: @unchecked Sendable {
                     if let vcpCode = VCPCode(rawValue: code) {
                         supportedCodes.insert(vcpCode)
 
-                        // If this is color temperature, extract presets
-                        if vcpCode == .colorTemperature,
+                        // If this is color preset select, extract presets
+                        if vcpCode == .colorPresetSelect,
                            let presetRange = component.range(of: "\\(([^)]+)\\)", options: .regularExpression) {
                             let presetSubstring = component[presetRange]
                             let presetStr = String(presetSubstring.dropFirst(1).dropLast(1))

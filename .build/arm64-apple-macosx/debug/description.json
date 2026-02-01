@@ -333,6 +333,18 @@
         },
         {
           "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/DisplayEngine/DisplayModeController+IOKit.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/DisplayEngine/DisplayModeController.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/DisplayEngine/DisplayModeControllerTests.swift"
+        },
+        {
+          "kind" : "file",
           "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/DisplayEngine/DisplayProfileManaging.swift"
         },
         {
@@ -401,6 +413,10 @@
         },
         {
           "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/Models/ColorPreset.swift"
+        },
+        {
+          "kind" : "file",
           "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/Models/ColorProfile.swift"
         },
         {
@@ -422,6 +438,14 @@
         {
           "kind" : "file",
           "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/Persistence/ProfileStore.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/UI/Components/ColorModeSelector.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/UI/Components/DisplayModeSelector.swift"
         },
         {
           "kind" : "file",
@@ -547,6 +571,9 @@
         "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/debug/ChromaFlow.build/DisplayDetecting.swift.o",
         "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/debug/ChromaFlow.build/DisplayDetector.swift.o",
         "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/debug/ChromaFlow.build/DisplayEngineActor.swift.o",
+        "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/debug/ChromaFlow.build/DisplayModeController+IOKit.swift.o",
+        "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/debug/ChromaFlow.build/DisplayModeController.swift.o",
+        "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/debug/ChromaFlow.build/DisplayModeControllerTests.swift.o",
         "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/debug/ChromaFlow.build/DisplayProfileManaging.swift.o",
         "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/debug/ChromaFlow.build/GammaController.swift.o",
         "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/debug/ChromaFlow.build/ProfileManager.swift.o",
@@ -564,12 +591,15 @@
         "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/debug/ChromaFlow.build/AppProfileMapping.swift.o",
         "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/debug/ChromaFlow.build/AutomationAction.swift.o",
         "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/debug/ChromaFlow.build/AutomationRule.swift.o",
+        "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/debug/ChromaFlow.build/ColorPreset.swift.o",
         "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/debug/ChromaFlow.build/ColorProfile.swift.o",
         "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/debug/ChromaFlow.build/DDCCapabilities.swift.o",
         "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/debug/ChromaFlow.build/DisplayDevice.swift.o",
         "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/debug/ChromaFlow.build/ReferenceModeManager.swift.o",
         "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/debug/ChromaFlow.build/DeviceMemory.swift.o",
         "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/debug/ChromaFlow.build/ProfileStore.swift.o",
+        "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/debug/ChromaFlow.build/ColorModeSelector.swift.o",
+        "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/debug/ChromaFlow.build/DisplayModeSelector.swift.o",
         "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/debug/ChromaFlow.build/ReferenceModeButton.swift.o",
         "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/debug/ChromaFlow.build/ElasticModifiers.swift.o",
         "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/debug/ChromaFlow.build/LiquidDepth.swift.o",
@@ -697,6 +727,18 @@
         },
         {
           "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/debug/ChromaFlow.build/DisplayModeController+IOKit.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/debug/ChromaFlow.build/DisplayModeController.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/debug/ChromaFlow.build/DisplayModeControllerTests.swift.o"
+        },
+        {
+          "kind" : "file",
           "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/debug/ChromaFlow.build/DisplayProfileManaging.swift.o"
         },
         {
@@ -765,6 +807,10 @@
         },
         {
           "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/debug/ChromaFlow.build/ColorPreset.swift.o"
+        },
+        {
+          "kind" : "file",
           "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/debug/ChromaFlow.build/ColorProfile.swift.o"
         },
         {
@@ -786,6 +832,14 @@
         {
           "kind" : "file",
           "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/debug/ChromaFlow.build/ProfileStore.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/debug/ChromaFlow.build/ColorModeSelector.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/debug/ChromaFlow.build/DisplayModeSelector.swift.o"
         },
         {
           "kind" : "file",
@@ -889,6 +943,9 @@
         "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/DisplayEngine/DisplayDetecting.swift",
         "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/DisplayEngine/DisplayDetector.swift",
         "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/DisplayEngine/DisplayEngineActor.swift",
+        "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/DisplayEngine/DisplayModeController+IOKit.swift",
+        "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/DisplayEngine/DisplayModeController.swift",
+        "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/DisplayEngine/DisplayModeControllerTests.swift",
         "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/DisplayEngine/DisplayProfileManaging.swift",
         "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/DisplayEngine/GammaController.swift",
         "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/DisplayEngine/ProfileManager.swift",
@@ -906,12 +963,15 @@
         "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/Models/AppProfileMapping.swift",
         "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/Models/AutomationAction.swift",
         "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/Models/AutomationRule.swift",
+        "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/Models/ColorPreset.swift",
         "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/Models/ColorProfile.swift",
         "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/Models/DDCCapabilities.swift",
         "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/Models/DisplayDevice.swift",
         "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/Models/ReferenceModeManager.swift",
         "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/Persistence/DeviceMemory.swift",
         "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/Persistence/ProfileStore.swift",
+        "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/UI/Components/ColorModeSelector.swift",
+        "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/UI/Components/DisplayModeSelector.swift",
         "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/UI/Components/ReferenceModeButton.swift",
         "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/UI/LiquidUI/ElasticModifiers.swift",
         "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/UI/LiquidUI/LiquidDepth.swift",
@@ -1409,6 +1469,9 @@
       "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/DisplayEngine/DisplayDetecting.swift",
       "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/DisplayEngine/DisplayDetector.swift",
       "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/DisplayEngine/DisplayEngineActor.swift",
+      "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/DisplayEngine/DisplayModeController+IOKit.swift",
+      "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/DisplayEngine/DisplayModeController.swift",
+      "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/DisplayEngine/DisplayModeControllerTests.swift",
       "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/DisplayEngine/DisplayProfileManaging.swift",
       "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/DisplayEngine/GammaController.swift",
       "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/DisplayEngine/ProfileManager.swift",
@@ -1426,12 +1489,15 @@
       "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/Models/AppProfileMapping.swift",
       "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/Models/AutomationAction.swift",
       "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/Models/AutomationRule.swift",
+      "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/Models/ColorPreset.swift",
       "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/Models/ColorProfile.swift",
       "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/Models/DDCCapabilities.swift",
       "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/Models/DisplayDevice.swift",
       "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/Models/ReferenceModeManager.swift",
       "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/Persistence/DeviceMemory.swift",
       "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/Persistence/ProfileStore.swift",
+      "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/UI/Components/ColorModeSelector.swift",
+      "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/UI/Components/DisplayModeSelector.swift",
       "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/UI/Components/ReferenceModeButton.swift",
       "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/UI/LiquidUI/ElasticModifiers.swift",
       "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/UI/LiquidUI/LiquidDepth.swift",
@@ -1826,6 +1892,18 @@
         },
         {
           "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/DisplayEngine/DisplayModeController+IOKit.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/DisplayEngine/DisplayModeController.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/DisplayEngine/DisplayModeControllerTests.swift"
+        },
+        {
+          "kind" : "file",
           "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/DisplayEngine/DisplayProfileManaging.swift"
         },
         {
@@ -1894,6 +1972,10 @@
         },
         {
           "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/Models/ColorPreset.swift"
+        },
+        {
+          "kind" : "file",
           "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/Models/ColorProfile.swift"
         },
         {
@@ -1915,6 +1997,14 @@
         {
           "kind" : "file",
           "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/Persistence/ProfileStore.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/UI/Components/ColorModeSelector.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/UI/Components/DisplayModeSelector.swift"
         },
         {
           "kind" : "file",
@@ -2060,6 +2150,14 @@
         },
         {
           "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/debug/ChromaFlow.build/ColorModeSelector.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/debug/ChromaFlow.build/ColorPreset.swift.o"
+        },
+        {
+          "kind" : "file",
           "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/debug/ChromaFlow.build/ColorProfile.swift.o"
         },
         {
@@ -2109,6 +2207,22 @@
         {
           "kind" : "file",
           "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/debug/ChromaFlow.build/DisplayEngineActor.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/debug/ChromaFlow.build/DisplayModeController+IOKit.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/debug/ChromaFlow.build/DisplayModeController.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/debug/ChromaFlow.build/DisplayModeControllerTests.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/debug/ChromaFlow.build/DisplayModeSelector.swift.o"
         },
         {
           "kind" : "file",

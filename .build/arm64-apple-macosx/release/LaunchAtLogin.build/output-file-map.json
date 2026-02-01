@@ -1,0 +1,13 @@
+{
+  "": {
+    "dependencies": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/LaunchAtLogin.build/LaunchAtLogin.d",
+    "object": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/LaunchAtLogin.build/LaunchAtLogin.o",
+    "swift-dependencies": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/LaunchAtLogin.build/master.swiftdeps"
+  },
+  "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/checkouts/LaunchAtLogin-Modern/Sources/LaunchAtLogin/LaunchAtLogin.swift": {
+    "object": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/LaunchAtLogin.build/LaunchAtLogin.swift.o",
+    "swiftmodule": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/LaunchAtLogin.build/LaunchAtLogin~partial.swiftmodule",
+    "swift-dependencies": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/LaunchAtLogin.build/LaunchAtLogin.swiftdeps",
+    "diagnostics": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/LaunchAtLogin.build/LaunchAtLogin.dia"
+  }
+}

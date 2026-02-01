@@ -10,7 +10,7 @@ struct DisplayDevice: Identifiable, Codable, Sendable {
     let connectionType: ConnectionType
     let isBuiltIn: Bool
     let maxBrightness: Double?
-    let ddcCapabilities: DDCCapabilities?
+    var ddcCapabilities: DDCCapabilities?
 
     enum ConnectionType: String, Codable, Sendable {
         case builtIn

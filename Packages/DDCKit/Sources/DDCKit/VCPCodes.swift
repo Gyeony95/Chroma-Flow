@@ -3,7 +3,7 @@ import Foundation
 public enum VCPCode: UInt8, Sendable {
     case brightness = 0x10
     case contrast = 0x12
-    case colorTemperature = 0x14
+    case colorPresetSelect = 0x14
     case inputSource = 0x60
     case powerMode = 0xD6
     case capabilities = 0xF3
@@ -15,7 +15,7 @@ public struct DDCCapabilities: Sendable {
     public let protocolClass: String?
     public let supportsBrightness: Bool
     public let supportsContrast: Bool
-    public let supportsColorTemperature: Bool
+    public let supportsColorPresetSelect: Bool
     public let supportsInputSource: Bool
     public let supportedColorPresets: [Int]
     public let maxBrightness: UInt16
@@ -28,7 +28,7 @@ public struct DDCCapabilities: Sendable {
         protocolClass: String? = nil,
         supportsBrightness: Bool = false,
         supportsContrast: Bool = false,
-        supportsColorTemperature: Bool = false,
+        supportsColorPresetSelect: Bool = false,
         supportsInputSource: Bool = false,
         supportedColorPresets: [Int] = [],
         maxBrightness: UInt16 = 100,
@@ -40,7 +40,7 @@ public struct DDCCapabilities: Sendable {
         self.protocolClass = protocolClass
         self.supportsBrightness = supportsBrightness
         self.supportsContrast = supportsContrast
-        self.supportsColorTemperature = supportsColorTemperature
+        self.supportsColorPresetSelect = supportsColorPresetSelect
         self.supportsInputSource = supportsInputSource
         self.supportedColorPresets = supportedColorPresets
         self.maxBrightness = maxBrightness

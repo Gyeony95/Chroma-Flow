@@ -1,0 +1,343 @@
+{
+  "": {
+    "dependencies": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/ChromaFlow.d",
+    "object": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/ChromaFlow.o",
+    "swift-dependencies": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/master.swiftdeps"
+  },
+  "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/App/AppState.swift": {
+    "object": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/AppState.swift.o",
+    "swiftmodule": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/AppState~partial.swiftmodule",
+    "swift-dependencies": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/AppState.swiftdeps",
+    "diagnostics": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/AppState.dia"
+  },
+  "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/App/Constants.swift": {
+    "object": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/Constants.swift.o",
+    "swiftmodule": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/Constants~partial.swiftmodule",
+    "swift-dependencies": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/Constants.swiftdeps",
+    "diagnostics": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/Constants.dia"
+  },
+  "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/App/TestAppAware.swift": {
+    "object": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/TestAppAware.swift.o",
+    "swiftmodule": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/TestAppAware~partial.swiftmodule",
+    "swift-dependencies": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/TestAppAware.swiftdeps",
+    "diagnostics": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/TestAppAware.dia"
+  },
+  "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/ChromaFlowApp.swift": {
+    "object": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/ChromaFlowApp.swift.o",
+    "swiftmodule": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/ChromaFlowApp~partial.swiftmodule",
+    "swift-dependencies": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/ChromaFlowApp.swiftdeps",
+    "diagnostics": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/ChromaFlowApp.dia"
+  },
+  "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/DisplayEngine/CalibrationDataManager.swift": {
+    "object": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/CalibrationDataManager.swift.o",
+    "swiftmodule": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/CalibrationDataManager~partial.swiftmodule",
+    "swift-dependencies": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/CalibrationDataManager.swiftdeps",
+    "diagnostics": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/CalibrationDataManager.dia"
+  },
+  "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/DisplayEngine/ColorCorrectionEngine.swift": {
+    "object": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/ColorCorrectionEngine.swift.o",
+    "swiftmodule": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/ColorCorrectionEngine~partial.swiftmodule",
+    "swift-dependencies": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/ColorCorrectionEngine.swiftdeps",
+    "diagnostics": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/ColorCorrectionEngine.dia"
+  },
+  "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/DisplayEngine/ColorSpaceDefinitions.swift": {
+    "object": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/ColorSpaceDefinitions.swift.o",
+    "swiftmodule": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/ColorSpaceDefinitions~partial.swiftmodule",
+    "swift-dependencies": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/ColorSpaceDefinitions.swiftdeps",
+    "diagnostics": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/ColorSpaceDefinitions.dia"
+  },
+  "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/DisplayEngine/DeltaECalculator.swift": {
+    "object": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/DeltaECalculator.swift.o",
+    "swiftmodule": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/DeltaECalculator~partial.swiftmodule",
+    "swift-dependencies": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/DeltaECalculator.swiftdeps",
+    "diagnostics": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/DeltaECalculator.dia"
+  },
+  "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/DisplayEngine/DisplayDetecting.swift": {
+    "object": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/DisplayDetecting.swift.o",
+    "swiftmodule": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/DisplayDetecting~partial.swiftmodule",
+    "swift-dependencies": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/DisplayDetecting.swiftdeps",
+    "diagnostics": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/DisplayDetecting.dia"
+  },
+  "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/DisplayEngine/DisplayDetector.swift": {
+    "object": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/DisplayDetector.swift.o",
+    "swiftmodule": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/DisplayDetector~partial.swiftmodule",
+    "swift-dependencies": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/DisplayDetector.swiftdeps",
+    "diagnostics": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/DisplayDetector.dia"
+  },
+  "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/DisplayEngine/DisplayEngineActor.swift": {
+    "object": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/DisplayEngineActor.swift.o",
+    "swiftmodule": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/DisplayEngineActor~partial.swiftmodule",
+    "swift-dependencies": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/DisplayEngineActor.swiftdeps",
+    "diagnostics": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/DisplayEngineActor.dia"
+  },
+  "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/DisplayEngine/DisplayProfileManaging.swift": {
+    "object": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/DisplayProfileManaging.swift.o",
+    "swiftmodule": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/DisplayProfileManaging~partial.swiftmodule",
+    "swift-dependencies": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/DisplayProfileManaging.swiftdeps",
+    "diagnostics": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/DisplayProfileManaging.dia"
+  },
+  "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/DisplayEngine/GammaController.swift": {
+    "object": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/GammaController.swift.o",
+    "swiftmodule": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/GammaController~partial.swiftmodule",
+    "swift-dependencies": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/GammaController.swiftdeps",
+    "diagnostics": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/GammaController.dia"
+  },
+  "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/DisplayEngine/ProfileManager.swift": {
+    "object": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/ProfileManager.swift.o",
+    "swiftmodule": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/ProfileManager~partial.swiftmodule",
+    "swift-dependencies": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/ProfileManager.swiftdeps",
+    "diagnostics": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/ProfileManager.dia"
+  },
+  "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/DisplayEngine/VirtualHDREngine.swift": {
+    "object": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/VirtualHDREngine.swift.o",
+    "swiftmodule": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/VirtualHDREngine~partial.swiftmodule",
+    "swift-dependencies": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/VirtualHDREngine.swiftdeps",
+    "diagnostics": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/VirtualHDREngine.dia"
+  },
+  "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/DisplayEngine/VirtualHDRTests.swift": {
+    "object": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/VirtualHDRTests.swift.o",
+    "swiftmodule": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/VirtualHDRTests~partial.swiftmodule",
+    "swift-dependencies": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/VirtualHDRTests.swiftdeps",
+    "diagnostics": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/VirtualHDRTests.dia"
+  },
+  "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/DisplayEngine/WhiteBalanceController.swift": {
+    "object": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/WhiteBalanceController.swift.o",
+    "swiftmodule": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/WhiteBalanceController~partial.swiftmodule",
+    "swift-dependencies": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/WhiteBalanceController.swiftdeps",
+    "diagnostics": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/WhiteBalanceController.dia"
+  },
+  "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/HardwareBridge/AppActivityMonitor.swift": {
+    "object": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/AppActivityMonitor.swift.o",
+    "swiftmodule": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/AppActivityMonitor~partial.swiftmodule",
+    "swift-dependencies": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/AppActivityMonitor.swiftdeps",
+    "diagnostics": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/AppActivityMonitor.dia"
+  },
+  "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/HardwareBridge/AutomationEngine.swift": {
+    "object": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/AutomationEngine.swift.o",
+    "swiftmodule": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/AutomationEngine~partial.swiftmodule",
+    "swift-dependencies": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/AutomationEngine.swiftdeps",
+    "diagnostics": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/AutomationEngine.dia"
+  },
+  "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/HardwareBridge/DDC/Arm64DDCAdapter.swift": {
+    "object": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/Arm64DDCAdapter.swift.o",
+    "swiftmodule": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/Arm64DDCAdapter~partial.swiftmodule",
+    "swift-dependencies": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/Arm64DDCAdapter.swiftdeps",
+    "diagnostics": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/Arm64DDCAdapter.dia"
+  },
+  "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/HardwareBridge/DDC/DDCActor.swift": {
+    "object": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/DDCActor.swift.o",
+    "swiftmodule": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/DDCActor~partial.swiftmodule",
+    "swift-dependencies": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/DDCActor.swiftdeps",
+    "diagnostics": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/DDCActor.dia"
+  },
+  "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/HardwareBridge/DDC/DDCDeviceControlling.swift": {
+    "object": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/DDCDeviceControlling.swift.o",
+    "swiftmodule": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/DDCDeviceControlling~partial.swiftmodule",
+    "swift-dependencies": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/DDCDeviceControlling.swiftdeps",
+    "diagnostics": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/DDCDeviceControlling.dia"
+  },
+  "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/HardwareBridge/Sensors/AmbientLightSensor.swift": {
+    "object": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/AmbientLightSensor.swift.o",
+    "swiftmodule": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/AmbientLightSensor~partial.swiftmodule",
+    "swift-dependencies": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/AmbientLightSensor.swiftdeps",
+    "diagnostics": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/AmbientLightSensor.dia"
+  },
+  "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/HardwareBridge/SolarCalculator.swift": {
+    "object": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/SolarCalculator.swift.o",
+    "swiftmodule": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/SolarCalculator~partial.swiftmodule",
+    "swift-dependencies": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/SolarCalculator.swiftdeps",
+    "diagnostics": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/SolarCalculator.dia"
+  },
+  "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/HardwareBridge/SolarScheduleEngine.swift": {
+    "object": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/SolarScheduleEngine.swift.o",
+    "swiftmodule": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/SolarScheduleEngine~partial.swiftmodule",
+    "swift-dependencies": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/SolarScheduleEngine.swiftdeps",
+    "diagnostics": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/SolarScheduleEngine.dia"
+  },
+  "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/Models/AppProfileMapping.swift": {
+    "object": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/AppProfileMapping.swift.o",
+    "swiftmodule": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/AppProfileMapping~partial.swiftmodule",
+    "swift-dependencies": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/AppProfileMapping.swiftdeps",
+    "diagnostics": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/AppProfileMapping.dia"
+  },
+  "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/Models/AutomationAction.swift": {
+    "object": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/AutomationAction.swift.o",
+    "swiftmodule": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/AutomationAction~partial.swiftmodule",
+    "swift-dependencies": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/AutomationAction.swiftdeps",
+    "diagnostics": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/AutomationAction.dia"
+  },
+  "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/Models/AutomationRule.swift": {
+    "object": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/AutomationRule.swift.o",
+    "swiftmodule": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/AutomationRule~partial.swiftmodule",
+    "swift-dependencies": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/AutomationRule.swiftdeps",
+    "diagnostics": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/AutomationRule.dia"
+  },
+  "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/Models/ColorPreset.swift": {
+    "object": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/ColorPreset.swift.o",
+    "swiftmodule": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/ColorPreset~partial.swiftmodule",
+    "swift-dependencies": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/ColorPreset.swiftdeps",
+    "diagnostics": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/ColorPreset.dia"
+  },
+  "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/Models/ColorProfile.swift": {
+    "object": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/ColorProfile.swift.o",
+    "swiftmodule": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/ColorProfile~partial.swiftmodule",
+    "swift-dependencies": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/ColorProfile.swiftdeps",
+    "diagnostics": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/ColorProfile.dia"
+  },
+  "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/Models/DDCCapabilities.swift": {
+    "object": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/DDCCapabilities.swift.o",
+    "swiftmodule": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/DDCCapabilities~partial.swiftmodule",
+    "swift-dependencies": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/DDCCapabilities.swiftdeps",
+    "diagnostics": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/DDCCapabilities.dia"
+  },
+  "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/Models/DisplayDevice.swift": {
+    "object": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/DisplayDevice.swift.o",
+    "swiftmodule": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/DisplayDevice~partial.swiftmodule",
+    "swift-dependencies": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/DisplayDevice.swiftdeps",
+    "diagnostics": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/DisplayDevice.dia"
+  },
+  "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/Models/ReferenceModeManager.swift": {
+    "object": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/ReferenceModeManager.swift.o",
+    "swiftmodule": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/ReferenceModeManager~partial.swiftmodule",
+    "swift-dependencies": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/ReferenceModeManager.swiftdeps",
+    "diagnostics": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/ReferenceModeManager.dia"
+  },
+  "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/Persistence/DeviceMemory.swift": {
+    "object": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/DeviceMemory.swift.o",
+    "swiftmodule": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/DeviceMemory~partial.swiftmodule",
+    "swift-dependencies": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/DeviceMemory.swiftdeps",
+    "diagnostics": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/DeviceMemory.dia"
+  },
+  "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/Persistence/ProfileStore.swift": {
+    "object": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/ProfileStore.swift.o",
+    "swiftmodule": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/ProfileStore~partial.swiftmodule",
+    "swift-dependencies": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/ProfileStore.swiftdeps",
+    "diagnostics": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/ProfileStore.dia"
+  },
+  "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/UI/Components/ReferenceModeButton.swift": {
+    "object": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/ReferenceModeButton.swift.o",
+    "swiftmodule": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/ReferenceModeButton~partial.swiftmodule",
+    "swift-dependencies": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/ReferenceModeButton.swiftdeps",
+    "diagnostics": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/ReferenceModeButton.dia"
+  },
+  "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/UI/LiquidUI/ElasticModifiers.swift": {
+    "object": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/ElasticModifiers.swift.o",
+    "swiftmodule": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/ElasticModifiers~partial.swiftmodule",
+    "swift-dependencies": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/ElasticModifiers.swiftdeps",
+    "diagnostics": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/ElasticModifiers.dia"
+  },
+  "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/UI/LiquidUI/LiquidDepth.swift": {
+    "object": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/LiquidDepth.swift.o",
+    "swiftmodule": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/LiquidDepth~partial.swiftmodule",
+    "swift-dependencies": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/LiquidDepth.swiftdeps",
+    "diagnostics": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/LiquidDepth.dia"
+  },
+  "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/UI/LiquidUI/LiquidMaterials.swift": {
+    "object": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/LiquidMaterials.swift.o",
+    "swiftmodule": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/LiquidMaterials~partial.swiftmodule",
+    "swift-dependencies": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/LiquidMaterials.swiftdeps",
+    "diagnostics": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/LiquidMaterials.dia"
+  },
+  "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/UI/LiquidUI/LiquidUITheme.swift": {
+    "object": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/LiquidUITheme.swift.o",
+    "swiftmodule": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/LiquidUITheme~partial.swiftmodule",
+    "swift-dependencies": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/LiquidUITheme.swiftdeps",
+    "diagnostics": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/LiquidUITheme.dia"
+  },
+  "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/UI/Popover/BrightnessContrastSliders.swift": {
+    "object": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/BrightnessContrastSliders.swift.o",
+    "swiftmodule": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/BrightnessContrastSliders~partial.swiftmodule",
+    "swift-dependencies": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/BrightnessContrastSliders.swiftdeps",
+    "diagnostics": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/BrightnessContrastSliders.dia"
+  },
+  "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/UI/Popover/DisplaySelectorView.swift": {
+    "object": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/DisplaySelectorView.swift.o",
+    "swiftmodule": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/DisplaySelectorView~partial.swiftmodule",
+    "swift-dependencies": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/DisplaySelectorView.swiftdeps",
+    "diagnostics": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/DisplaySelectorView.dia"
+  },
+  "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/UI/Popover/PopoverContentView.swift": {
+    "object": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/PopoverContentView.swift.o",
+    "swiftmodule": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/PopoverContentView~partial.swiftmodule",
+    "swift-dependencies": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/PopoverContentView.swiftdeps",
+    "diagnostics": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/PopoverContentView.dia"
+  },
+  "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/UI/Popover/ProfileSwitcherView.swift": {
+    "object": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/ProfileSwitcherView.swift.o",
+    "swiftmodule": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/ProfileSwitcherView~partial.swiftmodule",
+    "swift-dependencies": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/ProfileSwitcherView.swiftdeps",
+    "diagnostics": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/ProfileSwitcherView.dia"
+  },
+  "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/UI/Theme/UIThemeProviding.swift": {
+    "object": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/UIThemeProviding.swift.o",
+    "swiftmodule": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/UIThemeProviding~partial.swiftmodule",
+    "swift-dependencies": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/UIThemeProviding.swiftdeps",
+    "diagnostics": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/UIThemeProviding.dia"
+  },
+  "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/UI/Toast/ToastManager.swift": {
+    "object": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/ToastManager.swift.o",
+    "swiftmodule": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/ToastManager~partial.swiftmodule",
+    "swift-dependencies": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/ToastManager.swiftdeps",
+    "diagnostics": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/ToastManager.dia"
+  },
+  "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/UI/Toast/ToastNotification.swift": {
+    "object": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/ToastNotification.swift.o",
+    "swiftmodule": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/ToastNotification~partial.swiftmodule",
+    "swift-dependencies": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/ToastNotification.swiftdeps",
+    "diagnostics": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/ToastNotification.dia"
+  },
+  "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/UI/Toast/ToastOverlay.swift": {
+    "object": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/ToastOverlay.swift.o",
+    "swiftmodule": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/ToastOverlay~partial.swiftmodule",
+    "swift-dependencies": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/ToastOverlay.swiftdeps",
+    "diagnostics": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/ToastOverlay.dia"
+  },
+  "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/UI/Toast/ToastView.swift": {
+    "object": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/ToastView.swift.o",
+    "swiftmodule": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/ToastView~partial.swiftmodule",
+    "swift-dependencies": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/ToastView.swiftdeps",
+    "diagnostics": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/ToastView.dia"
+  },
+  "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/UI/VirtualHDRView.swift": {
+    "object": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/VirtualHDRView.swift.o",
+    "swiftmodule": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/VirtualHDRView~partial.swiftmodule",
+    "swift-dependencies": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/VirtualHDRView.swiftdeps",
+    "diagnostics": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/VirtualHDRView.dia"
+  },
+  "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/Utilities/Debouncer.swift": {
+    "object": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/Debouncer.swift.o",
+    "swiftmodule": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/Debouncer~partial.swiftmodule",
+    "swift-dependencies": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/Debouncer.swiftdeps",
+    "diagnostics": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/Debouncer.dia"
+  },
+  "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/Utilities/EDIDParser.swift": {
+    "object": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/EDIDParser.swift.o",
+    "swiftmodule": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/EDIDParser~partial.swiftmodule",
+    "swift-dependencies": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/EDIDParser.swiftdeps",
+    "diagnostics": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/EDIDParser.dia"
+  },
+  "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/Utilities/FeatureFlags.swift": {
+    "object": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/FeatureFlags.swift.o",
+    "swiftmodule": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/FeatureFlags~partial.swiftmodule",
+    "swift-dependencies": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/FeatureFlags.swiftdeps",
+    "diagnostics": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/FeatureFlags.dia"
+  },
+  "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/Utilities/Logger.swift": {
+    "object": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/Logger.swift.o",
+    "swiftmodule": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/Logger~partial.swiftmodule",
+    "swift-dependencies": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/Logger.swiftdeps",
+    "diagnostics": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/Logger.dia"
+  },
+  "/Users/gwongihyeon/IosProjects/ChromaFlow/ChromaFlow/Utilities/SystemConflictDetector.swift": {
+    "object": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/SystemConflictDetector.swift.o",
+    "swiftmodule": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/SystemConflictDetector~partial.swiftmodule",
+    "swift-dependencies": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/SystemConflictDetector.swiftdeps",
+    "diagnostics": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/SystemConflictDetector.dia"
+  },
+  "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/DerivedSources/resource_bundle_accessor.swift": {
+    "object": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/resource_bundle_accessor.swift.o",
+    "swiftmodule": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/resource_bundle_accessor~partial.swiftmodule",
+    "swift-dependencies": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/resource_bundle_accessor.swiftdeps",
+    "diagnostics": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow.build/resource_bundle_accessor.dia"
+  }
+}

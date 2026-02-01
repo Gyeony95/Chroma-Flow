@@ -5,6 +5,7 @@ struct PopoverContentView: View {
     @State private var isVisible = false
 
     var body: some View {
+        @Bindable var bindableAppState = appState
         ZStack {
             // Liquid glass background
             LiquidGlass(intensity: 1.2)
@@ -37,6 +38,67 @@ struct PopoverContentView: View {
                 // Organic separator
                 LiquidDivider(opacity: 0.05, blurRadius: 12)
                     .padding(.vertical, LiquidUITheme.Spacing.small)
+
+                // Display Mode Selector (only shown for external displays)
+                if appState.selectedDisplayID != nil,
+                   let display = appState.displays.first(where: { $0.id == appState.selectedDisplayID }),
+                   !display.isBuiltIn,
+                   !appState.availableDisplayModes.isEmpty {
+
+                    DisplayModeSelector(
+                        selectedBitDepth: $bindableAppState.selectedBitDepth,
+                        selectedRange: $bindableAppState.selectedRGBRange,
+                        selectedEncoding: $bindableAppState.selectedColorEncoding,
+                        availableModes: appState.availableDisplayModes
+                    ) { bitDepth, range, encoding in
+                        Task {
+                            await appState.setDisplayMode(bitDepth: bitDepth, range: range, encoding: encoding)
+                        }
+                    }
+                    .liquidDepth(.card)
+                    .padding(.horizontal, LiquidUITheme.Spacing.medium)
+
+                    // Organic separator
+                    LiquidDivider(opacity: 0.05, blurRadius: 12)
+                        .padding(.vertical, LiquidUITheme.Spacing.small)
+                }
+
+                // Color mode selector (shown for all external displays)
+                if appState.selectedDisplayID != nil,
+                   let display = appState.displays.first(where: { $0.id == appState.selectedDisplayID }),
+                   !display.isBuiltIn {
+
+                    VStack(spacing: LiquidUITheme.Spacing.small) {
+                        // Status indicator
+                        if let caps = display.ddcCapabilities, caps.supportsColorTemperature {
+                            HStack {
+                                Image(systemName: "checkmark.circle.fill")
+                                    .foregroundStyle(.green)
+                                Text("DDC Supported")
+                                    .font(.caption)
+                                    .foregroundStyle(.secondary)
+                            }
+                            .padding(.horizontal, LiquidUITheme.Spacing.medium)
+                        } else {
+                            HStack {
+                                Image(systemName: "questionmark.circle.fill")
+                                    .foregroundStyle(.orange)
+                                Text("Attempting DDC control...")
+                                    .font(.caption)
+                                    .foregroundStyle(.secondary)
+                            }
+                            .padding(.horizontal, LiquidUITheme.Spacing.medium)
+                        }
+
+                        ColorModeSelector()
+                            .liquidDepth(.card)
+                            .padding(.horizontal, LiquidUITheme.Spacing.medium)
+                    }
+
+                    // Organic separator
+                    LiquidDivider(opacity: 0.05, blurRadius: 12)
+                        .padding(.vertical, LiquidUITheme.Spacing.small)
+                }
 
                 // Brightness/Contrast sliders
                 BrightnessContrastSliders()

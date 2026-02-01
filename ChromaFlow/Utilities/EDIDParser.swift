@@ -26,32 +26,36 @@ struct EDIDParser {
 
     /// Get raw EDID data from IOKit
     private static func getEDIDData(for displayID: CGDirectDisplayID) -> Data? {
+        print("[EDID] Searching for EDID data for display \(displayID)")
+
+        // Try IOFramebuffer first (more reliable for external displays)
+        if let data = getEDIDFromFramebuffer(for: displayID) {
+            print("[EDID] ✓ Found EDID via IOFramebuffer")
+            return data
+        }
+
+        print("[EDID] Trying IODisplayConnect fallback...")
+
         var servicePort: io_service_t = 0
         var iter: io_iterator_t = 0
 
         // Get IODisplayConnect service for this display
         let matching = IOServiceMatching("IODisplayConnect")
         guard IOServiceGetMatchingServices(kIOMainPortDefault, matching, &iter) == KERN_SUCCESS else {
+            print("[EDID] ✗ Failed to get IODisplayConnect services")
             return nil
         }
 
         defer { IOObjectRelease(iter) }
 
         // Iterate through matching services
+        var foundCount = 0
         while true {
             servicePort = IOIteratorNext(iter)
             if servicePort == 0 { break }
+            foundCount += 1
 
             defer { IOObjectRelease(servicePort) }
-
-            // Check if this service belongs to our display
-            var displayIDProperty: Unmanaged<CFTypeRef>?
-            displayIDProperty = IORegistryEntryCreateCFProperty(
-                servicePort,
-                "IODisplayPrefsKey" as CFString,
-                kCFAllocatorDefault,
-                0
-            )
 
             // Get EDID data
             if let edidProperty = IORegistryEntryCreateCFProperty(
@@ -62,12 +66,62 @@ struct EDIDParser {
             ) {
                 let edid = edidProperty.takeRetainedValue()
                 if let data = edid as? Data {
-                    displayIDProperty?.release()
+                    print("[EDID] Found EDID from IODisplayConnect service \(foundCount) (\(data.count) bytes)")
                     return data
                 }
             }
+        }
 
-            displayIDProperty?.release()
+        print("[EDID] ✗ No EDID found in \(foundCount) IODisplayConnect services")
+        return nil
+    }
+
+    /// Get EDID from IOFramebuffer service (more reliable for external displays)
+    private static func getEDIDFromFramebuffer(for displayID: CGDirectDisplayID) -> Data? {
+        var servicePort: io_service_t = 0
+        var iter: io_iterator_t = 0
+
+        let matching = IOServiceMatching("IOFramebuffer")
+        guard IOServiceGetMatchingServices(kIOMainPortDefault, matching, &iter) == KERN_SUCCESS else {
+            return nil
+        }
+
+        defer { IOObjectRelease(iter) }
+
+        while true {
+            servicePort = IOIteratorNext(iter)
+            if servicePort == 0 { break }
+
+            defer { IOObjectRelease(servicePort) }
+
+            // Check if this framebuffer matches our display ID
+            if let dependentID = IORegistryEntryCreateCFProperty(
+                servicePort,
+                "IOFBDependentID" as CFString,
+                kCFAllocatorDefault,
+                0
+            ) {
+                let depID = dependentID.takeRetainedValue()
+                if let id = depID as? UInt32, id == displayID {
+                    // Found matching framebuffer, try to get EDID
+                    if let edidProperty = IORegistryEntryCreateCFProperty(
+                        servicePort,
+                        "AAPL,DisplayEDID" as CFString,  // Try Apple-specific key first
+                        kCFAllocatorDefault,
+                        0
+                    ) ?? IORegistryEntryCreateCFProperty(
+                        servicePort,
+                        "IODisplayEDID" as CFString,
+                        kCFAllocatorDefault,
+                        0
+                    ) {
+                        let edid = edidProperty.takeRetainedValue()
+                        if let data = edid as? Data {
+                            return data
+                        }
+                    }
+                }
+            }
         }
 
         return nil

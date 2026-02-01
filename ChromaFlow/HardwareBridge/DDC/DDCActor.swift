@@ -131,16 +131,46 @@ actor DDCActor {
         }
     }
 
+    /// Sets the color preset mode for the specified display
+    /// - Parameters:
+    ///   - preset: The color preset to apply (Warm, Standard, Cool, etc.)
+    ///   - displayID: The display to control
+    /// - Throws: DDCError if communication fails
+    func setColorPreset(_ preset: ColorPreset, for displayID: CGDirectDisplayID) async throws {
+        try await executeCommand(for: displayID) { adapter in
+            try await adapter.writeVCP(.colorPresetSelect, value: preset.vcpValue)
+        }
+    }
+
+    /// Reads the current color preset value from the display
+    /// - Parameter displayID: The display to query
+    /// - Returns: The current VCP value (needs to be mapped to ColorPreset by caller)
+    /// - Throws: DDCError if communication fails
+    func readColorPreset(for displayID: CGDirectDisplayID) async throws -> UInt16 {
+        let result = try await executeCommand(for: displayID) { adapter in
+            try await adapter.readVCP(.colorPresetSelect)
+        }
+        return result.current
+    }
+
     /// Detects DDC/CI capabilities for a display
     func detectCapabilities(for displayID: CGDirectDisplayID) async -> DDCCapabilities {
+        print("[DDCActor] detectCapabilities called for display \(displayID)")
+
         // Check cache first
         if let cached = displayStates[displayID]?.cachedCapabilities {
+            print("[DDCActor] Returning cached capabilities for display \(displayID)")
             return cached
         }
 
         do {
+            print("[DDCActor] Creating adapter for display \(displayID)")
             let adapter = try await getOrCreateAdapter(for: displayID)
+
+            print("[DDCActor] Requesting capabilities from adapter...")
             let capabilities = await adapter.capabilities
+
+            print("[DDCActor] Adapter returned capabilities: brightness=\(capabilities.supportsBrightness), contrast=\(capabilities.supportsContrast), colorTemp=\(capabilities.supportsColorTemperature)")
 
             // Cache for future use
             if displayStates[displayID] != nil {
@@ -149,6 +179,7 @@ actor DDCActor {
 
             return capabilities
         } catch {
+            print("[DDCActor] ERROR detecting capabilities for display \(displayID): \(error)")
             // Return empty capabilities on failure
             return DDCCapabilities(
                 supportsBrightness: false,

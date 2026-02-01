@@ -66,6 +66,13 @@ final class AppState {
     var activeCalibrationProfiles: [CGDirectDisplayID: CalibrationProfile] = [:]
     var contentAwareMode: ColorCorrectionEngine.ContentType = .photo
 
+    // Display Mode properties
+    var currentDisplayMode: DisplayModeController.DisplayMode?
+    var availableDisplayModes: [DisplayModeController.DisplayMode] = []
+    var selectedBitDepth: Int = 8
+    var selectedRGBRange: DisplayModeController.RGBRange = .full
+    var selectedColorEncoding: DisplayModeController.ColorEncoding = .rgb
+
     init() {
         // Initialize ReferenceModeManager
         self.referenceModeManager = ReferenceModeManager()
@@ -93,8 +100,16 @@ final class AppState {
 
     /// Load and populate connected displays
     func loadConnectedDisplays() async {
+        print("[AppState] Starting loadConnectedDisplays()")
+
+        // Get displays immediately without DDC detection (fast)
         let connectedDisplays = await displayEngine.connectedDisplays()
         displays = connectedDisplays
+
+        print("[AppState] Found \(connectedDisplays.count) displays:")
+        for display in connectedDisplays {
+            print("[AppState]   - \(display.name) (ID: \(display.id), Built-in: \(display.isBuiltIn))")
+        }
 
         // Set selected display to first available if not already set
         if selectedDisplayID == nil, let firstDisplay = connectedDisplays.first {
@@ -108,6 +123,35 @@ final class AppState {
             } catch {
                 // Failed to get active profile, leave as nil
             }
+
+            // Load display modes for external displays
+            if let display = connectedDisplays.first(where: { $0.id == displayID }), !display.isBuiltIn {
+                await loadDisplayModes(for: displayID)
+            }
+        }
+
+        // Detect DDC capabilities asynchronously in background (non-blocking)
+        let externalDisplays = connectedDisplays.filter { !$0.isBuiltIn }
+        print("[AppState] Detecting DDC for \(externalDisplays.count) external displays...")
+
+        Task.detached { [weak self] in
+            print("[AppState] DDC detection task started")
+            for display in externalDisplays {
+                print("[AppState] Detecting DDC for display \(display.id)...")
+                if let updated = await self?.displayEngine.detectAndUpdateDDCCapabilities(for: display.id) {
+                    print("[AppState] DDC detection completed for display \(display.id)")
+                    await MainActor.run {
+                        if let self = self,
+                           let index = self.displays.firstIndex(where: { $0.id == updated.id }) {
+                            self.displays[index] = updated
+                            print("[AppState] Updated display \(display.id) with DDC capabilities")
+                        }
+                    }
+                } else {
+                    print("[AppState] DDC detection returned nil for display \(display.id)")
+                }
+            }
+            print("[AppState] DDC detection task finished")
         }
     }
 
@@ -271,6 +315,44 @@ final class AppState {
     func refreshCalibrationStatus() async {
         for display in displays {
             displayCalibrationStatus[display.id] = await displayEngine.getCalibrationStatus(for: display.id)
+        }
+    }
+
+    // MARK: - Display Mode Methods
+
+    /// Load available display modes for the selected display
+    func loadDisplayModes(for displayID: CGDirectDisplayID) async {
+        availableDisplayModes = await displayEngine.displayEncodingVariants(for: displayID)
+        currentDisplayMode = await displayEngine.currentDisplayMode(for: displayID)
+
+        if let current = currentDisplayMode {
+            selectedBitDepth = current.bitDepth
+            selectedRGBRange = current.range
+            selectedColorEncoding = current.colorEncoding
+        }
+    }
+
+    /// Set a new display mode with the specified parameters
+    func setDisplayMode(bitDepth: Int, range: DisplayModeController.RGBRange, encoding: DisplayModeController.ColorEncoding) async {
+        guard let displayID = selectedDisplayID else { return }
+
+        // Find matching mode
+        let matchingMode = availableDisplayModes.first { mode in
+            mode.bitDepth == bitDepth &&
+            mode.range == range &&
+            mode.colorEncoding == encoding
+        }
+
+        guard let mode = matchingMode else {
+            ToastManager.shared.showError("Display mode not available")
+            return
+        }
+
+        do {
+            try await displayEngine.setDisplayMode(mode, for: displayID)
+            currentDisplayMode = mode
+        } catch {
+            ToastManager.shared.showError("Failed to change display mode: \(error.localizedDescription)")
         }
     }
 }

@@ -10,6 +10,8 @@
 /Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/debug/ChromaFlow.build/CalibrationDataManager.swift.o
 /Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/debug/ChromaFlow.build/ChromaFlowApp.swift.o
 /Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/debug/ChromaFlow.build/ColorCorrectionEngine.swift.o
+/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/debug/ChromaFlow.build/ColorModeSelector.swift.o
+/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/debug/ChromaFlow.build/ColorPreset.swift.o
 /Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/debug/ChromaFlow.build/ColorProfile.swift.o
 /Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/debug/ChromaFlow.build/ColorSpaceDefinitions.swift.o
 /Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/debug/ChromaFlow.build/Constants.swift.o
@@ -23,6 +25,10 @@
 /Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/debug/ChromaFlow.build/DisplayDetector.swift.o
 /Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/debug/ChromaFlow.build/DisplayDevice.swift.o
 /Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/debug/ChromaFlow.build/DisplayEngineActor.swift.o
+/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/debug/ChromaFlow.build/DisplayModeController+IOKit.swift.o
+/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/debug/ChromaFlow.build/DisplayModeController.swift.o
+/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/debug/ChromaFlow.build/DisplayModeControllerTests.swift.o
+/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/debug/ChromaFlow.build/DisplayModeSelector.swift.o
 /Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/debug/ChromaFlow.build/DisplayProfileManaging.swift.o
 /Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/debug/ChromaFlow.build/DisplaySelectorView.swift.o
 /Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/debug/ChromaFlow.build/EDIDParser.swift.o

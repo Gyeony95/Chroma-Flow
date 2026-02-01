@@ -34,7 +34,10 @@ struct DisplaySelectorView: View {
                         icon: displayIcon(for: display),
                         title: display.name,
                         subtitle: display.connectionType.description,
-                        value: display.id as CGDirectDisplayID?
+                        value: display.id as CGDirectDisplayID?,
+                        action: { newValue in
+                            appState.selectedDisplayID = newValue
+                        }
                     )
                 }
             }
@@ -138,12 +141,12 @@ extension DisplayDevice.ConnectionType {
 struct LiquidPicker<Content: View, Value: Hashable>: View {
     @Binding var selection: Value?
     let label: String
-    @ViewBuilder let content: () -> Content
+    @ViewBuilder let content: Content
     @State private var isExpanded = false
 
     var body: some View {
         Menu {
-            content()
+            content
         } label: {
             HStack {
                 Text(label)
@@ -181,10 +184,11 @@ struct LiquidPickerItem<Value: Hashable>: View {
     let title: String
     let subtitle: String
     let value: Value?
+    let action: (Value?) -> Void
 
     var body: some View {
         Button {
-            // Action handled by parent Menu
+            action(value)
         } label: {
             HStack(spacing: LiquidUITheme.Spacing.medium) {
                 Image(systemName: icon)
@@ -203,6 +207,5 @@ struct LiquidPickerItem<Value: Hashable>: View {
                 Spacer()
             }
         }
-        .tag(value)
     }
 }
