@@ -3,7 +3,7 @@ import Foundation
 extension Foundation.Bundle {
     static let module: Bundle = {
         let mainPath = Bundle.main.bundleURL.appendingPathComponent("ChromaFlow_ChromaFlow.bundle").path
-        let buildPath = "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/release/ChromaFlow_ChromaFlow.bundle"
+        let buildPath = "/Users/henry/EtcProjects/Chroma-Flow/.build/arm64-apple-macosx/release/ChromaFlow_ChromaFlow.bundle"
 
         let preferredBundle = Bundle(path: mainPath)
 

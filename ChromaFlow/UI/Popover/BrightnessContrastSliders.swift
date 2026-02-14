@@ -12,10 +12,6 @@ struct BrightnessContrastSliders: View {
     @State private var debounceTask: Task<Void, Never>?
     @State private var lastHapticValue: Double?
 
-    // Shared DDCActor instance (static to avoid recreation on view updates)
-    private static let ddcActor = DDCActor()
-    private var ddcActor: DDCActor { Self.ddcActor }
-
     var body: some View {
         VStack(spacing: 12) {
             if isLoading {
@@ -131,6 +127,12 @@ struct BrightnessContrastSliders: View {
                 await loadInitialValues()
             }
         }
+        .onChange(of: appState.displays.first(where: { $0.id == appState.selectedDisplayID })?.ddcCapabilities?.supportsBrightness) { _, newValue in
+            if let supported = newValue, !supported {
+                // DDC detection confirmed no brightness support
+                isDDCSupported = false
+            }
+        }
     }
 
     // MARK: - Private Methods
@@ -144,33 +146,43 @@ struct BrightnessContrastSliders: View {
             return
         }
 
-        // Check if display supports DDC
+        // Check if display is external (built-in displays don't support DDC brightness)
         guard let display = appState.displays.first(where: { $0.id == displayID }),
-              !display.isBuiltIn,
-              display.ddcCapabilities?.supportsBrightness == true else {
+              !display.isBuiltIn else {
             isLoading = false
             isDDCSupported = false
             return
         }
 
-        isDDCSupported = true
+        // If DDC capabilities are already known, use them
+        if let caps = display.ddcCapabilities {
+            if !caps.supportsBrightness {
+                isLoading = false
+                isDDCSupported = false
+                return
+            }
+        }
+        // If ddcCapabilities is nil, optimistically try for external displays
 
-        // Read current hardware values
+        // Try to read current hardware values (sequential to avoid I2C response corruption)
         do {
-            async let brightnessValue = ddcActor.readBrightness(for: displayID)
-            async let contrastValue = ddcActor.readContrast(for: displayID)
-
-            let (b, c) = try await (brightnessValue, contrastValue)
+            let b = try await appState.displayEngine.readDDCBrightness(for: displayID)
+            let c = try await appState.displayEngine.readDDCContrast(for: displayID)
 
             // Convert 0.0-1.0 to 0-100
             brightness = b * 100.0
             contrast = c * 100.0
+            isDDCSupported = true
 
         } catch {
-            // Fallback to cached values if read fails
+            // If reading fails, check if we have cached values
             if let cachedValues = appState.ddcValues[displayID] {
                 brightness = cachedValues.brightness * 100.0
                 contrast = cachedValues.contrast * 100.0
+                isDDCSupported = true
+            } else {
+                // No cached values and read failed - DDC probably not supported
+                isDDCSupported = false
             }
         }
 
@@ -218,8 +230,8 @@ struct BrightnessContrastSliders: View {
         let normalizedValue = value / 100.0
 
         // Fire-and-forget DDC command
-        Task.detached {
-            try? await ddcActor.setBrightness(normalizedValue, for: displayID)
+        Task.detached { [displayEngine = appState.displayEngine] in
+            try? await displayEngine.setDDCBrightness(normalizedValue, for: displayID)
         }
 
         // Update cached value immediately for responsiveness
@@ -237,8 +249,8 @@ struct BrightnessContrastSliders: View {
         let normalizedValue = value / 100.0
 
         // Fire-and-forget DDC command
-        Task.detached {
-            try? await ddcActor.setContrast(normalizedValue, for: displayID)
+        Task.detached { [displayEngine = appState.displayEngine] in
+            try? await displayEngine.setDDCContrast(normalizedValue, for: displayID)
         }
 
         // Update cached value immediately for responsiveness

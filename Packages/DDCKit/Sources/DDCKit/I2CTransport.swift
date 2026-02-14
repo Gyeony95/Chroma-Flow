@@ -81,7 +81,7 @@ private typealias IOAVServiceRef = UnsafeMutableRawPointer
 /// Parameters: allocator (CFAllocator), service (io_service_t)
 /// Returns: IOAVServiceRef or nil
 private typealias IOAVServiceCreateWithServiceFunc = @convention(c) (
-    CFAllocator, io_service_t
+    CFAllocator?, io_service_t
 ) -> IOAVServiceRef?
 
 /// Function signature for `IOAVServiceWriteI2C`.
@@ -263,7 +263,7 @@ public final class ARM64I2CTransport: I2CTransport, @unchecked Sendable {
             throw I2CTransportError.unsupported
         }
 
-        guard let avService = createFn(kCFAllocatorDefault, service) else {
+        guard let avService = createFn(nil, service) else {
             throw I2CTransportError.serviceCreationFailed
         }
 

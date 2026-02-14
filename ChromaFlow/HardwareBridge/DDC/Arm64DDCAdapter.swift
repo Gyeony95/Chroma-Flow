@@ -69,8 +69,8 @@ final class Arm64DDCAdapter: DDCDeviceControlling, @unchecked Sendable {
         self.displayID = displayID
         self.transport = transport
 
-        // Get IOFramebuffer service for this display
-        guard let service = Self.getFramebufferService(for: displayID) else {
+        // Get DCPAVServiceProxy service for this display (Apple Silicon)
+        guard let service = Self.getDisplayService(for: displayID) else {
             throw AdapterError.framebufferNotFound
         }
 
@@ -85,20 +85,19 @@ final class Arm64DDCAdapter: DDCDeviceControlling, @unchecked Sendable {
 
     func readVCP(_ code: VCPCode) async throws -> (current: UInt16, max: UInt16) {
         try await performI2CTransaction { [framebufferService, transport] in
-            // DDC/CI read command structure
+            // DDC/CI read request - buffer does NOT include source address (0x51)
+            // IOAVService sends 0x51 as dataAddress automatically
             var request: [UInt8] = [
-                0x51, // Source address (host)
-                0x82, // Length (2 bytes + checksum)
+                0x82, // Length (2 bytes) | 0x80
                 0x01, // VCP request
                 code.rawValue, // VCP code
                 0x00  // Checksum placeholder
             ]
 
-            // Calculate checksum (XOR of all bytes except checksum)
-            let checksum = request.prefix(4).reduce(0x6E) { $0 ^ $1 } // 0x6E is destination address
-            request[4] = checksum
+            // Checksum = XOR of destination (0x6E) ^ source (0x51) ^ all data bytes
+            request[3] = 0x6E ^ 0x51 ^ request[0] ^ request[1] ^ request[2]
 
-            // Send request via I2C
+            // Send request via I2C (address 0x37, dataAddress 0x51 handled by transport)
             do {
                 try transport.write(service: framebufferService, address: 0x37, data: request)
                 print("[DDC] Wrote VCP read request for code 0x\(String(code.rawValue, radix: 16))")
@@ -108,12 +107,12 @@ final class Arm64DDCAdapter: DDCDeviceControlling, @unchecked Sendable {
             }
 
             // Wait for display to process (DDC/CI spec requirement)
-            try await Task.sleep(nanoseconds: 40_000_000) // 40ms
+            try await Task.sleep(nanoseconds: 50_000_000) // 50ms
 
-            // Read response (12 bytes for VCP reply)
+            // Read 11-byte response
             let response: [UInt8]
             do {
-                response = try transport.read(service: framebufferService, address: 0x37, length: 12)
+                response = try transport.read(service: framebufferService, address: 0x37, length: 11)
                 print("[DDC] Read I2C response: \(response.map { String(format: "%02X", $0) }.joined(separator: " "))")
             } catch {
                 print("[DDC] Failed to read I2C response: \(error)")
@@ -121,16 +120,17 @@ final class Arm64DDCAdapter: DDCDeviceControlling, @unchecked Sendable {
             }
 
             // Parse VCP response
-            guard response.count >= 12,
-                  response[0] == 0x6E, // Destination address
-                  response[2] == 0x02, // VCP reply
+            // Response format: [0x6E, length, 0x02, result, vcp_code, type, max_hi, max_lo, cur_hi, cur_lo, checksum]
+            guard response.count >= 11,
+                  response[0] == 0x6E,
+                  response[2] == 0x02,
                   response[4] == code.rawValue else {
                 throw AdapterError.invalidResponse
             }
 
             // Extract current and max values (big-endian)
-            let current = (UInt16(response[8]) << 8) | UInt16(response[9])
             let max = (UInt16(response[6]) << 8) | UInt16(response[7])
+            let current = (UInt16(response[8]) << 8) | UInt16(response[9])
 
             return (current, max)
         }
@@ -138,10 +138,10 @@ final class Arm64DDCAdapter: DDCDeviceControlling, @unchecked Sendable {
 
     func writeVCP(_ code: VCPCode, value: UInt16) async throws {
         try await performI2CTransaction { [framebufferService, transport] in
-            // DDC/CI write command structure
+            // DDC/CI write command - buffer does NOT include source address (0x51)
+            // IOAVService sends 0x51 as dataAddress automatically
             var request: [UInt8] = [
-                0x51, // Source address (host)
-                0x84, // Length (4 bytes + checksum)
+                0x84, // Length (4 bytes) | 0x80
                 0x03, // VCP set
                 code.rawValue, // VCP code
                 UInt8((value >> 8) & 0xFF), // Value high byte
@@ -149,11 +149,9 @@ final class Arm64DDCAdapter: DDCDeviceControlling, @unchecked Sendable {
                 0x00  // Checksum placeholder
             ]
 
-            // Calculate checksum
-            let checksum = request.prefix(6).reduce(0x6E) { $0 ^ $1 }
-            request[6] = checksum
+            // Checksum = XOR of destination (0x6E) ^ source (0x51) ^ all data bytes
+            request[5] = request.prefix(5).reduce(0x6E ^ 0x51) { $0 ^ $1 }
 
-            // Send request via I2C
             do {
                 try transport.write(service: framebufferService, address: 0x37, data: request)
                 print("[DDC] Wrote VCP write request for code 0x\(String(code.rawValue, radix: 16)), value: \(value)")
@@ -246,262 +244,116 @@ final class Arm64DDCAdapter: DDCDeviceControlling, @unchecked Sendable {
 
     // MARK: - IOKit I2C Interface
 
-    private static func getFramebufferService(for displayID: CGDirectDisplayID) -> io_service_t? {
-        print("[DDC] Starting IOFramebuffer service search for display \(displayID)")
+    /// Find the DCPAVServiceProxy io_service_t for a given display ID.
+    ///
+    /// On Apple Silicon, IOFramebuffer does not exist. Instead, we enumerate
+    /// `DCPAVServiceProxy` services (one per display output) and match them
+    /// to the target CGDirectDisplayID by reading the EDID over I2C from
+    /// address 0x50 and comparing vendor/product IDs.
+    private static func getDisplayService(for displayID: CGDirectDisplayID) -> io_service_t? {
+        print("[DDC] Starting DCPAVServiceProxy search for display \(displayID)")
 
-        // First, get EDID info for the target display
-        let targetEDID = EDIDParser.parseEDID(for: displayID)
-        print("[DDC] Target display EDID: vendor=\(targetEDID?.manufacturer ?? "unknown"), product=\(targetEDID?.productCode ?? 0), serial=\(targetEDID?.serialNumber ?? "none")")
+        // Get expected vendor/product from CoreGraphics
+        let expectedVendor = CGDisplayVendorNumber(displayID)
+        let expectedProduct = CGDisplayModelNumber(displayID)
+        print("[DDC] Expected vendor=0x\(String(format: "%X", expectedVendor)), product=\(expectedProduct)")
 
-        // Find IOFramebuffer service by matching EDID properties
-        let matching = IOServiceMatching("IOFramebuffer")
-        var iterator: io_iterator_t = 0
-
-        guard IOServiceGetMatchingServices(kIOMainPortDefault, matching, &iterator) == KERN_SUCCESS else {
-            print("[DDC] Failed to enumerate IOFramebuffer services")
+        var iter: io_iterator_t = 0
+        guard IOServiceGetMatchingServices(kIOMainPortDefault, IOServiceMatching("DCPAVServiceProxy"), &iter) == KERN_SUCCESS else {
+            print("[DDC] Failed to enumerate DCPAVServiceProxy services")
             return nil
         }
+        defer { IOObjectRelease(iter) }
 
-        defer { IOObjectRelease(iterator) }
+        // Collect external services
+        var externalServices: [(service: io_service_t, vendor: UInt32, product: UInt32)] = []
 
-        var bestMatch: (service: io_service_t, score: Int) = (0, 0)
+        while true {
+            let service = IOIteratorNext(iter)
+            if service == 0 { break }
 
-        // Iterate through all IOFramebuffer services
-        while case let candidate = IOIteratorNext(iterator), candidate != 0 {
-            defer {
-                if bestMatch.service != candidate && candidate != 0 {
-                    IOObjectRelease(candidate)
-                }
+            // Only consider external displays
+            var loc = "?"
+            if let p = IORegistryEntryCreateCFProperty(service, "Location" as CFString, kCFAllocatorDefault, 0) {
+                if let s = p.takeRetainedValue() as? String { loc = s }
+            }
+            guard loc == "External" else {
+                IOObjectRelease(service)
+                continue
             }
 
-            var matchScore = 0
-            print("[DDC] Checking IOFramebuffer candidate...")
+            print("[DDC] Found external DCPAVServiceProxy service")
 
-            // Method 1: Try IOFBDependentID first (fastest and most reliable for built-in displays)
-            if let dependentIDProperty = IORegistryEntryCreateCFProperty(
-                candidate,
-                "IOFBDependentID" as CFString,
-                kCFAllocatorDefault,
-                0
-            ) {
-                let dependentIDValue = dependentIDProperty.takeRetainedValue()
+            // Read EDID via I2C to identify the display
+            if let avServiceRef = Self.createIOAVService(for: service) {
+                // Read EDID from I2C address 0x50
+                var offset: [UInt8] = [0x00]
+                var edid = [UInt8](repeating: 0, count: 128)
 
-                if let candidateID = dependentIDValue as? UInt32 {
-                    print("[DDC]   IOFBDependentID: \(candidateID)")
-                    if candidateID == displayID {
-                        print("[DDC] ✓ Exact match via IOFBDependentID for display \(displayID)")
-                        if bestMatch.service != 0 { IOObjectRelease(bestMatch.service) }
-                        return candidate
-                    }
-                }
-            }
+                // Get IOAVService symbols for direct I2C EDID read
+                let frameworkPath = "/System/Library/Frameworks/IOKit.framework/IOKit"
+                if let handle = dlopen(frameworkPath, RTLD_LAZY),
+                   let writeSym = dlsym(handle, "IOAVServiceWriteI2C"),
+                   let readSym = dlsym(handle, "IOAVServiceReadI2C") {
 
-            // Method 2: EDID-based matching (most reliable for external displays)
-            if let targetEDID = targetEDID {
-                var candidateVendor: UInt16?
-                var candidateProduct: UInt16?
-                var candidateSerial: UInt32?
+                    typealias WF = @convention(c) (UnsafeMutableRawPointer, UInt32, UInt32, UnsafeMutablePointer<UInt8>, UInt32) -> Int32
+                    typealias RF = @convention(c) (UnsafeMutableRawPointer, UInt32, UInt32, UnsafeMutablePointer<UInt8>, UInt32) -> Int32
 
-                // Try to read EDID data directly from the framebuffer
-                if let edidData = IORegistryEntryCreateCFProperty(
-                    candidate,
-                    "IODisplayEDID" as CFString,
-                    kCFAllocatorDefault,
-                    0
-                ) {
-                    if let data = edidData.takeRetainedValue() as? Data, data.count >= 16 {
-                        // Parse vendor and product from EDID bytes
-                        let vendorBytes = UInt16(data[8]) << 8 | UInt16(data[9])
-                        candidateVendor = vendorBytes
-                        candidateProduct = UInt16(data[10]) | (UInt16(data[11]) << 8)
-                        candidateSerial = UInt32(data[12]) | (UInt32(data[13]) << 8) |
-                                         (UInt32(data[14]) << 16) | (UInt32(data[15]) << 24)
+                    let writeFn = unsafeBitCast(writeSym, to: WF.self)
+                    let readFn = unsafeBitCast(readSym, to: RF.self)
 
-                        print("[DDC]   EDID: vendor=\(String(format: "0x%04X", candidateVendor ?? 0)), product=\(candidateProduct ?? 0), serial=\(candidateSerial ?? 0)")
-                    }
-                }
+                    let writeResult = writeFn(avServiceRef, 0x50, 0x00, &offset, 1)
+                    if writeResult == 0 {
+                        usleep(20000) // 20ms
+                        let readResult = readFn(avServiceRef, 0x50, 0x00, &edid, 128)
+                        if readResult == 0 {
+                            let edidVendor = UInt32(UInt16(edid[8]) << 8 | UInt16(edid[9]))
+                            let edidProduct = UInt32(UInt16(edid[10]) | (UInt16(edid[11]) << 8))
+                            print("[DDC] Service EDID: vendor=0x\(String(format: "%X", edidVendor)), product=\(edidProduct)")
 
-                // Also check IODisplayVendorID and IODisplayProductID properties
-                if candidateVendor == nil {
-                    if let vendorProp = IORegistryEntryCreateCFProperty(
-                        candidate,
-                        "IODisplayVendorID" as CFString,
-                        kCFAllocatorDefault,
-                        0
-                    ) {
-                        candidateVendor = vendorProp.takeRetainedValue() as? UInt16
-                        print("[DDC]   IODisplayVendorID: \(String(format: "0x%04X", candidateVendor ?? 0))")
-                    }
-                }
+                            externalServices.append((service, edidVendor, edidProduct))
 
-                if candidateProduct == nil {
-                    if let productProp = IORegistryEntryCreateCFProperty(
-                        candidate,
-                        "IODisplayProductID" as CFString,
-                        kCFAllocatorDefault,
-                        0
-                    ) {
-                        candidateProduct = productProp.takeRetainedValue() as? UInt16
-                        print("[DDC]   IODisplayProductID: \(candidateProduct ?? 0)")
-                    }
-                }
-
-                // Also check DisplayVendorID and DisplayProductID (alternative names)
-                if candidateVendor == nil {
-                    if let vendorProp = IORegistryEntryCreateCFProperty(
-                        candidate,
-                        "DisplayVendorID" as CFString,
-                        kCFAllocatorDefault,
-                        0
-                    ) {
-                        candidateVendor = vendorProp.takeRetainedValue() as? UInt16
-                        print("[DDC]   DisplayVendorID: \(String(format: "0x%04X", candidateVendor ?? 0))")
-                    }
-                }
-
-                if candidateProduct == nil {
-                    if let productProp = IORegistryEntryCreateCFProperty(
-                        candidate,
-                        "DisplayProductID" as CFString,
-                        kCFAllocatorDefault,
-                        0
-                    ) {
-                        candidateProduct = productProp.takeRetainedValue() as? UInt16
-                        print("[DDC]   DisplayProductID: \(candidateProduct ?? 0)")
-                    }
-                }
-
-                // Calculate match score
-                if let candidateVendor = candidateVendor,
-                   candidateVendor == targetEDID.vendorID {
-                    matchScore += 1
-                    print("[DDC]   ✓ Vendor ID matches")
-
-                    if let candidateProduct = candidateProduct,
-                       candidateProduct == targetEDID.productCode {
-                        matchScore += 2
-                        print("[DDC]   ✓ Product ID matches")
-
-                        if let targetSerial = targetEDID.serialNumber,
-                           let candidateSerial = candidateSerial,
-                           targetSerial == String(candidateSerial) {
-                            matchScore += 3
-                            print("[DDC]   ✓ Serial number matches")
+                            // Exact match - return immediately
+                            if edidVendor == expectedVendor && edidProduct == expectedProduct {
+                                print("[DDC] Exact EDID match for display \(displayID)")
+                                // Release non-matching services
+                                for other in externalServices where other.service != service {
+                                    IOObjectRelease(other.service)
+                                }
+                                return service
+                            }
+                            continue // Don't release - stored in externalServices
                         }
                     }
                 }
-
-                // If we have a perfect match (vendor + product + serial), return immediately
-                if matchScore >= 6 {
-                    print("[DDC] ✓ Perfect EDID match found for display \(displayID)")
-                    if bestMatch.service != 0 { IOObjectRelease(bestMatch.service) }
-                    return candidate
-                }
             }
 
-            // Method 3: Check IODisplayPrefsKey (UUID-based matching)
-            if let prefsKey = IORegistryEntryCreateCFProperty(
-                candidate,
-                "IODisplayPrefsKey" as CFString,
-                kCFAllocatorDefault,
-                0
-            ) {
-                if let keyString = prefsKey.takeRetainedValue() as? String {
-                    print("[DDC]   IODisplayPrefsKey: \(keyString)")
-                    // The prefs key often contains display ID information
-                    if keyString.contains("DisplayID-\(String(format: "%x", displayID))") {
-                        matchScore += 4
-                        print("[DDC]   ✓ Display ID found in IODisplayPrefsKey")
-                    }
-                }
-            }
-
-            // Update best match if this candidate has a higher score
-            if matchScore > bestMatch.score {
-                if bestMatch.service != 0 { IOObjectRelease(bestMatch.service) }
-                bestMatch = (candidate, matchScore)
-                print("[DDC]   New best match with score: \(matchScore)")
-            }
+            // If EDID read failed, still keep this as a candidate
+            externalServices.append((service, 0, 0))
         }
 
-        // Return the best match if we found any
-        if bestMatch.service != 0 && bestMatch.score > 0 {
-            print("[DDC] ✓ Returning best match for display \(displayID) with score: \(bestMatch.score)")
-            return bestMatch.service
-        }
-
-        // Fallback: If no EDID match found, try ALL framebuffers for external displays
-        print("[DDC] EDID matching failed, trying all framebuffers as fallback...")
-
-        var servicePort: io_service_t = 0
-        var iter2: io_iterator_t = 0
-
-        let matching2 = IOServiceMatching("IOFramebuffer")
-        guard IOServiceGetMatchingServices(kIOMainPortDefault, matching2, &iter2) == KERN_SUCCESS else {
-            print("[DDC] ✗ Failed to enumerate IOFramebuffer services for fallback")
-            return nil
-        }
-
-        defer { IOObjectRelease(iter2) }
-
-        var candidateServices: [(service: io_service_t, isBuiltIn: Bool)] = []
-        var totalFramebuffers = 0
-
-        while true {
-            servicePort = IOIteratorNext(iter2)
-            if servicePort == 0 { break }
-
-            totalFramebuffers += 1
-            print("[DDC] Examining framebuffer #\(totalFramebuffers)")
-
-            // Check if this is the built-in display framebuffer (skip it)
-            var isBuiltIn = false
-            var dependentDisplayID: UInt32?
-
-            if let dependentID = IORegistryEntryCreateCFProperty(
-                servicePort,
-                "IOFBDependentID" as CFString,
-                kCFAllocatorDefault,
-                0
-            ) {
-                let depID = dependentID.takeRetainedValue()
-                if let id = depID as? UInt32 {
-                    dependentDisplayID = id
-                    isBuiltIn = CGDisplayIsBuiltin(id) != 0
-                    print("[DDC]   - IOFBDependentID: \(id)")
-                    print("[DDC]   - CGDisplayIsBuiltin(\(id)): \(isBuiltIn)")
-                } else {
-                    print("[DDC]   - IOFBDependentID exists but not UInt32")
-                }
-            } else {
-                print("[DDC]   - No IOFBDependentID property")
+        // No exact match found - return first unmatched external service
+        if let first = externalServices.first {
+            print("[DDC] No exact match, using first external service for display \(displayID)")
+            for (idx, other) in externalServices.enumerated() where idx > 0 {
+                IOObjectRelease(other.service)
             }
-
-            if !isBuiltIn {
-                candidateServices.append((servicePort, isBuiltIn))
-                print("[DDC]   ✓ Added as external candidate #\(candidateServices.count)")
-            } else {
-                print("[DDC]   ✗ Skipped (built-in display)")
-                IOObjectRelease(servicePort)
-            }
+            return first.service
         }
 
-        print("[DDC] Total framebuffers found: \(totalFramebuffers), external candidates: \(candidateServices.count)")
-
-        // Try the first external framebuffer
-        if let candidate = candidateServices.first {
-            print("[DDC] Using first external framebuffer as fallback for display \(displayID)")
-            // Release all other candidates
-            for (index, candidatePair) in candidateServices.enumerated() where index > 0 {
-                IOObjectRelease(candidatePair.service)
-            }
-            return candidate.service
-        } else {
-            print("[DDC] No external framebuffer candidates found")
-        }
-
-        print("[DDC] ✗ No matching IOFramebuffer service found for display \(displayID)")
+        print("[DDC] No DCPAVServiceProxy found for display \(displayID)")
         return nil
+    }
+
+    /// Create an IOAVService reference from an io_service_t handle (for EDID reading).
+    private static func createIOAVService(for service: io_service_t) -> UnsafeMutableRawPointer? {
+        let frameworkPath = "/System/Library/Frameworks/IOKit.framework/IOKit"
+        guard let handle = dlopen(frameworkPath, RTLD_LAZY),
+              let sym = dlsym(handle, "IOAVServiceCreateWithService") else { return nil }
+
+        typealias CF = @convention(c) (CFAllocator?, io_service_t) -> UnsafeMutableRawPointer?
+        let createFn = unsafeBitCast(sym, to: CF.self)
+        return createFn(nil, service)
     }
 
 }

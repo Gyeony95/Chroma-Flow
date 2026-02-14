@@ -69,21 +69,12 @@ struct PopoverContentView: View {
                    !display.isBuiltIn {
 
                     VStack(spacing: LiquidUITheme.Spacing.small) {
-                        // Status indicator
+                        // DDC status indicator (only shown after detection completes)
                         if let caps = display.ddcCapabilities, caps.supportsColorTemperature {
                             HStack {
                                 Image(systemName: "checkmark.circle.fill")
                                     .foregroundStyle(.green)
                                 Text("DDC Supported")
-                                    .font(.caption)
-                                    .foregroundStyle(.secondary)
-                            }
-                            .padding(.horizontal, LiquidUITheme.Spacing.medium)
-                        } else {
-                            HStack {
-                                Image(systemName: "questionmark.circle.fill")
-                                    .foregroundStyle(.orange)
-                                Text("Attempting DDC control...")
                                     .font(.caption)
                                     .foregroundStyle(.secondary)
                             }

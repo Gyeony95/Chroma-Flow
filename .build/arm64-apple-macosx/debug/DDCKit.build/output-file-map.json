@@ -1,47 +1,47 @@
 {
   "": {
-    "swift-dependencies": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/debug/DDCKit.build/master.swiftdeps"
+    "swift-dependencies": "/Users/henry/EtcProjects/Chroma-Flow/.build/arm64-apple-macosx/debug/DDCKit.build/master.swiftdeps"
   },
-  "/Users/gwongihyeon/IosProjects/ChromaFlow/Packages/DDCKit/Sources/DDCKit/DDCCapabilityDetector.swift": {
-    "dependencies": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/debug/DDCKit.build/DDCCapabilityDetector.d",
-    "object": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/debug/DDCKit.build/DDCCapabilityDetector.swift.o",
-    "swiftmodule": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/debug/DDCKit.build/DDCCapabilityDetector~partial.swiftmodule",
-    "swift-dependencies": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/debug/DDCKit.build/DDCCapabilityDetector.swiftdeps",
-    "diagnostics": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/debug/DDCKit.build/DDCCapabilityDetector.dia"
+  "/Users/henry/EtcProjects/Chroma-Flow/Packages/DDCKit/Sources/DDCKit/DDCCapabilityDetector.swift": {
+    "dependencies": "/Users/henry/EtcProjects/Chroma-Flow/.build/arm64-apple-macosx/debug/DDCKit.build/DDCCapabilityDetector.d",
+    "object": "/Users/henry/EtcProjects/Chroma-Flow/.build/arm64-apple-macosx/debug/DDCKit.build/DDCCapabilityDetector.swift.o",
+    "swiftmodule": "/Users/henry/EtcProjects/Chroma-Flow/.build/arm64-apple-macosx/debug/DDCKit.build/DDCCapabilityDetector~partial.swiftmodule",
+    "swift-dependencies": "/Users/henry/EtcProjects/Chroma-Flow/.build/arm64-apple-macosx/debug/DDCKit.build/DDCCapabilityDetector.swiftdeps",
+    "diagnostics": "/Users/henry/EtcProjects/Chroma-Flow/.build/arm64-apple-macosx/debug/DDCKit.build/DDCCapabilityDetector.dia"
   },
-  "/Users/gwongihyeon/IosProjects/ChromaFlow/Packages/DDCKit/Sources/DDCKit/DDCInterface.swift": {
-    "dependencies": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/debug/DDCKit.build/DDCInterface.d",
-    "object": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/debug/DDCKit.build/DDCInterface.swift.o",
-    "swiftmodule": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/debug/DDCKit.build/DDCInterface~partial.swiftmodule",
-    "swift-dependencies": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/debug/DDCKit.build/DDCInterface.swiftdeps",
-    "diagnostics": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/debug/DDCKit.build/DDCInterface.dia"
+  "/Users/henry/EtcProjects/Chroma-Flow/Packages/DDCKit/Sources/DDCKit/DDCInterface.swift": {
+    "dependencies": "/Users/henry/EtcProjects/Chroma-Flow/.build/arm64-apple-macosx/debug/DDCKit.build/DDCInterface.d",
+    "object": "/Users/henry/EtcProjects/Chroma-Flow/.build/arm64-apple-macosx/debug/DDCKit.build/DDCInterface.swift.o",
+    "swiftmodule": "/Users/henry/EtcProjects/Chroma-Flow/.build/arm64-apple-macosx/debug/DDCKit.build/DDCInterface~partial.swiftmodule",
+    "swift-dependencies": "/Users/henry/EtcProjects/Chroma-Flow/.build/arm64-apple-macosx/debug/DDCKit.build/DDCInterface.swiftdeps",
+    "diagnostics": "/Users/henry/EtcProjects/Chroma-Flow/.build/arm64-apple-macosx/debug/DDCKit.build/DDCInterface.dia"
   },
-  "/Users/gwongihyeon/IosProjects/ChromaFlow/Packages/DDCKit/Sources/DDCKit/DDCKit.swift": {
-    "dependencies": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/debug/DDCKit.build/DDCKit.d",
-    "object": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/debug/DDCKit.build/DDCKit.swift.o",
-    "swiftmodule": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/debug/DDCKit.build/DDCKit~partial.swiftmodule",
-    "swift-dependencies": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/debug/DDCKit.build/DDCKit.swiftdeps",
-    "diagnostics": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/debug/DDCKit.build/DDCKit.dia"
+  "/Users/henry/EtcProjects/Chroma-Flow/Packages/DDCKit/Sources/DDCKit/DDCKit.swift": {
+    "dependencies": "/Users/henry/EtcProjects/Chroma-Flow/.build/arm64-apple-macosx/debug/DDCKit.build/DDCKit.d",
+    "object": "/Users/henry/EtcProjects/Chroma-Flow/.build/arm64-apple-macosx/debug/DDCKit.build/DDCKit.swift.o",
+    "swiftmodule": "/Users/henry/EtcProjects/Chroma-Flow/.build/arm64-apple-macosx/debug/DDCKit.build/DDCKit~partial.swiftmodule",
+    "swift-dependencies": "/Users/henry/EtcProjects/Chroma-Flow/.build/arm64-apple-macosx/debug/DDCKit.build/DDCKit.swiftdeps",
+    "diagnostics": "/Users/henry/EtcProjects/Chroma-Flow/.build/arm64-apple-macosx/debug/DDCKit.build/DDCKit.dia"
   },
-  "/Users/gwongihyeon/IosProjects/ChromaFlow/Packages/DDCKit/Sources/DDCKit/EDIDReader.swift": {
-    "dependencies": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/debug/DDCKit.build/EDIDReader.d",
-    "object": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/debug/DDCKit.build/EDIDReader.swift.o",
-    "swiftmodule": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/debug/DDCKit.build/EDIDReader~partial.swiftmodule",
-    "swift-dependencies": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/debug/DDCKit.build/EDIDReader.swiftdeps",
-    "diagnostics": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/debug/DDCKit.build/EDIDReader.dia"
+  "/Users/henry/EtcProjects/Chroma-Flow/Packages/DDCKit/Sources/DDCKit/EDIDReader.swift": {
+    "dependencies": "/Users/henry/EtcProjects/Chroma-Flow/.build/arm64-apple-macosx/debug/DDCKit.build/EDIDReader.d",
+    "object": "/Users/henry/EtcProjects/Chroma-Flow/.build/arm64-apple-macosx/debug/DDCKit.build/EDIDReader.swift.o",
+    "swiftmodule": "/Users/henry/EtcProjects/Chroma-Flow/.build/arm64-apple-macosx/debug/DDCKit.build/EDIDReader~partial.swiftmodule",
+    "swift-dependencies": "/Users/henry/EtcProjects/Chroma-Flow/.build/arm64-apple-macosx/debug/DDCKit.build/EDIDReader.swiftdeps",
+    "diagnostics": "/Users/henry/EtcProjects/Chroma-Flow/.build/arm64-apple-macosx/debug/DDCKit.build/EDIDReader.dia"
   },
-  "/Users/gwongihyeon/IosProjects/ChromaFlow/Packages/DDCKit/Sources/DDCKit/I2CTransport.swift": {
-    "dependencies": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/debug/DDCKit.build/I2CTransport.d",
-    "object": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/debug/DDCKit.build/I2CTransport.swift.o",
-    "swiftmodule": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/debug/DDCKit.build/I2CTransport~partial.swiftmodule",
-    "swift-dependencies": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/debug/DDCKit.build/I2CTransport.swiftdeps",
-    "diagnostics": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/debug/DDCKit.build/I2CTransport.dia"
+  "/Users/henry/EtcProjects/Chroma-Flow/Packages/DDCKit/Sources/DDCKit/I2CTransport.swift": {
+    "dependencies": "/Users/henry/EtcProjects/Chroma-Flow/.build/arm64-apple-macosx/debug/DDCKit.build/I2CTransport.d",
+    "object": "/Users/henry/EtcProjects/Chroma-Flow/.build/arm64-apple-macosx/debug/DDCKit.build/I2CTransport.swift.o",
+    "swiftmodule": "/Users/henry/EtcProjects/Chroma-Flow/.build/arm64-apple-macosx/debug/DDCKit.build/I2CTransport~partial.swiftmodule",
+    "swift-dependencies": "/Users/henry/EtcProjects/Chroma-Flow/.build/arm64-apple-macosx/debug/DDCKit.build/I2CTransport.swiftdeps",
+    "diagnostics": "/Users/henry/EtcProjects/Chroma-Flow/.build/arm64-apple-macosx/debug/DDCKit.build/I2CTransport.dia"
   },
-  "/Users/gwongihyeon/IosProjects/ChromaFlow/Packages/DDCKit/Sources/DDCKit/VCPCodes.swift": {
-    "dependencies": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/debug/DDCKit.build/VCPCodes.d",
-    "object": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/debug/DDCKit.build/VCPCodes.swift.o",
-    "swiftmodule": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/debug/DDCKit.build/VCPCodes~partial.swiftmodule",
-    "swift-dependencies": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/debug/DDCKit.build/VCPCodes.swiftdeps",
-    "diagnostics": "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/debug/DDCKit.build/VCPCodes.dia"
+  "/Users/henry/EtcProjects/Chroma-Flow/Packages/DDCKit/Sources/DDCKit/VCPCodes.swift": {
+    "dependencies": "/Users/henry/EtcProjects/Chroma-Flow/.build/arm64-apple-macosx/debug/DDCKit.build/VCPCodes.d",
+    "object": "/Users/henry/EtcProjects/Chroma-Flow/.build/arm64-apple-macosx/debug/DDCKit.build/VCPCodes.swift.o",
+    "swiftmodule": "/Users/henry/EtcProjects/Chroma-Flow/.build/arm64-apple-macosx/debug/DDCKit.build/VCPCodes~partial.swiftmodule",
+    "swift-dependencies": "/Users/henry/EtcProjects/Chroma-Flow/.build/arm64-apple-macosx/debug/DDCKit.build/VCPCodes.swiftdeps",
+    "diagnostics": "/Users/henry/EtcProjects/Chroma-Flow/.build/arm64-apple-macosx/debug/DDCKit.build/VCPCodes.dia"
   }
 }

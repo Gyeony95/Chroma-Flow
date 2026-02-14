@@ -142,7 +142,6 @@ struct LiquidPicker<Content: View, Value: Hashable>: View {
     @Binding var selection: Value?
     let label: String
     @ViewBuilder let content: Content
-    @State private var isExpanded = false
 
     var body: some View {
         Menu {
@@ -156,8 +155,6 @@ struct LiquidPicker<Content: View, Value: Hashable>: View {
                 Image(systemName: "chevron.down")
                     .font(.caption)
                     .foregroundColor(.secondary)
-                    .rotationEffect(.degrees(isExpanded ? 180 : 0))
-                    .animation(LiquidUITheme.Animation.snappy, value: isExpanded)
             }
             .padding(.horizontal, LiquidUITheme.Spacing.medium)
             .padding(.vertical, LiquidUITheme.Spacing.small)
@@ -166,16 +163,6 @@ struct LiquidPicker<Content: View, Value: Hashable>: View {
                     .fill(Color.primary.opacity(0.05))
             )
         }
-        .onTapGesture {
-            withAnimation(LiquidUITheme.Animation.snappy) {
-                isExpanded.toggle()
-            }
-            NSHapticFeedbackManager.defaultPerformer.perform(
-                .levelChange,
-                performanceTime: .now
-            )
-        }
-        .elasticButton(intensity: 0.5)
     }
 }
 

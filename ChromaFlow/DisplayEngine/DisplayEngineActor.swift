@@ -764,7 +764,7 @@ actor DisplayEngineActor {
     /// - Throws: DDCActor.DDCError if communication fails or display doesn't support DDC
     func setColorPreset(_ preset: ColorPreset, for displayID: CGDirectDisplayID) async throws {
         // Ensure display is connected and supports DDC
-        guard let device = await findDisplayDevice(by: displayID) else {
+        guard await findDisplayDevice(by: displayID) != nil else {
             throw DDCActor.DDCError.displayNotFound(displayID)
         }
 
@@ -796,6 +796,33 @@ actor DisplayEngineActor {
     func readColorPreset(for displayID: CGDirectDisplayID) async throws -> ColorPreset? {
         let vcpValue = try await ddcActor.readColorPreset(for: displayID)
         return ColorPreset(vcpValue: vcpValue)
+    }
+
+    /// Reset DDC failure counts for all displays (used when popover opens)
+    func resetDDCFailures() async {
+        await ddcActor.resetAllFailures()
+    }
+
+    // MARK: - DDC Brightness/Contrast Control
+
+    /// Reads current DDC brightness value (0.0 to 1.0)
+    func readDDCBrightness(for displayID: CGDirectDisplayID) async throws -> Double {
+        return try await ddcActor.readBrightness(for: displayID)
+    }
+
+    /// Reads current DDC contrast value (0.0 to 1.0)
+    func readDDCContrast(for displayID: CGDirectDisplayID) async throws -> Double {
+        return try await ddcActor.readContrast(for: displayID)
+    }
+
+    /// Sets DDC brightness (0.0 to 1.0)
+    func setDDCBrightness(_ value: Double, for displayID: CGDirectDisplayID) async throws {
+        try await ddcActor.setBrightness(value, for: displayID)
+    }
+
+    /// Sets DDC contrast (0.0 to 1.0)
+    func setDDCContrast(_ value: Double, for displayID: CGDirectDisplayID) async throws {
+        try await ddcActor.setContrast(value, for: displayID)
     }
 
     /// Detects DDC capabilities for a display and returns updated DisplayDevice

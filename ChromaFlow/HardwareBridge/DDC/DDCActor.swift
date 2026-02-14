@@ -66,7 +66,7 @@ actor DDCActor {
     private let minimumCommandDelay: TimeInterval = 0.05 // 50ms
 
     /// Maximum consecutive failures before disabling DDC
-    private let maxConsecutiveFailures = 3
+    private let maxConsecutiveFailures = 10
 
     /// Debounce interval for DDC persistence (500ms)
     private let persistenceDebounceInterval: TimeInterval = 0.5
@@ -198,6 +198,14 @@ actor DDCActor {
     func resetFailures(for displayID: CGDirectDisplayID) {
         displayStates[displayID]?.consecutiveFailures = 0
         displayStates[displayID]?.isDDCDisabled = false
+    }
+
+    /// Resets failure counts for all displays (used when re-detecting DDC)
+    func resetAllFailures() {
+        for displayID in displayStates.keys {
+            displayStates[displayID]?.consecutiveFailures = 0
+            displayStates[displayID]?.isDDCDisabled = false
+        }
     }
 
     /// Restore last-known DDC settings from DeviceMemory on display connect

@@ -11,7 +11,31 @@ final class AppState {
     // Display state
     var displays: [DisplayDevice] = []
     var activeProfiles: [CGDirectDisplayID: ColorProfile] = [:]
-    var selectedDisplayID: CGDirectDisplayID?
+    var selectedDisplayID: CGDirectDisplayID? {
+        didSet {
+            guard let newDisplayID = selectedDisplayID, newDisplayID != oldValue else { return }
+            guard displays.contains(where: { $0.id == newDisplayID }) else { return }
+
+            // Load display modes and profile when selection changes
+            Task {
+                // Load active profile
+                do {
+                    currentProfile = try await displayEngine.activeProfile(for: newDisplayID)
+                } catch {
+                    currentProfile = nil
+                }
+
+                // Load display modes for external displays
+                if let display = displays.first(where: { $0.id == newDisplayID }), !display.isBuiltIn {
+                    await loadDisplayModes(for: newDisplayID)
+                } else {
+                    // Clear display modes for built-in displays
+                    availableDisplayModes = []
+                    currentDisplayMode = nil
+                }
+            }
+        }
+    }
     var currentProfile: ColorProfile?
 
     // DDC state
@@ -38,6 +62,9 @@ final class AppState {
 
     // Automation engine (initialized later)
     var automationEngine: AutomationEngine?
+
+    // Guard against concurrent loadConnectedDisplays calls
+    private var isLoadingDisplays = false
 
     // Solar schedule properties
     var isSolarScheduleEnabled: Bool = false
@@ -100,6 +127,10 @@ final class AppState {
 
     /// Load and populate connected displays
     func loadConnectedDisplays() async {
+        guard !isLoadingDisplays else { return }
+        isLoadingDisplays = true
+        defer { isLoadingDisplays = false }
+
         print("[AppState] Starting loadConnectedDisplays()")
 
         // Get displays immediately without DDC detection (fast)
@@ -136,6 +167,9 @@ final class AppState {
 
         Task.detached { [weak self] in
             print("[AppState] DDC detection task started")
+            if let self = self {
+                await self.displayEngine.resetDDCFailures()
+            }
             for display in externalDisplays {
                 print("[AppState] Detecting DDC for display \(display.id)...")
                 if let updated = await self?.displayEngine.detectAndUpdateDDCCapabilities(for: display.id) {

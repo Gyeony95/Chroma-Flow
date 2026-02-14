@@ -62,6 +62,14 @@ struct ColorModeSelector: View {
                 await loadInitialState()
             }
         }
+        .onChange(of: appState.displays.first(where: { $0.id == appState.selectedDisplayID })?.ddcCapabilities?.supportsColorTemperature) { _, newValue in
+            if let supported = newValue {
+                // DDC detection completed - update state
+                withAnimation(LiquidUITheme.Animation.snappy) {
+                    isDDCSupported = supported
+                }
+            }
+        }
     }
 
     // MARK: - Subviews
@@ -142,17 +150,26 @@ struct ColorModeSelector: View {
             return
         }
 
-        // Check if display supports DDC
+        // Check if display is external (built-in displays never support DDC)
         guard let display = appState.displays.first(where: { $0.id == displayID }),
-              !display.isBuiltIn,
-              display.ddcCapabilities?.supportsColorTemperature == true ||
-              !(display.ddcCapabilities?.supportedColorPresets.isEmpty ?? true) else {
+              !display.isBuiltIn else {
             isLoading = false
             isDDCSupported = false
             return
         }
 
-        isDDCSupported = true
+        // If DDC capabilities are already known, use them
+        if let caps = display.ddcCapabilities {
+            isDDCSupported = caps.supportsColorTemperature || !caps.supportedColorPresets.isEmpty
+            if !isDDCSupported {
+                isLoading = false
+                return
+            }
+        } else {
+            // DDC capabilities not yet detected - optimistically assume supported for external displays
+            // The actual DDC command will fail gracefully if not supported
+            isDDCSupported = true
+        }
 
         // Try to read current color preset
         do {
@@ -162,7 +179,8 @@ struct ColorModeSelector: View {
                 }
             }
         } catch {
-            // Failed to read current preset, use default
+            // Failed to read current preset - this is OK, we'll still show the buttons
+            // and let the user try. The error will be shown on button press if DDC truly isn't supported.
             selectedPreset = .standard
         }
 
@@ -206,6 +224,18 @@ struct ColorModeSelector: View {
             withAnimation(LiquidUITheme.Animation.snappy) {
                 isChanging = false
                 errorMessage = error.localizedDescription
+            }
+
+            // If DDC failed, mark as unsupported so UI updates
+            if let ddcError = error as? DDCActor.DDCError {
+                switch ddcError {
+                case .ddcNotSupported, .ddcDisabled:
+                    withAnimation(LiquidUITheme.Animation.snappy) {
+                        isDDCSupported = false
+                    }
+                default:
+                    break
+                }
             }
 
             // Show error toast
