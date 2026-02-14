@@ -72,6 +72,15 @@ final class AppState {
     var blueLightFilterStrength: Double = 0.0
     var solarScheduleEngine: SolarScheduleEngine?
 
+    // White Balance properties
+    var whiteBalanceTemperature: Double = 6500 {
+        didSet {
+            guard whiteBalanceTemperature != oldValue else { return }
+            UserDefaults.standard.set(whiteBalanceTemperature, forKey: "ChromaFlow.whiteBalanceTemperature")
+        }
+    }
+    var isWhiteBalanceActive: Bool = false
+
     // Virtual HDR Emulation properties
     var isVirtualHDREnabled: Bool = false
     var hdrIntensity: Double = 0.5 // 0.0 to 1.0
@@ -120,6 +129,12 @@ final class AppState {
         // Load connected displays on initialization
         Task {
             await loadConnectedDisplays()
+        }
+
+        // Restore white balance temperature
+        let savedTemp = UserDefaults.standard.double(forKey: "ChromaFlow.whiteBalanceTemperature")
+        if savedTemp >= 3000 && savedTemp <= 7500 {
+            whiteBalanceTemperature = savedTemp
         }
     }
 
@@ -350,6 +365,29 @@ final class AppState {
         for display in displays {
             displayCalibrationStatus[display.id] = await displayEngine.getCalibrationStatus(for: display.id)
         }
+    }
+
+    // MARK: - White Balance Methods
+
+    /// Set white balance color temperature
+    func setWhiteBalanceTemperature(_ temperature: Double) async {
+        guard let displayID = selectedDisplayID else { return }
+
+        let clamped = min(max(temperature, 3000), 7500)
+        whiteBalanceTemperature = clamped
+        isWhiteBalanceActive = (clamped != 6500)
+
+        await displayEngine.setColorTemperature(clamped, for: displayID)
+    }
+
+    /// Reset white balance to default D65 (6500K)
+    func resetWhiteBalance() async {
+        guard let displayID = selectedDisplayID else { return }
+
+        whiteBalanceTemperature = 6500
+        isWhiteBalanceActive = false
+
+        await displayEngine.resetWhiteBalance(for: displayID)
     }
 
     // MARK: - Display Mode Methods

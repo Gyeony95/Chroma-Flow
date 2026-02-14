@@ -327,9 +327,9 @@ struct EDIDParser {
         let vendorID = vendorBytes
 
         // Decode 3-letter manufacturer ID (compressed ASCII)
-        let char1 = Character(UnicodeScalar(((vendorBytes >> 10) & 0x1F) + 64)!)
-        let char2 = Character(UnicodeScalar(((vendorBytes >> 5) & 0x1F) + 64)!)
-        let char3 = Character(UnicodeScalar((vendorBytes & 0x1F) + 64)!)
+        let char1 = Character(UnicodeScalar(((vendorBytes >> 10) & 0x1F) + 64) ?? UnicodeScalar(65))
+        let char2 = Character(UnicodeScalar(((vendorBytes >> 5) & 0x1F) + 64) ?? UnicodeScalar(65))
+        let char3 = Character(UnicodeScalar((vendorBytes & 0x1F) + 64) ?? UnicodeScalar(65))
         let manufacturer = String([char1, char2, char3])
 
         // Parse product code (bytes 10-11, little-endian)
@@ -395,26 +395,47 @@ struct EDIDParser {
         let isBuiltIn = CGDisplayIsBuiltin(displayID) != 0
 
         var manufacturer = "Unknown"
-        var model = "External Display"
+        var model = isBuiltIn ? "Built-in Display" : "External Display"
 
         if isBuiltIn {
             manufacturer = "Apple"
             model = "Built-in Display"
-        } else {
-            // Try to get display name from IODisplayCreateInfoDictionary
-            if let displayInfo = getDisplayInfoFromCoreGraphics(for: displayID) {
-                if let displayName = displayInfo["DisplayProductName"] as? [String: String] {
-                    // Try to get localized name (usually en_US key)
-                    if let localizedName = displayName["en_US"] ?? displayName.values.first {
+        }
+
+        // Try to get display name from IODisplayCreateInfoDictionary
+        if let displayInfo = getDisplayInfoFromCoreGraphics(for: displayID) {
+            // Extract display product name (localized dictionary)
+            if let displayName = displayInfo["DisplayProductName"] as? [String: String] {
+                // Try multiple locale keys
+                if let localizedName = displayName["en_US"] ?? displayName["en"] ?? displayName.values.first {
+                    if !localizedName.isEmpty {
                         model = localizedName
-                        print("[EDID] Found display name from CoreGraphics: \(model)")
+                        print("[EDID] Found display name from IOKit: \(model)")
                     }
                 }
-
-                if let vendorID = displayInfo["DisplayVendorID"] as? UInt32 {
-                    manufacturer = decodeVendorID(vendorID)
-                    print("[EDID] Found vendor from CoreGraphics: \(manufacturer)")
+            } else if let displayName = displayInfo["DisplayProductName"] as? String {
+                // Sometimes it's a plain string
+                if !displayName.isEmpty {
+                    model = displayName
+                    print("[EDID] Found display name (string) from IOKit: \(model)")
                 }
+            }
+
+            if let vendorID = displayInfo["DisplayVendorID"] as? UInt32, vendorID > 0 {
+                manufacturer = decodeVendorID(vendorID)
+                print("[EDID] Found vendor from IOKit: \(manufacturer) (ID: \(vendorID))")
+            }
+        }
+
+        // If still "External Display", try manufacturer code from CG vendor number
+        if model == "External Display" && !isBuiltIn {
+            let vendorNum = CGDisplayVendorNumber(displayID)
+            let modelNum = CGDisplayModelNumber(displayID)
+            if vendorNum != 0 {
+                manufacturer = decodeVendorID(vendorNum)
+                // Use vendor + model number as a last resort name
+                model = "\(manufacturer) Display (\(modelNum))"
+                print("[EDID] Using CG vendor/model numbers: \(model)")
             }
         }
 
@@ -429,17 +450,21 @@ struct EDIDParser {
 
     /// Get display info using IODisplayCreateInfoDictionary (IOKit API)
     private static func getDisplayInfoFromCoreGraphics(for displayID: CGDirectDisplayID) -> [String: Any]? {
-        // Search IORegistry for display service
+        let expectedVendor = CGDisplayVendorNumber(displayID)
+        let expectedProduct = CGDisplayModelNumber(displayID)
+
+        print("[EDID] getDisplayInfoFromCoreGraphics: looking for vendor=\(expectedVendor), product=\(expectedProduct)")
+
+        // Search IORegistry for display services
         var iter: io_iterator_t = 0
-        let matching = IOServiceMatching("IODisplay")
+        let matching = IOServiceMatching("IODisplayConnect")
         guard IOServiceGetMatchingServices(kIOMainPortDefault, matching, &iter) == KERN_SUCCESS else {
-            print("[EDID] Failed to get IODisplay services")
+            print("[EDID] Failed to get IODisplayConnect services")
             return nil
         }
 
         defer { IOObjectRelease(iter) }
 
-        var displayInfo: [String: Any]?
         var foundCount = 0
 
         while true {
@@ -449,26 +474,60 @@ struct EDIDParser {
 
             defer { IOObjectRelease(service) }
 
-            // Get parent IOService (IODisplayConnect)
-            var parent: io_registry_entry_t = 0
-            if IORegistryEntryGetParentEntry(service, kIOServicePlane, &parent) == KERN_SUCCESS {
-                defer { IOObjectRelease(parent) }
+            // Safely call IODisplayCreateInfoDictionary - it returns Unmanaged<CFDictionary>! which is nil-crashable
+            guard let rawDict = IODisplayCreateInfoDictionary(service, IOOptionBits(kIODisplayOnlyPreferredName)) else {
+                continue
+            }
 
-                // Try to create info dictionary
-                if let infoDict = IODisplayCreateInfoDictionary(parent, IOOptionBits(kIODisplayOnlyPreferredName)).takeRetainedValue() as? [String: Any] {
-                    print("[EDID] IOKit display info from service \(foundCount), keys: \(infoDict.keys)")
-                    // Return first valid info (we could match by vendor/product if needed)
-                    displayInfo = infoDict
-                    break
-                }
+            let infoDict = rawDict.takeRetainedValue() as NSDictionary
+            guard let dict = infoDict as? [String: Any] else { continue }
+
+            // Match by vendor and product ID
+            let dictVendor = dict["DisplayVendorID"] as? UInt32 ?? 0
+            let dictProduct = dict["DisplayProductID"] as? UInt32 ?? 0
+
+            print("[EDID] Service \(foundCount): vendor=\(dictVendor), product=\(dictProduct)")
+
+            if expectedVendor != 0 && (dictVendor == expectedVendor && dictProduct == expectedProduct) {
+                print("[EDID] ✓ Found matching display info from service \(foundCount)")
+                return dict
             }
         }
 
-        if displayInfo == nil {
-            print("[EDID] Checked \(foundCount) IODisplay services, no display info found")
+        // Fallback: if no match by ID, try again and return the first non-built-in
+        // (This handles cases where CGDisplayVendorNumber returns 0)
+        if expectedVendor == 0 {
+            var iter2: io_iterator_t = 0
+            let matching2 = IOServiceMatching("IODisplayConnect")
+            guard IOServiceGetMatchingServices(kIOMainPortDefault, matching2, &iter2) == KERN_SUCCESS else {
+                return nil
+            }
+            defer { IOObjectRelease(iter2) }
+
+            while true {
+                let service = IOIteratorNext(iter2)
+                if service == 0 { break }
+                defer { IOObjectRelease(service) }
+
+                guard let rawDict = IODisplayCreateInfoDictionary(service, IOOptionBits(kIODisplayOnlyPreferredName)) else {
+                    continue
+                }
+
+                let infoDict = rawDict.takeRetainedValue() as NSDictionary
+                guard let dict = infoDict as? [String: Any] else { continue }
+
+                // Skip built-in displays
+                if let isInternal = dict["IODisplayIsInternal"] as? Bool, isInternal {
+                    continue
+                }
+
+                print("[EDID] ✓ Found display info (no ID match, using first external)")
+                return dict
+            }
         }
 
-        return displayInfo
+        print("[EDID] Checked \(foundCount) services, no display info found")
+        return nil
     }
 
     /// Decode vendor ID to manufacturer code

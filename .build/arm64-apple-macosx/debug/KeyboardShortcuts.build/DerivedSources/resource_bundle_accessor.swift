@@ -3,7 +3,7 @@ import Foundation
 extension Foundation.Bundle {
     static let module: Bundle = {
         let mainPath = Bundle.main.bundleURL.appendingPathComponent("KeyboardShortcuts_KeyboardShortcuts.bundle").path
-        let buildPath = "/Users/henry/EtcProjects/Chroma-Flow/.build/arm64-apple-macosx/debug/KeyboardShortcuts_KeyboardShortcuts.bundle"
+        let buildPath = "/Users/gwongihyeon/IosProjects/ChromaFlow/.build/arm64-apple-macosx/debug/KeyboardShortcuts_KeyboardShortcuts.bundle"
 
         let preferredBundle = Bundle(path: mainPath)
 

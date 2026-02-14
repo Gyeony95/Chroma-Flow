@@ -16,6 +16,7 @@ actor DisplayEngineActor {
     private let colorCorrectionEngine: ColorCorrectionEngine
     private let ddcActor: DDCActor
     private let displayModeController: DisplayModeController
+    private let whiteBalanceController = WhiteBalanceController()
     private let logger = Logger(
         subsystem: "com.chromaflow.ChromaFlow",
         category: "DisplayEngine"
@@ -39,10 +40,8 @@ actor DisplayEngineActor {
         self.displayDetector = displayDetector
         self.ddcActor = ddcActor
 
-        // Initialize DisplayModeController on MainActor
-        self.displayModeController = MainActor.assumeIsolated {
-            DisplayModeController()
-        }
+        // Initialize DisplayModeController
+        self.displayModeController = DisplayModeController()
 
         // Initialize or capture GammaController
         let localGammaController: GammaController
@@ -664,31 +663,23 @@ actor DisplayEngineActor {
     // MARK: - Display Mode Control
 
     /// Get available display modes for a display
-    func availableDisplayModes(for displayID: CGDirectDisplayID) async -> [DisplayModeController.DisplayMode] {
-        return await MainActor.run {
-            displayModeController.availableModes(for: displayID)
-        }
+    func availableDisplayModes(for displayID: CGDirectDisplayID) -> [DisplayModeController.DisplayMode] {
+        return displayModeController.availableModes(for: displayID)
     }
 
     /// Get encoding variants (same timing, different encoding)
-    func displayEncodingVariants(for displayID: CGDirectDisplayID) async -> [DisplayModeController.DisplayMode] {
-        return await MainActor.run {
-            displayModeController.encodingVariants(for: displayID, matchingCurrent: true)
-        }
+    func displayEncodingVariants(for displayID: CGDirectDisplayID) -> [DisplayModeController.DisplayMode] {
+        return displayModeController.encodingVariants(for: displayID, matchingCurrent: true)
     }
 
     /// Get current display mode
-    func currentDisplayMode(for displayID: CGDirectDisplayID) async -> DisplayModeController.DisplayMode? {
-        return await MainActor.run {
-            displayModeController.currentMode(for: displayID)
-        }
+    func currentDisplayMode(for displayID: CGDirectDisplayID) -> DisplayModeController.DisplayMode? {
+        return displayModeController.currentMode(for: displayID)
     }
 
     /// Set display mode
     func setDisplayMode(_ mode: DisplayModeController.DisplayMode, for displayID: CGDirectDisplayID) async throws {
-        try await MainActor.run {
-            try displayModeController.setMode(mode, for: displayID)
-        }
+        try displayModeController.setMode(mode, for: displayID)
 
         logger.info("Display mode changed to: \(mode.description)")
 
@@ -704,9 +695,7 @@ actor DisplayEngineActor {
 
     /// Switch to 8-bit SDR RGB mode
     func setSDRMode(for displayID: CGDirectDisplayID) async throws {
-        try await MainActor.run {
-            try displayModeController.setSSDRMode(for: displayID)
-        }
+        try displayModeController.setSSDRMode(for: displayID)
 
         logger.info("Switched to 8-bit SDR RGB mode for display \(displayID)")
 
@@ -721,9 +710,7 @@ actor DisplayEngineActor {
 
     /// Switch to 10-bit HDR mode
     func setHDRMode(for displayID: CGDirectDisplayID) async throws {
-        try await MainActor.run {
-            try displayModeController.setHDRMode(for: displayID)
-        }
+        try displayModeController.setHDRMode(for: displayID)
 
         logger.info("Switched to 10-bit HDR mode for display \(displayID)")
 
@@ -738,9 +725,7 @@ actor DisplayEngineActor {
 
     /// Toggle between full and limited RGB range
     func toggleRGBRange(for displayID: CGDirectDisplayID) async throws {
-        try await MainActor.run {
-            try displayModeController.toggleRGBRange(for: displayID)
-        }
+        try displayModeController.toggleRGBRange(for: displayID)
 
         guard let newMode = await currentDisplayMode(for: displayID) else { return }
 
@@ -750,6 +735,34 @@ actor DisplayEngineActor {
             ToastManager.shared.show(
                 title: "RGB Range",
                 subtitle: newMode.range.description,
+                style: .success
+            )
+        }
+    }
+
+    // MARK: - White Balance Control
+
+    /// Set color temperature for white balance adjustment
+    /// - Parameters:
+    ///   - temperature: Temperature in Kelvin (3000-7500)
+    ///   - displayID: Target display ID
+    func setColorTemperature(_ temperature: Double, for displayID: CGDirectDisplayID) {
+        gammaController.setColorTemperature(temperature, for: displayID)
+
+        logger.info("White balance set to \(Int(temperature))K for display \(displayID)")
+    }
+
+    /// Reset white balance to default (6500K)
+    /// - Parameter displayID: Target display ID
+    func resetWhiteBalance(for displayID: CGDirectDisplayID) {
+        gammaController.resetGamma(for: displayID)
+
+        logger.info("White balance reset for display \(displayID)")
+
+        Task { @MainActor in
+            ToastManager.shared.show(
+                title: "White Balance Reset",
+                subtitle: "Restored to 6500K (D65)",
                 style: .success
             )
         }

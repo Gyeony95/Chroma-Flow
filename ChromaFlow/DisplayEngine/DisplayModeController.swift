@@ -12,13 +12,12 @@ import IOKit.graphics
 import os.log
 
 /// Controls display pixel format and RGB range using CoreGraphics APIs
-@MainActor
-public final class DisplayModeController {
+public final class DisplayModeController: @unchecked Sendable {
 
     // MARK: - Types
 
     /// Represents a display mode with encoding information
-    public struct DisplayMode: Equatable, Hashable {
+    public struct DisplayMode: Equatable, Hashable, @unchecked Sendable {
         public let cgMode: CGDisplayMode
         public let bitDepth: Int
         public let colorEncoding: ColorEncoding
@@ -27,7 +26,7 @@ public final class DisplayModeController {
         public let resolution: Resolution
         public let pixelEncoding: String?
 
-        public struct Resolution: Equatable, Hashable {
+        public struct Resolution: Equatable, Hashable, Sendable {
             public let width: Int
             public let height: Int
 
@@ -59,10 +58,30 @@ public final class DisplayModeController {
             resolution == other.resolution &&
             abs(refreshRate - other.refreshRate) < 0.01
         }
+
+        // Manual Equatable - compare by properties, not cgMode reference
+        public static func == (lhs: DisplayMode, rhs: DisplayMode) -> Bool {
+            lhs.bitDepth == rhs.bitDepth &&
+            lhs.colorEncoding == rhs.colorEncoding &&
+            lhs.range == rhs.range &&
+            lhs.refreshRate == rhs.refreshRate &&
+            lhs.resolution == rhs.resolution &&
+            lhs.pixelEncoding == rhs.pixelEncoding
+        }
+
+        // Manual Hashable - hash by properties, not cgMode reference
+        public func hash(into hasher: inout Hasher) {
+            hasher.combine(bitDepth)
+            hasher.combine(colorEncoding)
+            hasher.combine(range)
+            hasher.combine(refreshRate)
+            hasher.combine(resolution)
+            hasher.combine(pixelEncoding)
+        }
     }
 
     /// Color encoding format
-    public enum ColorEncoding: String, CaseIterable {
+    public enum ColorEncoding: String, CaseIterable, Sendable {
         case rgb = "RGB"
         case ycbcr444 = "YCbCr 4:4:4"
         case ycbcr422 = "YCbCr 4:2:2"
@@ -90,7 +109,7 @@ public final class DisplayModeController {
     }
 
     /// RGB range
-    public enum RGBRange: String, CaseIterable {
+    public enum RGBRange: String, CaseIterable, Sendable {
         case full = "Full (0-255)"
         case limited = "Limited (16-235)"
         case auto = "Auto"

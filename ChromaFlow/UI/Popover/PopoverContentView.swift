@@ -39,6 +39,15 @@ struct PopoverContentView: View {
                 LiquidDivider(opacity: 0.05, blurRadius: 12)
                     .padding(.vertical, LiquidUITheme.Spacing.small)
 
+                // White Balance control (shown for all displays)
+                WhiteBalanceView()
+                    .liquidDepth(.card)
+                    .padding(.horizontal, LiquidUITheme.Spacing.medium)
+
+                // Organic separator
+                LiquidDivider(opacity: 0.05, blurRadius: 12)
+                    .padding(.vertical, LiquidUITheme.Spacing.small)
+
                 // Display Mode Selector (only shown for external displays)
                 if appState.selectedDisplayID != nil,
                    let display = appState.displays.first(where: { $0.id == appState.selectedDisplayID }),

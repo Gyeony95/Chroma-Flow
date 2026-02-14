@@ -30,11 +30,15 @@ struct DisplayModeSelector: View {
     }
 
     private var availableRanges: [DisplayModeController.RGBRange] {
-        Array(Set(availableModes.map { $0.range }))
+        let order: [DisplayModeController.RGBRange] = [.full, .limited, .auto]
+        let unique = Set(availableModes.map { $0.range })
+        return order.filter { unique.contains($0) }
     }
 
     private var availableEncodings: [DisplayModeController.ColorEncoding] {
-        Array(Set(availableModes.map { $0.colorEncoding }))
+        let order: [DisplayModeController.ColorEncoding] = [.rgb, .ycbcr444, .ycbcr422, .ycbcr420]
+        let unique = Set(availableModes.map { $0.colorEncoding })
+        return order.filter { unique.contains($0) }
     }
 
     var body: some View {
@@ -61,7 +65,7 @@ struct DisplayModeSelector: View {
                     .transition(.opacity)
 
                 encodingSection
-                    .transition(.move(edge: .top).combined(with: .opacity))
+                    .transition(.opacity)
             }
         }
         .padding(LiquidUITheme.Spacing.medium)

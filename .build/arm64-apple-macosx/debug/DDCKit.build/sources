@@ -1,6 +1,6 @@
-/Users/henry/EtcProjects/Chroma-Flow/Packages/DDCKit/Sources/DDCKit/DDCCapabilityDetector.swift
-/Users/henry/EtcProjects/Chroma-Flow/Packages/DDCKit/Sources/DDCKit/DDCInterface.swift
-/Users/henry/EtcProjects/Chroma-Flow/Packages/DDCKit/Sources/DDCKit/DDCKit.swift
-/Users/henry/EtcProjects/Chroma-Flow/Packages/DDCKit/Sources/DDCKit/EDIDReader.swift
-/Users/henry/EtcProjects/Chroma-Flow/Packages/DDCKit/Sources/DDCKit/I2CTransport.swift
-/Users/henry/EtcProjects/Chroma-Flow/Packages/DDCKit/Sources/DDCKit/VCPCodes.swift
+/Users/gwongihyeon/IosProjects/ChromaFlow/Packages/DDCKit/Sources/DDCKit/DDCCapabilityDetector.swift
+/Users/gwongihyeon/IosProjects/ChromaFlow/Packages/DDCKit/Sources/DDCKit/DDCInterface.swift
+/Users/gwongihyeon/IosProjects/ChromaFlow/Packages/DDCKit/Sources/DDCKit/DDCKit.swift
+/Users/gwongihyeon/IosProjects/ChromaFlow/Packages/DDCKit/Sources/DDCKit/EDIDReader.swift
+/Users/gwongihyeon/IosProjects/ChromaFlow/Packages/DDCKit/Sources/DDCKit/I2CTransport.swift
+/Users/gwongihyeon/IosProjects/ChromaFlow/Packages/DDCKit/Sources/DDCKit/VCPCodes.swift
