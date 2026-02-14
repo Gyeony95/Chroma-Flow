@@ -1,6 +1,7 @@
 import SwiftUI
 import Observation
 import CoreGraphics
+import AppKit
 
 @Observable
 @MainActor
@@ -32,6 +33,11 @@ final class AppState {
                     // Clear display modes for built-in displays
                     availableDisplayModes = []
                     currentDisplayMode = nil
+                }
+
+                // Re-apply white balance for the newly selected display
+                if isWhiteBalanceActive {
+                    await displayEngine.setColorTemperature(whiteBalanceTemperature, for: newDisplayID)
                 }
             }
         }
@@ -65,6 +71,9 @@ final class AppState {
 
     // Guard against concurrent loadConnectedDisplays calls
     private var isLoadingDisplays = false
+
+    // Display change observer
+    private nonisolated(unsafe) var displayChangeObserver: NSObjectProtocol?
 
     // Solar schedule properties
     var isSolarScheduleEnabled: Bool = false
@@ -136,6 +145,26 @@ final class AppState {
         if savedTemp >= 3000 && savedTemp <= 7500 {
             whiteBalanceTemperature = savedTemp
         }
+
+        // Observe display configuration changes (HDMI connect/disconnect)
+        displayChangeObserver = NotificationCenter.default.addObserver(
+            forName: NSApplication.didChangeScreenParametersNotification,
+            object: nil,
+            queue: .main
+        ) { [weak self] _ in
+            guard let self else { return }
+            Task { @MainActor in
+                // Small delay for OS to fully register the display
+                try? await Task.sleep(nanoseconds: 500_000_000)
+                await self.loadConnectedDisplays()
+            }
+        }
+    }
+
+    deinit {
+        if let observer = displayChangeObserver {
+            NotificationCenter.default.removeObserver(observer)
+        }
     }
 
     // MARK: - Display Management
@@ -173,6 +202,11 @@ final class AppState {
             // Load display modes for external displays
             if let display = connectedDisplays.first(where: { $0.id == displayID }), !display.isBuiltIn {
                 await loadDisplayModes(for: displayID)
+            }
+
+            // Re-apply white balance if active (gamma tables reset on display reconnect)
+            if isWhiteBalanceActive {
+                await displayEngine.setColorTemperature(whiteBalanceTemperature, for: displayID)
             }
         }
 

@@ -1,0 +1,15 @@
+{
+  "created_at": "2026-02-14T16:29:21.724Z",
+  "trigger": "auto",
+  "active_modes": {
+    "ultrawork": {
+      "original_prompt": "ulw plan: 지금 모니터의 값을 수정한게 모니터 커넥트를 끊었다가 다시 연결해도 유지되는상태야? 유지가 되어야"
+    }
+  },
+  "todo_summary": {
+    "pending": 0,
+    "in_progress": 0,
+    "completed": 0
+  },
+  "wisdom_exported": false
+}
