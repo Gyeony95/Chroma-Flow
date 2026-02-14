@@ -273,6 +273,7 @@ struct WhiteBalanceSlider: View {
                     }
             )
         }
+        .frame(height: 20)
     }
 
     private var normalizedValue: CGFloat {

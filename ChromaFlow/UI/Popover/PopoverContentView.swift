@@ -11,8 +11,9 @@ struct PopoverContentView: View {
             LiquidGlass(intensity: 1.2)
                 .ignoresSafeArea()
 
-            VStack(spacing: 0) {
-                if appState.showConflictWarning {
+            ScrollView(.vertical, showsIndicators: false) {
+                VStack(spacing: 0) {
+                    if appState.showConflictWarning {
                     ConflictWarningBanner(message: appState.conflictMessage ?? "")
                         .transition(.asymmetric(
                             insertion: .push(from: .top).combined(with: .opacity),
@@ -116,6 +117,7 @@ struct PopoverContentView: View {
                 .padding(LiquidUITheme.Spacing.medium)
                 .accessibilityLabel(String(localized: "Revert to Previous"))
                 .accessibilityHint("Restores the previous color profile")
+                }
             }
             .frame(width: 320)
         }
