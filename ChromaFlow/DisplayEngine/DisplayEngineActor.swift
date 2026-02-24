@@ -16,6 +16,7 @@ actor DisplayEngineActor {
     private let colorCorrectionEngine: ColorCorrectionEngine
     private let ddcActor: DDCActor
     private let displayModeController: DisplayModeController
+    private let connectionModeController: ConnectionModeController
     private let whiteBalanceController = WhiteBalanceController()
     private let logger = Logger(
         subsystem: "com.chromaflow.ChromaFlow",
@@ -42,6 +43,9 @@ actor DisplayEngineActor {
 
         // Initialize DisplayModeController
         self.displayModeController = DisplayModeController()
+
+        // Initialize ConnectionModeController
+        self.connectionModeController = ConnectionModeController()
 
         // Initialize or capture GammaController
         let localGammaController: GammaController
@@ -300,6 +304,9 @@ actor DisplayEngineActor {
 
         // Auto-restore last profile from DeviceMemory
         await restoreProfileFromMemory(for: display)
+
+        // Auto-restore preferred connection mode
+        await restoreConnectionModeFromMemory(for: display)
     }
 
     private func handleDisplayDisconnected(_ displayID: CGDirectDisplayID) async {
@@ -376,6 +383,45 @@ actor DisplayEngineActor {
             await MainActor.run {
                 ToastManager.shared.showError("Failed to restore profile")
             }
+        }
+    }
+
+    @MainActor
+    private func restoreConnectionModeFromMemory(for display: DisplayDevice) async {
+        guard !display.isBuiltIn else { return }
+
+        guard let preferredMode = DeviceMemory.shared.loadConnectionMode(for: display) else {
+            logger.debug("No saved connection mode for display \(display.id)")
+            return
+        }
+
+        // Check if current mode already matches
+        let currentMode = connectionModeController.currentMode(for: display.id)
+        if currentMode == preferredMode {
+            logger.debug("Connection mode already matches preferred for display \(display.id)")
+            return
+        }
+
+        do {
+            let instantApplied = try await connectionModeController.setMode(preferredMode, for: display.id)
+
+            await MainActor.run {
+                if instantApplied {
+                    ToastManager.shared.showInfo(
+                        "Connection Mode Restored",
+                        subtitle: "\(preferredMode.description) for \(display.name)"
+                    )
+                } else {
+                    ToastManager.shared.showInfo(
+                        "Connection Mode Restored",
+                        subtitle: "\(preferredMode.description) for \(display.name)\nRe-login required to apply"
+                    )
+                }
+            }
+
+            logger.info("Auto-restored connection mode '\(preferredMode.description)' for display \(display.id), instant=\(instantApplied)")
+        } catch {
+            logger.error("Failed to restore connection mode: \(error.localizedDescription)")
         }
     }
 
@@ -669,6 +715,15 @@ actor DisplayEngineActor {
 
     /// Get encoding variants (same timing, different encoding)
     func displayEncodingVariants(for displayID: CGDirectDisplayID) -> [DisplayModeController.DisplayMode] {
+        // Try IORegistry-based connection modes first (accurate on Apple Silicon)
+        let connectionModes = connectionModeController.toDisplayModeArray(for: displayID)
+        if !connectionModes.isEmpty {
+            logger.info("Using IORegistry connection modes: \(connectionModes.count) variants")
+            return connectionModes
+        }
+
+        // Fallback to CoreGraphics-based modes
+        logger.info("Falling back to CoreGraphics display modes")
         return displayModeController.encodingVariants(for: displayID, matchingCurrent: true)
     }
 
@@ -721,6 +776,54 @@ actor DisplayEngineActor {
                 style: .success
             )
         }
+    }
+
+    /// Get available connection color modes for a display (IORegistry-based)
+    func availableConnectionModes(for displayID: CGDirectDisplayID) -> [ConnectionColorMode] {
+        return connectionModeController.availableModes(for: displayID)
+    }
+
+    /// Get the currently active connection color mode for a display
+    func currentConnectionMode(for displayID: CGDirectDisplayID) -> ConnectionColorMode? {
+        return connectionModeController.currentMode(for: displayID)
+    }
+
+    /// Set a connection color mode for a display.
+    ///
+    /// Writes the plist and attempts instant apply via CoreDisplay private API.
+    /// - Returns: `true` if instant apply succeeded (no logout needed),
+    ///   `false` if a logout/restart is required.
+    @discardableResult
+    func setConnectionMode(_ mode: ConnectionColorMode, for displayID: CGDirectDisplayID) async throws -> Bool {
+        let instantApplied = try await connectionModeController.setMode(mode, for: displayID)
+
+        logger.info("Connection mode changed to: \(mode.description), instant=\(instantApplied)")
+
+        // Save to DeviceMemory for auto-restore
+        if let display = await findDisplayDevice(by: displayID) {
+            await MainActor.run {
+                DeviceMemory.shared.saveConnectionMode(mode, for: display)
+            }
+        }
+
+        // Show toast notification
+        await MainActor.run {
+            if instantApplied {
+                ToastManager.shared.show(
+                    title: "Display Mode Changed",
+                    subtitle: mode.description,
+                    style: .success
+                )
+            } else {
+                ToastManager.shared.show(
+                    title: "Display Mode Changed",
+                    subtitle: "\(mode.description)\n로그아웃 후 다시 로그인하면 적용됩니다",
+                    style: .success
+                )
+            }
+        }
+
+        return instantApplied
     }
 
     /// Toggle between full and limited RGB range

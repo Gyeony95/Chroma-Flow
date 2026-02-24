@@ -49,28 +49,119 @@ struct PopoverContentView: View {
                 LiquidDivider(opacity: 0.05, blurRadius: 12)
                     .padding(.vertical, LiquidUITheme.Spacing.small)
 
-                // Display Mode Selector (only shown for external displays)
+                // Display Mode Selector (always shown for external displays)
                 if appState.selectedDisplayID != nil,
                    let display = appState.displays.first(where: { $0.id == appState.selectedDisplayID }),
-                   !display.isBuiltIn,
-                   !appState.availableDisplayModes.isEmpty {
+                   !display.isBuiltIn {
 
-                    DisplayModeSelector(
-                        selectedBitDepth: $bindableAppState.selectedBitDepth,
-                        selectedRange: $bindableAppState.selectedRGBRange,
-                        selectedEncoding: $bindableAppState.selectedColorEncoding,
-                        availableModes: appState.availableDisplayModes
-                    ) { bitDepth, range, encoding in
-                        Task {
-                            await appState.setDisplayMode(bitDepth: bitDepth, range: range, encoding: encoding)
+                    if !appState.availableDisplayModes.isEmpty {
+                        DisplayModeSelector(
+                            selectedBitDepth: $bindableAppState.selectedBitDepth,
+                            selectedRange: $bindableAppState.selectedRGBRange,
+                            selectedEncoding: $bindableAppState.selectedColorEncoding,
+                            availableModes: appState.availableDisplayModes
+                        ) { bitDepth, range, encoding in
+                            Task {
+                                await appState.setDisplayMode(bitDepth: bitDepth, range: range, encoding: encoding)
+                            }
                         }
+                        .liquidDepth(.card)
+                        .padding(.horizontal, LiquidUITheme.Spacing.medium)
+                    } else if appState.isLoadingDisplayModes {
+                        // Loading state
+                        VStack(spacing: LiquidUITheme.Spacing.medium) {
+                            HStack(spacing: LiquidUITheme.Spacing.small) {
+                                Image(systemName: "tv.fill")
+                                    .font(.system(size: 14, weight: .medium))
+                                    .foregroundStyle(
+                                        LinearGradient(
+                                            colors: [.purple, .blue],
+                                            startPoint: .topLeading,
+                                            endPoint: .bottomTrailing
+                                        )
+                                    )
+
+                                Text("Display Mode")
+                                    .font(LiquidUITheme.Typography.titleFont)
+                                    .foregroundStyle(.primary)
+
+                                Spacer()
+
+                                ProgressView()
+                                    .scaleEffect(0.7)
+                                    .progressViewStyle(.circular)
+                            }
+
+                            Text(String(localized: "디스플레이 모드 감지 중..."))
+                                .font(LiquidUITheme.Typography.captionFont)
+                                .foregroundStyle(.secondary)
+                        }
+                        .padding(LiquidUITheme.Spacing.medium)
+                        .liquidDepth(.card)
+                        .padding(.horizontal, LiquidUITheme.Spacing.medium)
+                    } else {
+                        // Empty state - modes not available
+                        VStack(spacing: LiquidUITheme.Spacing.medium) {
+                            HStack(spacing: LiquidUITheme.Spacing.small) {
+                                Image(systemName: "tv.fill")
+                                    .font(.system(size: 14, weight: .medium))
+                                    .foregroundStyle(.secondary)
+
+                                Text("Display Mode")
+                                    .font(LiquidUITheme.Typography.titleFont)
+                                    .foregroundStyle(.primary)
+
+                                Spacer()
+                            }
+
+                            HStack(spacing: LiquidUITheme.Spacing.small) {
+                                Image(systemName: "info.circle")
+                                    .font(.caption)
+                                    .foregroundStyle(.secondary)
+
+                                Text(String(localized: "이 디스플레이의 연결 모드를 감지할 수 없습니다"))
+                                    .font(LiquidUITheme.Typography.captionFont)
+                                    .foregroundStyle(.secondary)
+                            }
+                        }
+                        .padding(LiquidUITheme.Spacing.medium)
+                        .liquidDepth(.card)
+                        .padding(.horizontal, LiquidUITheme.Spacing.medium)
                     }
-                    .liquidDepth(.card)
-                    .padding(.horizontal, LiquidUITheme.Spacing.medium)
 
                     // Organic separator
                     LiquidDivider(opacity: 0.05, blurRadius: 12)
                         .padding(.vertical, LiquidUITheme.Spacing.small)
+                }
+
+                // Re-login required banner
+                if appState.requiresReloginForModeChange {
+                    HStack(spacing: LiquidUITheme.Spacing.small) {
+                        Image(systemName: "arrow.counterclockwise.circle.fill")
+                            .font(.caption)
+                            .foregroundStyle(.blue)
+
+                        Text(String(localized: "변경사항 적용을 위해 로그아웃 후 다시 로그인이 필요합니다"))
+                            .font(LiquidUITheme.Typography.captionFont)
+                            .foregroundStyle(.blue)
+
+                        Spacer()
+                    }
+                    .padding(LiquidUITheme.Spacing.medium)
+                    .background(
+                        RoundedRectangle(cornerRadius: LiquidUITheme.CornerRadius.small)
+                            .fill(.blue.opacity(0.1))
+                            .overlay(
+                                RoundedRectangle(cornerRadius: LiquidUITheme.CornerRadius.small)
+                                    .strokeBorder(.blue.opacity(0.2), lineWidth: 1)
+                            )
+                    )
+                    .liquidDepth(.card)
+                    .padding(.horizontal, LiquidUITheme.Spacing.medium)
+                    .transition(.asymmetric(
+                        insertion: .push(from: .top).combined(with: .opacity),
+                        removal: .push(from: .bottom).combined(with: .opacity)
+                    ))
                 }
 
                 // Color mode selector (shown for all external displays)

@@ -99,6 +99,43 @@ final class DeviceMemory: Sendable {
         return Double(contrast) / 100.0 // Convert from 0-100 integer to 0.0-1.0
     }
 
+    // MARK: - Connection Mode Persistence
+
+    /// Save preferred connection color mode for a display device
+    func saveConnectionMode(_ mode: ConnectionColorMode, for device: DisplayDevice) {
+        let deviceID = deviceIdentifier(for: device)
+        var settings = deviceSettings.load(for: deviceID) ?? DeviceSettings()
+        settings.preferredPixelEncoding = mode.pixelEncoding.rawValue
+        settings.preferredBitsPerComponent = mode.bitsPerComponent.rawValue
+        settings.preferredColorRange = mode.colorRange.rawValue
+        settings.preferredDynamicRange = mode.dynamicRange.rawValue
+        settings.lastModified = Date()
+        deviceSettings.save(settings, for: deviceID)
+        scheduleSave(for: deviceID, settings: settings)
+    }
+
+    /// Load preferred connection color mode for a display device
+    func loadConnectionMode(for device: DisplayDevice) -> ConnectionColorMode? {
+        let deviceID = deviceIdentifier(for: device)
+        guard let settings = deviceSettings.load(for: deviceID),
+              let encodingRaw = settings.preferredPixelEncoding,
+              let bpcRaw = settings.preferredBitsPerComponent,
+              let rangeRaw = settings.preferredColorRange,
+              let dynamicRaw = settings.preferredDynamicRange,
+              let encoding = PixelEncoding(rawValue: encodingRaw),
+              let bpc = BitsPerComponent(rawValue: bpcRaw),
+              let range = ColorRange(rawValue: rangeRaw),
+              let dynamic = DynamicRange(rawValue: dynamicRaw) else {
+            return nil
+        }
+        return ConnectionColorMode(
+            pixelEncoding: encoding,
+            bitsPerComponent: bpc,
+            colorRange: range,
+            dynamicRange: dynamic
+        )
+    }
+
     // MARK: - Private Helpers
 
     /// Generate stable device identifier from EDID serial or manufacturer+model hash
@@ -133,17 +170,29 @@ struct DeviceSettings: Codable, Sendable {
     var lastDDCBrightness: Int?
     var lastDDCContrast: Int?
     var lastModified: Date
+    var preferredPixelEncoding: Int?      // ConnectionColorMode.PixelEncoding raw value
+    var preferredBitsPerComponent: Int?   // BitsPerComponent raw value
+    var preferredColorRange: Int?         // ColorRange raw value
+    var preferredDynamicRange: Int?       // DynamicRange raw value
 
     init(
         lastProfileID: UUID? = nil,
         lastDDCBrightness: Int? = nil,
         lastDDCContrast: Int? = nil,
-        lastModified: Date = Date()
+        lastModified: Date = Date(),
+        preferredPixelEncoding: Int? = nil,
+        preferredBitsPerComponent: Int? = nil,
+        preferredColorRange: Int? = nil,
+        preferredDynamicRange: Int? = nil
     ) {
         self.lastProfileID = lastProfileID
         self.lastDDCBrightness = lastDDCBrightness
         self.lastDDCContrast = lastDDCContrast
         self.lastModified = lastModified
+        self.preferredPixelEncoding = preferredPixelEncoding
+        self.preferredBitsPerComponent = preferredBitsPerComponent
+        self.preferredColorRange = preferredColorRange
+        self.preferredDynamicRange = preferredDynamicRange
     }
 }
 

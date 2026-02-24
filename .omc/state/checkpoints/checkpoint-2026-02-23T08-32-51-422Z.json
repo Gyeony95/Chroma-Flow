@@ -1,0 +1,15 @@
+{
+  "created_at": "2026-02-23T08:32:51.421Z",
+  "trigger": "auto",
+  "active_modes": {
+    "ultrawork": {
+      "original_prompt": "ulw plan: 이 프로젝트에서 내가 바라는 기능은 Better Display 에서 기본값으로 색상모드가 SDR, YCbCr, 4:4:4, 제한된 범위 로 되어있는걸 SDR, RGP, 전체범위로 바꾸려는 기능을 원해, 내 모니터가 이 설정을 해줘야 정상적으로 노출되더라고, 토큰을무한정 사용해도 좋으니 위 기능을 수행하기위한 모든것을 작업해"
+    }
+  },
+  "todo_summary": {
+    "pending": 0,
+    "in_progress": 0,
+    "completed": 0
+  },
+  "wisdom_exported": false
+}

@@ -114,9 +114,13 @@ final class AppState {
     // Display Mode properties
     var currentDisplayMode: DisplayModeController.DisplayMode?
     var availableDisplayModes: [DisplayModeController.DisplayMode] = []
+    var isLoadingDisplayModes: Bool = false
     var selectedBitDepth: Int = 8
     var selectedRGBRange: DisplayModeController.RGBRange = .full
     var selectedColorEncoding: DisplayModeController.ColorEncoding = .rgb
+
+    // Connection mode re-login requirement
+    var requiresReloginForModeChange: Bool = false
 
     init() {
         // Initialize ReferenceModeManager
@@ -428,10 +432,25 @@ final class AppState {
 
     /// Load available display modes for the selected display
     func loadDisplayModes(for displayID: CGDirectDisplayID) async {
+        isLoadingDisplayModes = true
+        defer { isLoadingDisplayModes = false }
+
         availableDisplayModes = await displayEngine.displayEncodingVariants(for: displayID)
         currentDisplayMode = await displayEngine.currentDisplayMode(for: displayID)
 
-        if let current = currentDisplayMode {
+        // Try to get accurate current mode from IORegistry/plist
+        if let connectionMode = await displayEngine.currentConnectionMode(for: displayID) {
+            selectedBitDepth = connectionMode.bitsPerComponent.numericValue
+            selectedColorEncoding = {
+                switch connectionMode.pixelEncoding {
+                case .rgb444: return .rgb
+                case .ycbcr444: return .ycbcr444
+                case .ycbcr422: return .ycbcr422
+                case .ycbcr420: return .ycbcr420
+                }
+            }()
+            selectedRGBRange = connectionMode.colorRange == .full ? .full : .limited
+        } else if let current = currentDisplayMode {
             selectedBitDepth = current.bitDepth
             selectedRGBRange = current.range
             selectedColorEncoding = current.colorEncoding
@@ -442,21 +461,43 @@ final class AppState {
     func setDisplayMode(bitDepth: Int, range: DisplayModeController.RGBRange, encoding: DisplayModeController.ColorEncoding) async {
         guard let displayID = selectedDisplayID else { return }
 
-        // Find matching mode
-        let matchingMode = availableDisplayModes.first { mode in
-            mode.bitDepth == bitDepth &&
-            mode.range == range &&
-            mode.colorEncoding == encoding
-        }
+        // Build the target ConnectionColorMode directly from UI parameters.
+        // The WindowServer plist LinkDescription accepts any combination of
+        // encoding/range/bitDepth/eotf — no need to match against the IORegistry
+        // "available" list (which only reflects hardware capabilities, not plist constraints).
+        let targetEncoding: PixelEncoding = {
+            switch encoding {
+            case .rgb: return .rgb444
+            case .ycbcr444: return .ycbcr444
+            case .ycbcr422: return .ycbcr422
+            case .ycbcr420: return .ycbcr420
+            }
+        }()
 
-        guard let mode = matchingMode else {
-            ToastManager.shared.showError("Display mode not available")
-            return
-        }
+        let targetRange: ColorRange = {
+            switch range {
+            case .full: return .full
+            case .limited, .auto: return .limited
+            }
+        }()
+
+        let targetBPC = BitsPerComponent(numericBitDepth: bitDepth) ?? .bpc8
+
+        let targetMode = ConnectionColorMode(
+            pixelEncoding: targetEncoding,
+            bitsPerComponent: targetBPC,
+            colorRange: targetRange,
+            dynamicRange: .sdr
+        )
 
         do {
-            try await displayEngine.setDisplayMode(mode, for: displayID)
-            currentDisplayMode = mode
+            let instantApplied = try await displayEngine.setConnectionMode(targetMode, for: displayID)
+            requiresReloginForModeChange = !instantApplied
+
+            // Update UI state
+            selectedBitDepth = bitDepth
+            selectedRGBRange = range
+            selectedColorEncoding = encoding
         } catch {
             ToastManager.shared.showError("Failed to change display mode: \(error.localizedDescription)")
         }
